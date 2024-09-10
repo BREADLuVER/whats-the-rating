@@ -1,0 +1,9 @@
+# requirements.txt
+
+Django>=4.0,<5.0
+djangorestframework
+psycopg2-binary
+django-cors-headers
+django-allauth
+gunicorn
+python-dotenv
