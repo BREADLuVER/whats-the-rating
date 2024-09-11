@@ -1,9 +1,5 @@
 # docker-compose.yml
 
-# docker-compose.yml
-
-version: '3.11.0'
-
 services:
   db:
     image: postgres:13
