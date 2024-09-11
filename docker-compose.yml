@@ -1,0 +1,11 @@
+# docker-compose.yml
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: guess_the_rating_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5050:5432"

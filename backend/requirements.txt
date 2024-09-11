@@ -7,3 +7,6 @@ django-cors-headers
 django-allauth
 gunicorn
 python-dotenv
+psycopg2>=2.9
+django
+psycopg2
