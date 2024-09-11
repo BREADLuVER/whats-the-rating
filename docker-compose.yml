@@ -1,11 +1,50 @@
 # docker-compose.yml
 
+# docker-compose.yml
+
+version: '3.11.0'
+
 services:
   db:
     image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
     environment:
-      POSTGRES_DB: guess_the_rating_db
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - guess-the-rating-network
+
+  backend:
+    build: ./backend
+    command: gunicorn whats_the_rating.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - ./backend:/app
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - db
+    networks:
+      - guess-the-rating-network
     ports:
-      - "5050:5432"
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+    environment:
+      - NODE_ENV=development
+    networks:
+      - guess-the-rating-network
+    ports:
+      - "3000:3000"
+
+networks:
+  guess-the-rating-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+
