@@ -18,7 +18,7 @@ services:
 
   backend:
     build: ./backend
-    command: gunicorn whats_the_rating.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn guess_the_rating.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ./backend:/app
     env_file:
