@@ -30,16 +30,57 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# backend/guess_the_rating/settings.py
+
 INSTALLED_APPS = [
+    # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',  # Required for Allauth
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'game_prediction',
-    'rest_framework',
+    
+    # Third-party apps
+    'rest_framework',           # For APIs
+    'dj_rest_auth',             # RESTful auth
+    'allauth',                  # Django Allauth
+    'allauth.account',          # Email/Password Authentication
+    'allauth.socialaccount',    # Social login support
+    'allauth.socialaccount.providers.google',  # Google login
+    'corsheaders',              # Handle CORS for frontend
 ]
+
+# Site ID (required by Allauth)
+SITE_ID = 1
+
+# CORS configuration for cross-origin requests
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',  # React frontend URL
+]
+
+# Rest Framework configuration
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
+}
+
+# Allauth and REST auth settings
+ACCOUNT_EMAIL_VERIFICATION = "none"  # Disable email verification for simplicity
+ACCOUNT_EMAIL_REQUIRED = False
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': ['profile', 'email'],
+        'AUTH_PARAMS': {'access_type': 'online'},
+    }
+}
+
+# Google OAuth2 keys
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.getenv('GOOGLE_CLIENT_ID')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

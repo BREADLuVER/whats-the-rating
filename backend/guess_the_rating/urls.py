@@ -14,10 +14,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# backend/guess_the_rating/urls.py
+
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('game_prediction.urls')),
+    path('api/auth/', include('dj_rest_auth.urls')),  # Login/Logout
+    path('api/auth/registration/', include('dj_rest_auth.registration.urls')),  # Signup
+    path('api/auth/google/', include('allauth.socialaccount.urls')),  # Google login
 ]
