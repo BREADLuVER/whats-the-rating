@@ -14,6 +14,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# backend/guess_the_rating/urls.py
+
 from django.contrib import admin
 from django.urls import path, include
 from game_prediction.views import google_login
