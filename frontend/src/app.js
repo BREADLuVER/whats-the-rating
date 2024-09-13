@@ -1,4 +1,4 @@
-// src/app.js
+// src/App.js
 import React from 'react';
 import Amplify from 'aws-amplify';
 import { AmplifyAuthenticator, AmplifySignUp, AmplifySignIn } from '@aws-amplify/ui-react';
@@ -29,5 +29,5 @@ function App() {
   );
 }
 
-export default app;
+export default App;
 
