@@ -12,3 +12,6 @@ django
 psycopg2
 Pillow
 google-auth
+dj-rest-auth
+requests
+jwt

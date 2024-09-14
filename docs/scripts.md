@@ -1,4 +1,4 @@
-python-mvenvvenv
+python-m venvvenv
 
 .\.venv\Scripts\Activate
 
@@ -19,9 +19,25 @@ docker run --name postgres-rating -e POSTGRES_PASSWORD=123 -p 5050:5432 -d postg
 psql -h localhost -p 5050 -U postgres -W
 
 
+#amplify
+
+amplify init
+
+amplify add auth
+
+amplify push
+
 #docker
 
 docker-compose down
 docker build -t whats-the-rating-frontend ./frontend
 
 docker run -p 3000:3000 whats-the-rating-frontend
+
+docker-compose up --build
+
+#node
+
+nvm install 16.13.0
+
+nvm use 16.13.0
