@@ -1,6 +1,6 @@
 {
   "auth": {
-    "gtr714e6bf0": {
+    "gtr8cff66f1": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -16,15 +16,38 @@
           "EMAIL"
         ],
         "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
+        "usernameAttributes": [],
         "verificationMechanisms": [
           "EMAIL"
         ]
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "gtr299ed3a6DefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_gtr299ed3a6DefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gtr299ed3a6DefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_gtr299ed3a6DefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gtr299ed3a6DefineAuthChallenge"
+        }
+      ]
     }
   }
 }

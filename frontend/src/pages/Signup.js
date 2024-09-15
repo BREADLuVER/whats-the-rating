@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
 const Signup = () => {
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password1, setPassword1] = useState('');
   const [password2, setPassword2] = useState('');
@@ -13,6 +14,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('http://localhost:8000/api/auth/registration/', {
+      username: username, // Send the username
       email: email,
       password1: password1,
       password2: password2,
@@ -31,6 +33,10 @@ const Signup = () => {
     <div>
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
+        <div>
+          <label>Username</label>
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
+        </div>
         <div>
           <label>Email</label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />

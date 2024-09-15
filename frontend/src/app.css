@@ -1,0 +1,40 @@
+.app-container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282c34;
+    padding: 10px;
+    color: white;
+  }
+  
+  .header-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-section.left {
+    flex: 1;
+  }
+  
+  .header-section.center {
+    flex: 2;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header-section.right {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .main-content {
+    padding: 20px;
+    text-align: center;
+  }

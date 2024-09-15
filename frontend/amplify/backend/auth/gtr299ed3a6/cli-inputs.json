@@ -1,0 +1,60 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "gtr299ed3a6_identitypool_299ed3a6",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "gtr299ed3a6",
+    "userPoolName": "gtr299ed3a6_userpool_299ed3a6",
+    "autoVerifiedAttributes": [
+      "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+      "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+      "email"
+    ],
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+      "email"
+    ],
+    "userpoolClientReadAttributes": [
+      "email"
+    ],
+    "userpoolClientLambdaRole": "gtr299299ed3a6_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": false,
+    "sharedId": "299ed3a6",
+    "resourceName": "gtr299ed3a6",
+    "authSelections": "identityPoolAndUserPool",
+    "useDefault": "default",
+    "triggers": {
+      "DefineAuthChallenge": [
+        "captcha-define-challenge"
+      ],
+      "CreateAuthChallenge": [
+        "captcha-create-challenge"
+      ],
+      "VerifyAuthChallengeResponse": [
+        "captcha-verify"
+      ],
+      "CustomMessage": [
+        "verification-link"
+      ]
+    },
+    "userPoolGroupList": [],
+    "serviceName": "Cognito",
+    "verificationBucketName": "gtr299ed3a6verificationbucket",
+    "usernameCaseSensitive": false,
+    "useEnabledMfas": true
+  }
+}
