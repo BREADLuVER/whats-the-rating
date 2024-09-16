@@ -1,25 +1,37 @@
 /* app.css */
-.app-container {
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  width: 100%;
 }
 
-.main-content {
+.navigation {
   width: 100%;
-  padding: 20px;
-  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
+/* .main-content {
+  width: 100%;
+  padding: 0px;
+  text-align: center;
+} */
 
 @media (max-width: 600px) {
-  .main-content {
-    padding: 10px;
-  }
+
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
-  .main-content {
-    padding: 15px;
-  }
+
 }

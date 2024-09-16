@@ -1,17 +1,19 @@
 // src/app.js
 
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Amplify } from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import config from './amplifyconfiguration.json';
-import './app.css';  // Include custom CSS for layout
+import './app.css';
 Amplify.configure(config);
 
 // Import the Framer Navigation component
 import Navigation from './framer/navigation';
+import Hero from './framer/hero';
+import UserPage from './pages/UserPage';
 
-// Hook to get window size for responsiveness
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
@@ -47,22 +49,38 @@ function App({ signOut, user }) {
   }
 
   return (
-    <div className="app-container">
-      {/* Responsive Navigation Component */}
-      <Navigation
-        userName={user.username || 'User'}  // Properly pass userName prop
-        className='!w-full'  // Use className to override width
-        style={{ width: '100%' }}  // Override Framer's default styles
-        variant={variant}  // Pass the variant based on screen size
-      />
-
-      {/* Main Content Section */}
-      <main className="main-content">
-        <h2>Welcome, {user.username || 'User'}!</h2>
-        <h2>Future Games Content Here</h2>
-        <button onClick={signOut}>Sign Out</button>
-      </main>
-    </div>
+    <Router>
+      <div className="nav-container">
+        {/* Responsive Navigation Component */}
+        <Navigation
+          userName={user.username || 'User'}
+          className='!w-full'
+          style={{ width: '100%' }}
+          variant={variant}
+        />
+        
+        {/* Define Routes */}
+        <Routes>
+          {/* Main Page Route ("/") */}
+          <Route 
+            path="/" 
+            element={
+              <>
+                {/* Hero Section only on the root path */}
+                <Hero
+                  className='!w-full'
+                  style={{ width: '100%' }}
+                  variant={variant}
+                />
+              </>
+            } 
+          />
+          
+          {/* User Page Route ("/user") */}
+          <Route path="/user" element={<UserPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

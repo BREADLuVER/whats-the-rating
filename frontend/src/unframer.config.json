@@ -2,7 +2,8 @@
     "$schema": "https://unframer-schema.vercel.app/schema.json",
     "outDir": "./framer",
     "components": {
-      "navigation": "https://framer.com/m/Navigation-FJsM.js@c5mt84xmKZHFbzFjnWt9"
+      "navigation": "https://framer.com/m/Navigation-FJsM.js",
+      "hero": "https://framer.com/m/hero-DlCg.js"
     }
   }
   
