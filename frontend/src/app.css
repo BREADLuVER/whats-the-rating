@@ -1,9 +1,25 @@
-/* 
+/* app.css */
 .app-container {
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-content {
+  width: 100%;
   padding: 20px;
   text-align: center;
-} */
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .main-content {
+    padding: 15px;
+  }
+}

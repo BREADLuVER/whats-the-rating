@@ -56,6 +56,7 @@ var createLayoutDependency = (props, variants,) => {
   if (props.layoutDependency) return variants.join('-',) + props.layoutDependency;
   return variants.join('-',);
 };
+
 var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
   const { activeLocale, setLocale, } = useLocaleInfo();
   const { style, className, layoutId, variant, ...restProps } = getProps(props,);
@@ -410,7 +411,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                         '--framer-text-alignment': 'center',
                         '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
                       },
-                      children: 'User',
+                      children: props.userName || 'User',
                     },),
                   },),
                   className: 'framer-16s5cwp',
@@ -574,10 +575,8 @@ addFonts(Framerj6oGRcNtb, [{
 },], { supportsExplicitInterCodegen: true, },);
 
 // virtual:navigation
-import { WithFramerBreakpoints, } from 'unframer';
-import { jsx, } from 'react/jsx-runtime';
-stdin_default.Responsive = (props,) => {
-  return /* @__PURE__ */ jsx(WithFramerBreakpoints, { Component: stdin_default, ...props, },);
-};
+import { WithFramerBreakpoints } from 'unframer';
+import { jsx } from 'react/jsx-runtime';
+
 var navigation_default = stdin_default;
-export { navigation_default as default, };
+export { navigation_default as default };
