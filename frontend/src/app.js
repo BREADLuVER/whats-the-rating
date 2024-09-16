@@ -59,14 +59,11 @@ function App({ signOut, user }) {
           variant={variant}
         />
         
-        {/* Define Routes */}
         <Routes>
-          {/* Main Page Route ("/") */}
           <Route 
             path="/" 
             element={
               <>
-                {/* Hero Section only on the root path */}
                 <Hero
                   className='!w-full'
                   style={{ width: '100%' }}
@@ -76,7 +73,6 @@ function App({ signOut, user }) {
             } 
           />
           
-          {/* User Page Route ("/user") */}
           <Route path="/user" element={<UserPage />} />
         </Routes>
       </div>

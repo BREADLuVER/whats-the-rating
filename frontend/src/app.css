@@ -1,11 +1,14 @@
-/* app.css */
-
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
+}
+
+/* Ensure everything includes padding and border */
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 .nav-container {
@@ -15,18 +18,29 @@ html, body {
   width: 100%;
 }
 
+/* Ensure no margin between navigation and hero */
+/* Ensure Navigation has no borders, shadow, or padding */
 .navigation {
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 100;
+  margin: 0;
+  padding: 0;
+  border: none; /* Remove border */
+  box-shadow: none; /* Remove shadow */
+  background-color: #fff; /* Ensure consistent background color */
 }
 
-/* .main-content {
+/* Ensure Hero has no borders, shadow, or padding */
+.hero {
   width: 100%;
-  padding: 0px;
-  text-align: center;
-} */
+  margin: 0;
+  padding: 0;
+  border: none; /* Remove border */
+  box-shadow: none; /* Remove shadow */
+  background-color: #fff; /* Ensure consistent background color */
+}
 
 @media (max-width: 600px) {
 

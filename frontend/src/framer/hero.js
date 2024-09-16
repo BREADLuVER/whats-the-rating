@@ -2,13 +2,13 @@
 /* eslint-disable */
 'use client';
 
-// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/jYyJiOB7wVnV7ezgW7Tq/V5lESJQt3.js
-import { jsx as _jsx2, jsxs as _jsxs, } from 'react/jsx-runtime';
+// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/f47T072lnuOYinaubXjQ/V5lESJQt3.js
+import { jsx as _jsx3, jsxs as _jsxs, } from 'react/jsx-runtime';
 import {
   addFonts,
-  addPropertyControls as addPropertyControls2,
+  addPropertyControls as addPropertyControls3,
   ComponentViewportProvider,
-  ControlType as ControlType2,
+  ControlType as ControlType6,
   cx,
   getFonts,
   RichText,
@@ -18,7 +18,7 @@ import {
   withCSS,
 } from 'unframer';
 import { LayoutGroup, motion, MotionConfigContext, } from 'unframer';
-import * as React from 'react';
+import * as React3 from 'react';
 
 // https :https://framerusercontent.com/modules/HYcHVPAbe8jLEeU7c4mp/TcQV6SEsl3y6G9Op8tp0/Time.js
 import { jsx as _jsx, } from 'react/jsx-runtime';
@@ -210,10 +210,481 @@ addPropertyControls(Time, {
   color: { type: ControlType.Color, defaultValue: Time.defaultProps.color, },
 },);
 
-// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/jYyJiOB7wVnV7ezgW7Tq/V5lESJQt3.js
+// https :https://framerusercontent.com/modules/o1PI5S8YtkA5bP5g4dFz/Xr8CO3Ul8Gb7lVfgMKTh/Embed.js
+import { jsx as _jsx2, } from 'react/jsx-runtime';
+import { useEffect as useEffect8, useRef as useRef3, useState as useState4, } from 'react';
+import { addPropertyControls as addPropertyControls2, ControlType as ControlType5, } from 'unframer';
+
+// https :https://framerusercontent.com/modules/VTUDdizacRHpwbkOamr7/AykinQJbgwl92LvMGZwu/constants.js
+import { ControlType as ControlType2, } from 'unframer';
+var containerStyles = {
+  position: 'relative',
+  width: '100%',
+  height: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+};
+var emptyStateStyle = {
+  ...containerStyles,
+  borderRadius: 6,
+  background: 'rgba(136, 85, 255, 0.3)',
+  color: '#85F',
+  border: '1px dashed #85F',
+  flexDirection: 'column',
+};
+var defaultEvents = {
+  onClick: {
+    type: ControlType2.EventHandler,
+  },
+  onMouseEnter: {
+    type: ControlType2.EventHandler,
+  },
+  onMouseLeave: {
+    type: ControlType2.EventHandler,
+  },
+};
+var fontSizeOptions = {
+  type: ControlType2.Number,
+  title: 'Font Size',
+  min: 2,
+  max: 200,
+  step: 1,
+  displayStepper: true,
+};
+var fontControls = {
+  font: {
+    type: ControlType2.Boolean,
+    title: 'Font',
+    defaultValue: false,
+    disabledTitle: 'Default',
+    enabledTitle: 'Custom',
+  },
+  fontFamily: {
+    type: ControlType2.String,
+    title: 'Family',
+    placeholder: 'Inter',
+    hidden: ({ font, },) => !font,
+  },
+  fontWeight: {
+    type: ControlType2.Enum,
+    title: 'Weight',
+    options: [
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900,
+    ],
+    optionTitles: [
+      'Thin',
+      'Extra-light',
+      'Light',
+      'Regular',
+      'Medium',
+      'Semi-bold',
+      'Bold',
+      'Extra-bold',
+      'Black',
+    ],
+    hidden: ({ font, },) => !font,
+  },
+};
+
+// https :https://framerusercontent.com/modules/D4TWeLfcxT6Tysr2BlYg/iZjmqdxVx1EOiM3k1FaW/useOnNavigationTargetChange.js
+import { useIsInCurrentNavigationTarget, } from 'unframer';
+import { useEffect as useEffect2, } from 'react';
+
+// https :https://framerusercontent.com/modules/ExNgrA7EJTKUPpH6vIlN/eiOrSJ2Ab5M9jPCvVwUz/useConstant.js
+import { useRef, } from 'react';
+
+// https :https://framerusercontent.com/modules/D2Lz5CmnNVPZFFiZXalt/QaCzPbriZBfXWZIIycFI/colorFromToken.js
+import { Color, } from 'unframer';
+
+// https :https://framerusercontent.com/modules/3mKFSGQqKHV82uOV1eBc/5fbRLvOpxZC0JOXugvwm/isMotionValue.js
+import { MotionValue, } from 'unframer';
+
+// https :https://framerusercontent.com/modules/xDiQsqBGXzmMsv7AlEVy/uhunpMiNsbXxzjlXsg1y/useUniqueClassName.js
+import * as React from 'react';
+
+// https :https://framerusercontent.com/modules/ETACN5BJyFTSo0VVDJfu/NHRqowOiXkF9UwOzczF7/variantUtils.js
+import { ControlType as ControlType3, } from 'unframer';
+
+// https :https://framerusercontent.com/modules/eMBrwoqQK7h6mEeGQUH8/GuplvPJVjmxpk9zqOTcb/isBrowser.js
+import { useMemo, } from 'react';
+
+// https :https://framerusercontent.com/modules/v9AWX2URmiYsHf7GbctE/XxKAZ9KlhWqf5x1JMyyF/useOnChange.js
+import { useEffect as useEffect4, } from 'react';
+
+// https :https://framerusercontent.com/modules/kNDwabfjDEb3vUxkQlZS/fSIr3AOAYbGlfSPgXpYu/useAutoMotionValue.js
+import { useCallback as useCallback2, useEffect as useEffect5, useRef as useRef2, } from 'react';
+import { animate, motionValue, RenderTarget as RenderTarget2, } from 'unframer';
+
+// https :https://framerusercontent.com/modules/cuQH4dmpDnV8YK1mSgQX/KqRXqunFjE6ufhpc7ZRu/useFontControls.js
+import { fontStore, } from 'unframer';
+import { useEffect as useEffect6, } from 'react';
+
+// https :https://framerusercontent.com/modules/afBE9Yx1W6bY5q32qPxe/m3q7puE2tbo1S2C0s0CT/useRenderTarget.js
+import { useMemo as useMemo2, } from 'react';
+import { RenderTarget as RenderTarget3, } from 'unframer';
+function useIsOnCanvas() {
+  const onCanvas = useMemo2(
+    () => RenderTarget3.current() === RenderTarget3.canvas,
+    [],
+  );
+  return onCanvas;
+}
+
+// https :https://framerusercontent.com/modules/zGkoP8tPDCkoBzMdt5uq/0zFSjxIYliHxrQQnryFX/useControlledState.js
+import * as React2 from 'react';
+
+// https :https://framerusercontent.com/modules/5SM58HxZHxjjv7aLMOgQ/WXz9i6mVki0bBCrKdqB3/propUtils.js
+import { useMemo as useMemo3, } from 'react';
+import { ControlType as ControlType4, } from 'unframer';
+var borderRadiusControl = {
+  borderRadius: {
+    title: 'Radius',
+    type: ControlType4.FusedNumber,
+    toggleKey: 'isMixedBorderRadius',
+    toggleTitles: [
+      'Radius',
+      'Radius per corner',
+    ],
+    valueKeys: [
+      'topLeftRadius',
+      'topRightRadius',
+      'bottomRightRadius',
+      'bottomLeftRadius',
+    ],
+    valueLabels: [
+      'TL',
+      'TR',
+      'BR',
+      'BL',
+    ],
+    min: 0,
+  },
+};
+var paddingControl = {
+  padding: {
+    type: ControlType4.FusedNumber,
+    toggleKey: 'paddingPerSide',
+    toggleTitles: [
+      'Padding',
+      'Padding per side',
+    ],
+    valueKeys: [
+      'paddingTop',
+      'paddingRight',
+      'paddingBottom',
+      'paddingLeft',
+    ],
+    valueLabels: [
+      'T',
+      'R',
+      'B',
+      'L',
+    ],
+    min: 0,
+    title: 'Padding',
+  },
+};
+
+// https :https://framerusercontent.com/modules/o1PI5S8YtkA5bP5g4dFz/Xr8CO3Ul8Gb7lVfgMKTh/Embed.js
+function Embed({ type, url, html, style = {}, },) {
+  if (type === 'url' && url) {
+    return /* @__PURE__ */ _jsx2(EmbedUrl, { url, style, },);
+  }
+  if (type === 'html' && html) {
+    return /* @__PURE__ */ _jsx2(EmbedHtml, { html, style, },);
+  }
+  return /* @__PURE__ */ _jsx2(Instructions, { style, },);
+}
+addPropertyControls2(Embed, {
+  type: {
+    type: ControlType5.Enum,
+    defaultValue: 'url',
+    displaySegmentedControl: true,
+    options: ['url', 'html',],
+    optionTitles: ['URL', 'HTML',],
+  },
+  url: {
+    title: 'URL',
+    type: ControlType5.String,
+    description: 'Some websites don\u2019t support embedding.',
+    hidden(props,) {
+      return props.type !== 'url';
+    },
+  },
+  html: {
+    title: 'HTML',
+    type: ControlType5.String,
+    displayTextArea: true,
+    hidden(props,) {
+      return props.type !== 'html';
+    },
+  },
+},);
+function Instructions({ style, },) {
+  return /* @__PURE__ */ _jsx2('div', {
+    style: { minHeight: getMinHeight(style,), ...emptyStateStyle, overflow: 'hidden', ...style, },
+    children: /* @__PURE__ */ _jsx2('div', {
+      style: centerTextStyle,
+      children: 'To embed a website or widget, add it to the properties\xA0panel.',
+    },),
+  },);
+}
+function EmbedUrl({ url, style, },) {
+  const hasAutoHeight = !style.height;
+  if (!/[a-z]+:\/\//.test(url,)) {
+    url = 'https://' + url;
+  }
+  const onCanvas = useIsOnCanvas();
+  const [state, setState,] = useState4(onCanvas ? void 0 : false,);
+  useEffect8(() => {
+    if (!onCanvas) return;
+    let isLastEffect = true;
+    setState(void 0,);
+    async function load() {
+      const response = await fetch('https://api.framer.com/functions/check-iframe-url?url=' + encodeURIComponent(url,),);
+      if (response.status == 200) {
+        const { isBlocked, } = await response.json();
+        if (isLastEffect) {
+          setState(isBlocked,);
+        }
+      } else {
+        const message = await response.text();
+        console.error(message,);
+        const error = new Error('This site can\u2019t be reached.',);
+        setState(error,);
+      }
+    }
+    load().catch((error,) => {
+      console.error(error,);
+      setState(error,);
+    },);
+    return () => {
+      isLastEffect = false;
+    };
+  }, [url,],);
+  if (onCanvas && hasAutoHeight) {
+    return /* @__PURE__ */ _jsx2(ErrorMessage, { message: 'URL embeds do not support auto height.', style, },);
+  }
+  if (!url.startsWith('https://',)) {
+    return /* @__PURE__ */ _jsx2(ErrorMessage, { message: 'Unsupported protocol.', style, },);
+  }
+  if (state === void 0) {
+    return /* @__PURE__ */ _jsx2(LoadingIndicator, {},);
+  }
+  if (state instanceof Error) {
+    return /* @__PURE__ */ _jsx2(ErrorMessage, { message: state.message, style, },);
+  }
+  if (state === true) {
+    const message = `Can\u2019t embed ${url} due to its content security policy.`;
+    return /* @__PURE__ */ _jsx2(ErrorMessage, { message, style, },);
+  }
+  return /* @__PURE__ */ _jsx2('iframe', {
+    src: url,
+    style: { ...iframeStyle, ...style, },
+    loading: 'lazy',
+    // @ts-ignore
+    fetchPriority: onCanvas ? 'low' : 'auto',
+    referrerPolicy: 'no-referrer',
+    sandbox: getSandbox(onCanvas,),
+  },);
+}
+var iframeStyle = { width: '100%', height: '100%', border: 'none', };
+function getSandbox(onCanvas,) {
+  const result = ['allow-same-origin', 'allow-scripts',];
+  if (!onCanvas) {
+    result.push(
+      'allow-downloads',
+      'allow-forms',
+      'allow-modals',
+      'allow-orientation-lock',
+      'allow-pointer-lock',
+      'allow-popups',
+      'allow-popups-to-escape-sandbox',
+      'allow-presentation',
+      'allow-storage-access-by-user-activation',
+      'allow-top-navigation-by-user-activation',
+    );
+  }
+  return result.join(' ',);
+}
+function EmbedHtml({ html, ...props },) {
+  const hasScript = html.includes('<\/script>',);
+  if (hasScript) {
+    const hasSplineViewer = html.includes('</spline-viewer>',);
+    const hasComment = html.includes('<!-- framer-direct-embed -->',);
+    if (hasSplineViewer || hasComment) {
+      return /* @__PURE__ */ _jsx2(EmbedHtmlWithScripts, { html, ...props, },);
+    }
+    return /* @__PURE__ */ _jsx2(EmbedHtmlInsideIframe, { html, ...props, },);
+  }
+  return /* @__PURE__ */ _jsx2(EmbedHtmlWithoutScripts, { html, ...props, },);
+}
+function EmbedHtmlInsideIframe({ html, style, },) {
+  const ref = useRef3();
+  const [iframeHeight, setIframeHeight,] = useState4(0,);
+  useEffect8(() => {
+    var _ref_current;
+    const iframeWindow = (_ref_current = ref.current) === null || _ref_current === void 0 ? void 0 : _ref_current.contentWindow;
+    function handleMessage(event,) {
+      if (event.source !== iframeWindow) return;
+      const data = event.data;
+      if (typeof data !== 'object' || data === null) return;
+      const height = data.embedHeight;
+      if (typeof height !== 'number') return;
+      setIframeHeight(height,);
+    }
+    window.addEventListener('message', handleMessage,);
+    iframeWindow === null || iframeWindow === void 0 ? void 0 : iframeWindow.postMessage('getEmbedHeight', '*',);
+    return () => {
+      window.removeEventListener('message', handleMessage,);
+    };
+  }, [],);
+  const srcDoc = `
+<html>
+    <head>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+
+            :root {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            * {
+                box-sizing: border-box;
+                -webkit-font-smoothing: inherit;
+            }
+
+            h1, h2, h3, h4, h5, h6, p, figure {
+                margin: 0;
+            }
+
+            body, input, textarea, select, button {
+                font-size: 12px;
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        ${html}
+        <script type="module">
+            let height = 0
+
+            function sendEmbedHeight() {
+                window.parent.postMessage({
+                    embedHeight: height
+                }, "*")
+            }
+
+            const observer = new ResizeObserver((entries) => {
+                if (entries.length !== 1) return
+                const entry = entries[0]
+                if (entry.target !== document.body) return
+
+                height = entry.contentRect.height
+                sendEmbedHeight()
+            })
+
+            observer.observe(document.body)
+
+            window.addEventListener("message", (event) => {
+                if (event.source !== window.parent) return
+                if (event.data !== "getEmbedHeight") return
+                sendEmbedHeight()
+            })
+        <\/script>
+    <body>
+</html>
+`;
+  const currentStyle = { ...iframeStyle, ...style, };
+  const hasAutoHeight = !style.height;
+  if (hasAutoHeight) {
+    currentStyle.height = iframeHeight + 'px';
+  }
+  return /* @__PURE__ */ _jsx2('iframe', { ref, style: currentStyle, srcDoc, },);
+}
+function EmbedHtmlWithScripts({ html, style, },) {
+  const ref = useRef3();
+  useEffect8(() => {
+    const div = ref.current;
+    if (!div) return;
+    div.innerHTML = html;
+    executeScripts(div,);
+    return () => {
+      div.innerHTML = '';
+    };
+  }, [html,],);
+  return /* @__PURE__ */ _jsx2('div', { ref, style: { ...htmlStyle, ...style, }, },);
+}
+function EmbedHtmlWithoutScripts({ html, style, },) {
+  return /* @__PURE__ */ _jsx2('div', { style: { ...htmlStyle, ...style, }, dangerouslySetInnerHTML: { __html: html, }, },);
+}
+var htmlStyle = {
+  width: '100%',
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+};
+function executeScripts(node,) {
+  if (node instanceof Element && node.tagName === 'SCRIPT') {
+    const script = document.createElement('script',);
+    script.text = node.innerHTML;
+    for (const { name, value, } of node.attributes) {
+      script.setAttribute(name, value,);
+    }
+    node.parentElement.replaceChild(script, node,);
+  } else {
+    for (const child of node.childNodes) {
+      executeScripts(child,);
+    }
+  }
+}
+function LoadingIndicator() {
+  return /* @__PURE__ */ _jsx2('div', {
+    className: 'framerInternalUI-componentPlaceholder',
+    style: { ...containerStyles, overflow: 'hidden', },
+    children: /* @__PURE__ */ _jsx2('div', { style: centerTextStyle, children: 'Loading\u2026', },),
+  },);
+}
+function ErrorMessage({ message, style, },) {
+  return /* @__PURE__ */ _jsx2('div', {
+    className: 'framerInternalUI-errorPlaceholder',
+    style: { minHeight: getMinHeight(style,), ...containerStyles, overflow: 'hidden', ...style, },
+    children: /* @__PURE__ */ _jsx2('div', { style: centerTextStyle, children: message, },),
+  },);
+}
+var centerTextStyle = { textAlign: 'center', minWidth: 140, };
+function getMinHeight(style,) {
+  const hasAutoHeight = !style.height;
+  if (hasAutoHeight) return 200;
+}
+
+// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/f47T072lnuOYinaubXjQ/V5lESJQt3.js
+var EmbedFonts = getFonts(Embed,);
 var TimeDateFonts = getFonts(Time,);
 var cycleOrder = ['YFmbfKAkc', 'Ca3pCwa1m', 'FPp4EquH4',];
-var serializationHash = 'framer-X2kpq';
+var serializationHash = 'framer-NdVaX';
 var variantClassNames = { Ca3pCwa1m: 'framer-v-muo7b', FPp4EquH4: 'framer-v-1n0dnja', YFmbfKAkc: 'framer-v-9afcqs', };
 function addPropertyOverrides(overrides, ...variants) {
   const nextOverrides = {};
@@ -224,12 +695,12 @@ function addPropertyOverrides(overrides, ...variants) {
 }
 var transition1 = { bounce: 0.2, delay: 0, duration: 0.4, type: 'spring', };
 var Transition = ({ value, children, },) => {
-  const config = React.useContext(MotionConfigContext,);
+  const config = React3.useContext(MotionConfigContext,);
   const transition = value !== null && value !== void 0 ? value : config.transition;
-  const contextValue = React.useMemo(() => ({ ...config, transition, }), [JSON.stringify(transition,),],);
-  return /* @__PURE__ */ _jsx2(MotionConfigContext.Provider, { value: contextValue, children, },);
+  const contextValue = React3.useMemo(() => ({ ...config, transition, }), [JSON.stringify(transition,),],);
+  return /* @__PURE__ */ _jsx3(MotionConfigContext.Provider, { value: contextValue, children, },);
 };
-var Variants = motion(React.Fragment,);
+var Variants = motion(React3.Fragment,);
 var humanReadableVariantMap = { Desktop: 'YFmbfKAkc', Phone: 'Ca3pCwa1m', Tablet: 'FPp4EquH4', };
 var getProps = ({ height, id, width, ...props },) => {
   var _humanReadableVariantMap_props_variant, _ref;
@@ -249,7 +720,7 @@ var createLayoutDependency = (props, variants,) => {
   if (props.layoutDependency) return variants.join('-',) + props.layoutDependency;
   return variants.join('-',);
 };
-var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
+var Component = /* @__PURE__ */ React3.forwardRef(function (props, ref,) {
   const { activeLocale, setLocale, } = useLocaleInfo();
   const { style, className, layoutId, variant, ...restProps } = getProps(props,);
   const {
@@ -264,16 +735,16 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
     variants,
   } = useVariantState({ cycleOrder, defaultVariant: 'YFmbfKAkc', variant, variantClassNames, },);
   const layoutDependency = createLayoutDependency(props, variants,);
-  const ref1 = React.useRef(null,);
-  const defaultLayoutId = React.useId();
+  const ref1 = React3.useRef(null,);
+  const defaultLayoutId = React3.useId();
   const sharedStyleClassNames = [];
   const componentViewport = useComponentViewport();
-  return /* @__PURE__ */ _jsx2(LayoutGroup, {
+  return /* @__PURE__ */ _jsx3(LayoutGroup, {
     id: layoutId !== null && layoutId !== void 0 ? layoutId : defaultLayoutId,
-    children: /* @__PURE__ */ _jsx2(Variants, {
+    children: /* @__PURE__ */ _jsx3(Variants, {
       animate: variants,
       initial: false,
-      children: /* @__PURE__ */ _jsx2(Transition, {
+      children: /* @__PURE__ */ _jsx3(Transition, {
         value: transition1,
         children: /* @__PURE__ */ _jsxs(motion.header, {
           ...restProps,
@@ -290,12 +761,30 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
             gestureVariant,
           ),
           children: [
-            /* @__PURE__ */ _jsx2(ComponentViewportProvider, {
-              children: /* @__PURE__ */ _jsx2(motion.div, {
+            /* @__PURE__ */ _jsx3(ComponentViewportProvider, {
+              children: /* @__PURE__ */ _jsx3(motion.div, {
+                className: 'framer-pbn8s2-container',
+                layoutDependency,
+                layoutId: 'BqlsfaoeK-container',
+                children: /* @__PURE__ */ _jsx3(Embed, {
+                  height: '100%',
+                  html:
+                    '<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.26/build/spline-viewer.js"><\/script>\n<spline-viewer url="https://prod.spline.design/ZouFgBqL4sDgYnyI/scene.splinecode"></spline-viewer>',
+                  id: 'BqlsfaoeK',
+                  layoutId: 'BqlsfaoeK',
+                  style: { height: '100%', width: '100%', },
+                  type: 'html',
+                  url: '',
+                  width: '100%',
+                },),
+              },),
+            },),
+            /* @__PURE__ */ _jsx3(ComponentViewportProvider, {
+              children: /* @__PURE__ */ _jsx3(motion.div, {
                 className: 'framer-l01x53-container',
                 layoutDependency,
                 layoutId: 'bC4zEDBPB-container',
-                children: /* @__PURE__ */ _jsx2(Time, {
+                children: /* @__PURE__ */ _jsx3(Time, {
                   color: 'rgb(153, 153, 153)',
                   font: {},
                   height: '100%',
@@ -314,10 +803,10 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                 },),
               },),
             },),
-            /* @__PURE__ */ _jsx2(RichText, {
+            /* @__PURE__ */ _jsx3(RichText, {
               __fromCanvasComponent: true,
-              children: /* @__PURE__ */ _jsx2(React.Fragment, {
-                children: /* @__PURE__ */ _jsx2(motion.h1, {
+              children: /* @__PURE__ */ _jsx3(React3.Fragment, {
+                children: /* @__PURE__ */ _jsx3(motion.h1, {
                   style: {
                     '--font-selector': 'R0Y7SW50ZXItNzAw',
                     '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
@@ -343,14 +832,14 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
               verticalAlignment: 'top',
               withExternalLayout: true,
             },),
-            /* @__PURE__ */ _jsx2(RichText, {
+            /* @__PURE__ */ _jsx3(RichText, {
               __fromCanvasComponent: true,
-              children: /* @__PURE__ */ _jsx2(React.Fragment, {
-                children: /* @__PURE__ */ _jsx2(motion.h2, {
+              children: /* @__PURE__ */ _jsx3(React3.Fragment, {
+                children: /* @__PURE__ */ _jsx3(motion.h2, {
                   style: {
                     '--font-selector': 'R0Y7SW50ZXItNTAw',
                     '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
-                    '--framer-font-size': '24px',
+                    '--framer-font-size': '21px',
                     '--framer-font-weight': '500',
                     '--framer-letter-spacing': '-0.5px',
                     '--framer-line-height': '1.5em',
@@ -370,8 +859,24 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
               ...addPropertyOverrides(
                 {
                   Ca3pCwa1m: {
-                    children: /* @__PURE__ */ _jsx2(React.Fragment, {
-                      children: /* @__PURE__ */ _jsx2(motion.h2, {
+                    children: /* @__PURE__ */ _jsx3(React3.Fragment, {
+                      children: /* @__PURE__ */ _jsx3(motion.h2, {
+                        style: {
+                          '--font-selector': 'R0Y7SW50ZXItNTAw',
+                          '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
+                          '--framer-font-weight': '500',
+                          '--framer-letter-spacing': '-0.5px',
+                          '--framer-line-height': '1.5em',
+                          '--framer-text-alignment': 'center',
+                          '--framer-text-color': 'var(--extracted-1of0zx5, rgb(136, 136, 136))',
+                        },
+                        children: 'Be two steps ahead\u2014predict how game journalists will rate future anticipated games',
+                      },),
+                    },),
+                  },
+                  FPp4EquH4: {
+                    children: /* @__PURE__ */ _jsx3(React3.Fragment, {
+                      children: /* @__PURE__ */ _jsx3(motion.h2, {
                         style: {
                           '--font-selector': 'R0Y7SW50ZXItNTAw',
                           '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
@@ -391,11 +896,11 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                 gestureVariant,
               ),
             },),
-            /* @__PURE__ */ _jsx2(motion.div, {
+            /* @__PURE__ */ _jsx3(motion.div, {
               className: 'framer-z5iyz9',
               layoutDependency,
               layoutId: 'hzaMY6kMk',
-              children: /* @__PURE__ */ _jsx2(motion.div, {
+              children: /* @__PURE__ */ _jsx3(motion.div, {
                 className: 'framer-1pgfsv7',
                 'data-framer-name': 'Button',
                 layoutDependency,
@@ -409,10 +914,10 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                   boxShadow:
                     '0px 0.7065919983928324px 0.7065919983928324px -0.625px rgba(0, 0, 0, 0.14764), 0px 1.8065619053231785px 1.8065619053231785px -1.25px rgba(0, 0, 0, 0.14398), 0px 3.6217592146567767px 3.6217592146567767px -1.875px rgba(0, 0, 0, 0.13793), 0px 6.8655999097303715px 6.8655999097303715px -2.5px rgba(0, 0, 0, 0.12711), 0px 13.646761411524492px 13.646761411524492px -3.125px rgba(0, 0, 0, 0.10451), 0px 30px 30px -3.75px rgba(0, 0, 0, 0.05)',
                 },
-                children: /* @__PURE__ */ _jsx2(RichText, {
+                children: /* @__PURE__ */ _jsx3(RichText, {
                   __fromCanvasComponent: true,
-                  children: /* @__PURE__ */ _jsx2(React.Fragment, {
-                    children: /* @__PURE__ */ _jsx2(motion.p, {
+                  children: /* @__PURE__ */ _jsx3(React3.Fragment, {
+                    children: /* @__PURE__ */ _jsx3(motion.p, {
                       style: {
                         '--font-selector': 'R0Y7SW50ZXItNzAw',
                         '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
@@ -447,47 +952,54 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
 },);
 var css = [
   '@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }',
-  '.framer-X2kpq.framer-1i9vt0l, .framer-X2kpq .framer-1i9vt0l { display: block; }',
-  '.framer-X2kpq.framer-9afcqs { align-content: center; align-items: center; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 20px; height: 600px; justify-content: center; overflow: hidden; padding: 40px; position: relative; width: 1200px; }',
-  '.framer-X2kpq .framer-l01x53-container { flex: none; height: auto; left: 32px; position: absolute; top: 34px; width: auto; z-index: 1; }',
-  '.framer-X2kpq .framer-eyx347 { flex: none; height: auto; max-width: 100%; position: relative; white-space: pre-wrap; width: auto; word-break: break-word; word-wrap: break-word; }',
-  '.framer-X2kpq .framer-b5rsry { flex: none; height: auto; max-width: 100%; overflow: visible; position: relative; white-space: pre-wrap; width: 390px; word-break: break-word; word-wrap: break-word; }',
-  '.framer-X2kpq .framer-z5iyz9 { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 15px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: min-content; }',
-  '.framer-X2kpq .framer-1pgfsv7 { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: 40px; justify-content: center; overflow: visible; padding: 15px; position: relative; width: min-content; }',
-  '.framer-X2kpq .framer-1xmhrq0 { flex: none; height: auto; position: relative; white-space: pre; width: auto; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-X2kpq.framer-9afcqs, .framer-X2kpq .framer-z5iyz9, .framer-X2kpq .framer-1pgfsv7 { gap: 0px; } .framer-X2kpq.framer-9afcqs > * { margin: 0px; margin-bottom: calc(20px / 2); margin-top: calc(20px / 2); } .framer-X2kpq.framer-9afcqs > :first-child { margin-top: 0px; } .framer-X2kpq.framer-9afcqs > :last-child { margin-bottom: 0px; } .framer-X2kpq .framer-z5iyz9 > * { margin: 0px; margin-left: calc(15px / 2); margin-right: calc(15px / 2); } .framer-X2kpq .framer-z5iyz9 > :first-child, .framer-X2kpq .framer-1pgfsv7 > :first-child { margin-left: 0px; } .framer-X2kpq .framer-z5iyz9 > :last-child, .framer-X2kpq .framer-1pgfsv7 > :last-child { margin-right: 0px; } .framer-X2kpq .framer-1pgfsv7 > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } }',
-  '.framer-X2kpq.framer-v-muo7b.framer-9afcqs { padding: 60px; width: 390px; }',
-  '.framer-X2kpq.framer-v-muo7b .framer-l01x53-container { left: 310px; top: 30px; }',
-  '.framer-X2kpq.framer-v-1n0dnja.framer-9afcqs { width: 810px; }',
+  '.framer-NdVaX.framer-1i9vt0l, .framer-NdVaX .framer-1i9vt0l { display: block; }',
+  '.framer-NdVaX.framer-9afcqs { align-content: center; align-items: center; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 7px; height: 600px; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 1200px; }',
+  '.framer-NdVaX .framer-pbn8s2-container { bottom: -80px; flex: none; left: 0px; position: absolute; right: -1px; top: 0px; z-index: 0; }',
+  '.framer-NdVaX .framer-l01x53-container { flex: none; height: auto; left: 32px; position: absolute; top: 34px; width: auto; z-index: 1; }',
+  '.framer-NdVaX .framer-eyx347 { flex: none; height: auto; max-width: 100%; position: relative; white-space: pre-wrap; width: auto; word-break: break-word; word-wrap: break-word; }',
+  '.framer-NdVaX .framer-b5rsry { flex: none; height: auto; max-width: 100%; overflow: visible; position: relative; white-space: pre-wrap; width: 390px; word-break: break-word; word-wrap: break-word; }',
+  '.framer-NdVaX .framer-z5iyz9 { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 15px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: min-content; }',
+  '.framer-NdVaX .framer-1pgfsv7 { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: 40px; justify-content: center; overflow: visible; padding: 15px; position: relative; width: min-content; }',
+  '.framer-NdVaX .framer-1xmhrq0 { flex: none; height: auto; position: relative; white-space: pre; width: auto; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-NdVaX.framer-9afcqs, .framer-NdVaX .framer-z5iyz9, .framer-NdVaX .framer-1pgfsv7 { gap: 0px; } .framer-NdVaX.framer-9afcqs > * { margin: 0px; margin-bottom: calc(7px / 2); margin-top: calc(7px / 2); } .framer-NdVaX.framer-9afcqs > :first-child { margin-top: 0px; } .framer-NdVaX.framer-9afcqs > :last-child { margin-bottom: 0px; } .framer-NdVaX .framer-z5iyz9 > * { margin: 0px; margin-left: calc(15px / 2); margin-right: calc(15px / 2); } .framer-NdVaX .framer-z5iyz9 > :first-child, .framer-NdVaX .framer-1pgfsv7 > :first-child { margin-left: 0px; } .framer-NdVaX .framer-z5iyz9 > :last-child, .framer-NdVaX .framer-1pgfsv7 > :last-child { margin-right: 0px; } .framer-NdVaX .framer-1pgfsv7 > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } }',
+  '.framer-NdVaX.framer-v-muo7b.framer-9afcqs { gap: 14px; width: 390px; }',
+  '.framer-NdVaX.framer-v-muo7b .framer-l01x53-container { left: unset; right: 9px; top: 30px; }',
+  '.framer-NdVaX.framer-v-muo7b .framer-b5rsry { width: 262px; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-NdVaX.framer-v-muo7b.framer-9afcqs { gap: 0px; } .framer-NdVaX.framer-v-muo7b.framer-9afcqs > * { margin: 0px; margin-bottom: calc(14px / 2); margin-top: calc(14px / 2); } .framer-NdVaX.framer-v-muo7b.framer-9afcqs > :first-child { margin-top: 0px; } .framer-NdVaX.framer-v-muo7b.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
+  '.framer-NdVaX.framer-v-1n0dnja.framer-9afcqs { width: 810px; }',
 ];
-var FramerV5lESJQt3 = withCSS(Component, css, 'framer-X2kpq',);
+var FramerV5lESJQt3 = withCSS(Component, css, 'framer-NdVaX',);
 var stdin_default = FramerV5lESJQt3;
 FramerV5lESJQt3.displayName = 'hero';
 FramerV5lESJQt3.defaultProps = { height: 600, width: 1200, };
-addPropertyControls2(FramerV5lESJQt3, {
+addPropertyControls3(FramerV5lESJQt3, {
   variant: {
     options: ['YFmbfKAkc', 'Ca3pCwa1m', 'FPp4EquH4',],
     optionTitles: ['Desktop', 'Phone', 'Tablet',],
     title: 'Variant',
-    type: ControlType2.Enum,
+    type: ControlType6.Enum,
   },
 },);
-addFonts(FramerV5lESJQt3, [{
-  explicitInter: true,
-  fonts: [{
-    family: 'Inter',
-    source: 'google',
-    style: 'normal',
-    url: 'https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZ1rib2Bg-4.woff2',
-    weight: '700',
-  }, {
-    family: 'Inter',
-    source: 'google',
-    style: 'normal',
-    url: 'https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZ1rib2Bg-4.woff2',
-    weight: '500',
-  },],
-}, ...TimeDateFonts,], { supportsExplicitInterCodegen: true, },);
+addFonts(FramerV5lESJQt3, [
+  {
+    explicitInter: true,
+    fonts: [{
+      family: 'Inter',
+      source: 'google',
+      style: 'normal',
+      url: 'https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZ1rib2Bg-4.woff2',
+      weight: '700',
+    }, {
+      family: 'Inter',
+      source: 'google',
+      style: 'normal',
+      url: 'https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZ1rib2Bg-4.woff2',
+      weight: '500',
+    },],
+  },
+  ...EmbedFonts,
+  ...TimeDateFonts,
+], { supportsExplicitInterCodegen: true, },);
 
 // virtual:hero
 import { WithFramerBreakpoints, } from 'unframer';

@@ -69,8 +69,8 @@
       ],
       "format": "esm"
     },
-    "https :https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/ZSCia5SlclJ3ZPLT2vA4/j6oGRcNtb.js": {
-      "bytes": 24934,
+    "https :https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/PJZyonVhR1oo3UKO031e/j6oGRcNtb.js": {
+      "bytes": 22999,
       "imports": [
         {
           "path": "react/jsx-runtime",
@@ -114,9 +114,9 @@
       "bytes": 536,
       "imports": [
         {
-          "path": "https :https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/ZSCia5SlclJ3ZPLT2vA4/j6oGRcNtb.js",
+          "path": "https :https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/PJZyonVhR1oo3UKO031e/j6oGRcNtb.js",
           "kind": "import-statement",
-          "original": "https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/ZSCia5SlclJ3ZPLT2vA4/j6oGRcNtb.js"
+          "original": "https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/PJZyonVhR1oo3UKO031e/j6oGRcNtb.js"
         },
         {
           "path": "unframer",
@@ -182,8 +182,601 @@
       ],
       "format": "esm"
     },
-    "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/jYyJiOB7wVnV7ezgW7Tq/V5lESJQt3.js": {
-      "bytes": 12589,
+    "https :https://framerusercontent.com/modules/VTUDdizacRHpwbkOamr7/AykinQJbgwl92LvMGZwu/constants.js": {
+      "bytes": 7061,
+      "imports": [
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/D4TWeLfcxT6Tysr2BlYg/iZjmqdxVx1EOiM3k1FaW/useOnNavigationTargetChange.js": {
+      "bytes": 799,
+      "imports": [
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/ExNgrA7EJTKUPpH6vIlN/eiOrSJ2Ab5M9jPCvVwUz/useConstant.js": {
+      "bytes": 355,
+      "imports": [
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/D2Lz5CmnNVPZFFiZXalt/QaCzPbriZBfXWZIIycFI/colorFromToken.js": {
+      "bytes": 570,
+      "imports": [
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/3mKFSGQqKHV82uOV1eBc/5fbRLvOpxZC0JOXugvwm/isMotionValue.js": {
+      "bytes": 279,
+      "imports": [
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/xDiQsqBGXzmMsv7AlEVy/uhunpMiNsbXxzjlXsg1y/useUniqueClassName.js": {
+      "bytes": 877,
+      "imports": [
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/ETACN5BJyFTSo0VVDJfu/NHRqowOiXkF9UwOzczF7/variantUtils.js": {
+      "bytes": 1491,
+      "imports": [
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/eMBrwoqQK7h6mEeGQUH8/GuplvPJVjmxpk9zqOTcb/isBrowser.js": {
+      "bytes": 766,
+      "imports": [
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/v9AWX2URmiYsHf7GbctE/XxKAZ9KlhWqf5x1JMyyF/useOnChange.js": {
+      "bytes": 989,
+      "imports": [
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/3mKFSGQqKHV82uOV1eBc/5fbRLvOpxZC0JOXugvwm/isMotionValue.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/3mKFSGQqKHV82uOV1eBc/5fbRLvOpxZC0JOXugvwm/isMotionValue.js"
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/4zHZnO5JojN1PrIbu2jm/revv9QCWpkh8lPzi2jje/time.js": {
+      "bytes": 672,
+      "imports": [
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/kNDwabfjDEb3vUxkQlZS/fSIr3AOAYbGlfSPgXpYu/useAutoMotionValue.js": {
+      "bytes": 2090,
+      "imports": [
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/3mKFSGQqKHV82uOV1eBc/5fbRLvOpxZC0JOXugvwm/isMotionValue.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/3mKFSGQqKHV82uOV1eBc/5fbRLvOpxZC0JOXugvwm/isMotionValue.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/ExNgrA7EJTKUPpH6vIlN/eiOrSJ2Ab5M9jPCvVwUz/useConstant.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/ExNgrA7EJTKUPpH6vIlN/eiOrSJ2Ab5M9jPCvVwUz/useConstant.js"
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/cuQH4dmpDnV8YK1mSgQX/KqRXqunFjE6ufhpc7ZRu/useFontControls.js": {
+      "bytes": 1301,
+      "imports": [
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/VTUDdizacRHpwbkOamr7/AykinQJbgwl92LvMGZwu/constants.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/VTUDdizacRHpwbkOamr7/AykinQJbgwl92LvMGZwu/constants.js"
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/afBE9Yx1W6bY5q32qPxe/m3q7puE2tbo1S2C0s0CT/useRenderTarget.js": {
+      "bytes": 920,
+      "imports": [
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/zGkoP8tPDCkoBzMdt5uq/0zFSjxIYliHxrQQnryFX/useControlledState.js": {
+      "bytes": 448,
+      "imports": [
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/5SM58HxZHxjjv7aLMOgQ/WXz9i6mVki0bBCrKdqB3/propUtils.js": {
+      "bytes": 2497,
+      "imports": [
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/8CkHAZatUz1UR8jNTcfD/HwbnIAZlUmQ2oTpcLkaH/detectAutoSizingAxis.js": {
+      "bytes": 464,
+      "imports": [
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framer.com/m/framer/default-utils.js": {
+      "bytes": 5937,
+      "imports": [
+        {
+          "path": "https :https://framerusercontent.com/modules/VTUDdizacRHpwbkOamr7/AykinQJbgwl92LvMGZwu/constants.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/VTUDdizacRHpwbkOamr7/AykinQJbgwl92LvMGZwu/constants.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/D4TWeLfcxT6Tysr2BlYg/iZjmqdxVx1EOiM3k1FaW/useOnNavigationTargetChange.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/D4TWeLfcxT6Tysr2BlYg/iZjmqdxVx1EOiM3k1FaW/useOnNavigationTargetChange.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/ExNgrA7EJTKUPpH6vIlN/eiOrSJ2Ab5M9jPCvVwUz/useConstant.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/ExNgrA7EJTKUPpH6vIlN/eiOrSJ2Ab5M9jPCvVwUz/useConstant.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/D2Lz5CmnNVPZFFiZXalt/QaCzPbriZBfXWZIIycFI/colorFromToken.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/D2Lz5CmnNVPZFFiZXalt/QaCzPbriZBfXWZIIycFI/colorFromToken.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/3mKFSGQqKHV82uOV1eBc/5fbRLvOpxZC0JOXugvwm/isMotionValue.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/3mKFSGQqKHV82uOV1eBc/5fbRLvOpxZC0JOXugvwm/isMotionValue.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/xDiQsqBGXzmMsv7AlEVy/uhunpMiNsbXxzjlXsg1y/useUniqueClassName.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/xDiQsqBGXzmMsv7AlEVy/uhunpMiNsbXxzjlXsg1y/useUniqueClassName.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/ETACN5BJyFTSo0VVDJfu/NHRqowOiXkF9UwOzczF7/variantUtils.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/ETACN5BJyFTSo0VVDJfu/NHRqowOiXkF9UwOzczF7/variantUtils.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/eMBrwoqQK7h6mEeGQUH8/GuplvPJVjmxpk9zqOTcb/isBrowser.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/eMBrwoqQK7h6mEeGQUH8/GuplvPJVjmxpk9zqOTcb/isBrowser.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/v9AWX2URmiYsHf7GbctE/XxKAZ9KlhWqf5x1JMyyF/useOnChange.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/v9AWX2URmiYsHf7GbctE/XxKAZ9KlhWqf5x1JMyyF/useOnChange.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/4zHZnO5JojN1PrIbu2jm/revv9QCWpkh8lPzi2jje/time.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/4zHZnO5JojN1PrIbu2jm/revv9QCWpkh8lPzi2jje/time.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/kNDwabfjDEb3vUxkQlZS/fSIr3AOAYbGlfSPgXpYu/useAutoMotionValue.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/kNDwabfjDEb3vUxkQlZS/fSIr3AOAYbGlfSPgXpYu/useAutoMotionValue.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/cuQH4dmpDnV8YK1mSgQX/KqRXqunFjE6ufhpc7ZRu/useFontControls.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/cuQH4dmpDnV8YK1mSgQX/KqRXqunFjE6ufhpc7ZRu/useFontControls.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/afBE9Yx1W6bY5q32qPxe/m3q7puE2tbo1S2C0s0CT/useRenderTarget.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/afBE9Yx1W6bY5q32qPxe/m3q7puE2tbo1S2C0s0CT/useRenderTarget.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/zGkoP8tPDCkoBzMdt5uq/0zFSjxIYliHxrQQnryFX/useControlledState.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/zGkoP8tPDCkoBzMdt5uq/0zFSjxIYliHxrQQnryFX/useControlledState.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/5SM58HxZHxjjv7aLMOgQ/WXz9i6mVki0bBCrKdqB3/propUtils.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/5SM58HxZHxjjv7aLMOgQ/WXz9i6mVki0bBCrKdqB3/propUtils.js"
+        },
+        {
+          "path": "https :https://framerusercontent.com/modules/8CkHAZatUz1UR8jNTcfD/HwbnIAZlUmQ2oTpcLkaH/detectAutoSizingAxis.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/8CkHAZatUz1UR8jNTcfD/HwbnIAZlUmQ2oTpcLkaH/detectAutoSizingAxis.js"
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/o1PI5S8YtkA5bP5g4dFz/Xr8CO3Ul8Gb7lVfgMKTh/Embed.js": {
+      "bytes": 9403,
+      "imports": [
+        {
+          "path": "react/jsx-runtime",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "https :https://framer.com/m/framer/default-utils.js",
+          "kind": "import-statement",
+          "original": "https://framer.com/m/framer/default-utils.js"
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/f47T072lnuOYinaubXjQ/V5lESJQt3.js": {
+      "bytes": 14508,
       "imports": [
         {
           "path": "react/jsx-runtime",
@@ -211,6 +804,11 @@
           "original": "https://framerusercontent.com/modules/HYcHVPAbe8jLEeU7c4mp/TcQV6SEsl3y6G9Op8tp0/Time.js"
         },
         {
+          "path": "https :https://framerusercontent.com/modules/o1PI5S8YtkA5bP5g4dFz/Xr8CO3Ul8Gb7lVfgMKTh/Embed.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/o1PI5S8YtkA5bP5g4dFz/Xr8CO3Ul8Gb7lVfgMKTh/Embed.js"
+        },
+        {
           "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\frontend\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
           "kind": "import-statement",
           "external": true
@@ -232,9 +830,9 @@
       "bytes": 536,
       "imports": [
         {
-          "path": "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/jYyJiOB7wVnV7ezgW7Tq/V5lESJQt3.js",
+          "path": "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/f47T072lnuOYinaubXjQ/V5lESJQt3.js",
           "kind": "import-statement",
-          "original": "https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/jYyJiOB7wVnV7ezgW7Tq/V5lESJQt3.js"
+          "original": "https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/f47T072lnuOYinaubXjQ/V5lESJQt3.js"
         },
         {
           "path": "unframer",
@@ -304,14 +902,14 @@
       ],
       "entryPoint": "virtual:navigation",
       "inputs": {
-        "https :https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/ZSCia5SlclJ3ZPLT2vA4/j6oGRcNtb.js": {
-          "bytesInOutput": 24131
+        "https :https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/PJZyonVhR1oo3UKO031e/j6oGRcNtb.js": {
+          "bytesInOutput": 22196
         },
         "virtual:navigation": {
           "bytesInOutput": 267
         }
       },
-      "bytes": 24583
+      "bytes": 22648
     },
     "hero.js": {
       "imports": [
@@ -351,6 +949,116 @@
           "external": true
         },
         {
+          "path": "react/jsx-runtime",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
           "path": "unframer",
           "kind": "import-statement",
           "external": true
@@ -366,17 +1074,62 @@
       ],
       "entryPoint": "virtual:hero",
       "inputs": {
-        "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/jYyJiOB7wVnV7ezgW7Tq/V5lESJQt3.js": {
-          "bytesInOutput": 11752
+        "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/f47T072lnuOYinaubXjQ/V5lESJQt3.js": {
+          "bytesInOutput": 13576
         },
         "https :https://framerusercontent.com/modules/HYcHVPAbe8jLEeU7c4mp/TcQV6SEsl3y6G9Op8tp0/Time.js": {
           "bytesInOutput": 4902
+        },
+        "https :https://framerusercontent.com/modules/o1PI5S8YtkA5bP5g4dFz/Xr8CO3Ul8Gb7lVfgMKTh/Embed.js": {
+          "bytesInOutput": 8953
+        },
+        "https :https://framerusercontent.com/modules/VTUDdizacRHpwbkOamr7/AykinQJbgwl92LvMGZwu/constants.js": {
+          "bytesInOutput": 1425
+        },
+        "https :https://framerusercontent.com/modules/D4TWeLfcxT6Tysr2BlYg/iZjmqdxVx1EOiM3k1FaW/useOnNavigationTargetChange.js": {
+          "bytesInOutput": 108
+        },
+        "https :https://framerusercontent.com/modules/ExNgrA7EJTKUPpH6vIlN/eiOrSJ2Ab5M9jPCvVwUz/useConstant.js": {
+          "bytesInOutput": 32
+        },
+        "https :https://framerusercontent.com/modules/D2Lz5CmnNVPZFFiZXalt/QaCzPbriZBfXWZIIycFI/colorFromToken.js": {
+          "bytesInOutput": 34
+        },
+        "https :https://framerusercontent.com/modules/3mKFSGQqKHV82uOV1eBc/5fbRLvOpxZC0JOXugvwm/isMotionValue.js": {
+          "bytesInOutput": 40
+        },
+        "https :https://framerusercontent.com/modules/xDiQsqBGXzmMsv7AlEVy/uhunpMiNsbXxzjlXsg1y/useUniqueClassName.js": {
+          "bytesInOutput": 32
+        },
+        "https :https://framerusercontent.com/modules/ETACN5BJyFTSo0VVDJfu/NHRqowOiXkF9UwOzczF7/variantUtils.js": {
+          "bytesInOutput": 56
+        },
+        "https :https://framerusercontent.com/modules/eMBrwoqQK7h6mEeGQUH8/GuplvPJVjmxpk9zqOTcb/isBrowser.js": {
+          "bytesInOutput": 33
+        },
+        "https :https://framerusercontent.com/modules/v9AWX2URmiYsHf7GbctE/XxKAZ9KlhWqf5x1JMyyF/useOnChange.js": {
+          "bytesInOutput": 49
+        },
+        "https :https://framerusercontent.com/modules/kNDwabfjDEb3vUxkQlZS/fSIr3AOAYbGlfSPgXpYu/useAutoMotionValue.js": {
+          "bytesInOutput": 177
+        },
+        "https :https://framerusercontent.com/modules/cuQH4dmpDnV8YK1mSgQX/KqRXqunFjE6ufhpc7ZRu/useFontControls.js": {
+          "bytesInOutput": 87
+        },
+        "https :https://framerusercontent.com/modules/afBE9Yx1W6bY5q32qPxe/m3q7puE2tbo1S2C0s0CT/useRenderTarget.js": {
+          "bytesInOutput": 252
+        },
+        "https :https://framerusercontent.com/modules/zGkoP8tPDCkoBzMdt5uq/0zFSjxIYliHxrQQnryFX/useControlledState.js": {
+          "bytesInOutput": 33
+        },
+        "https :https://framerusercontent.com/modules/5SM58HxZHxjjv7aLMOgQ/WXz9i6mVki0bBCrKdqB3/propUtils.js": {
+          "bytesInOutput": 917
         },
         "virtual:hero": {
           "bytesInOutput": 261
         }
       },
-      "bytes": 17291
+      "bytes": 33072
     }
   }
 }
