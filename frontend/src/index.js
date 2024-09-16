@@ -1,14 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-// import './index.css';  // Optional, if you have styles
-import App from './app';  // Ensure App.js exists
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom/client'; // Note the change here
+import App from './app';
 
-ReactDOM.render(
+// Create a root element using createRoot
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
-
-reportWebVitals();

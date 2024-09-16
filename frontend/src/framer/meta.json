@@ -1,0 +1,199 @@
+{
+  "inputs": {
+    "../../../node_modules/esbuild-plugin-polyfill-node/polyfills/__dirname.js": {
+      "bytes": 30,
+      "imports": [],
+      "format": "esm"
+    },
+    "../../../node_modules/@jspm/core/nodelibs/browser/process.js": {
+      "bytes": 7074,
+      "imports": [
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "../../../node_modules/esbuild-plugin-polyfill-node/polyfills/process.js": {
+      "bytes": 36,
+      "imports": [
+        {
+          "path": "../../../node_modules/@jspm/core/nodelibs/browser/process.js",
+          "kind": "import-statement",
+          "original": "process"
+        }
+      ],
+      "format": "esm"
+    },
+    "../../../node_modules/@jspm/core/nodelibs/browser/buffer.js": {
+      "bytes": 68034,
+      "imports": [
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "../../../node_modules/esbuild-plugin-polyfill-node/polyfills/buffer.js": {
+      "bytes": 33,
+      "imports": [
+        {
+          "path": "../../../node_modules/@jspm/core/nodelibs/browser/buffer.js",
+          "kind": "import-statement",
+          "original": "buffer"
+        }
+      ],
+      "format": "esm"
+    },
+    "https :https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/c5mt84xmKZHFbzFjnWt9/j6oGRcNtb.js": {
+      "bytes": 24934,
+      "imports": [
+        {
+          "path": "react/jsx-runtime",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    },
+    "virtual:navigation": {
+      "bytes": 536,
+      "imports": [
+        {
+          "path": "https :https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/c5mt84xmKZHFbzFjnWt9/j6oGRcNtb.js",
+          "kind": "import-statement",
+          "original": "https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/c5mt84xmKZHFbzFjnWt9/j6oGRcNtb.js"
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\__dirname.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\buffer.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "C:\\Users\\bread\\Documents\\guess-the-rating\\node_modules\\esbuild-plugin-polyfill-node\\polyfills\\process.js",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react/jsx-runtime",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    "navigation.js": {
+      "imports": [
+        {
+          "path": "react/jsx-runtime",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "unframer",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "react/jsx-runtime",
+          "kind": "import-statement",
+          "external": true
+        }
+      ],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "virtual:navigation",
+      "inputs": {
+        "https :https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/c5mt84xmKZHFbzFjnWt9/j6oGRcNtb.js": {
+          "bytesInOutput": 24131
+        },
+        "virtual:navigation": {
+          "bytesInOutput": 267
+        }
+      },
+      "bytes": 24583
+    }
+  }
+}
