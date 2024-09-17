@@ -293,7 +293,6 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                         '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
                         cursor: 'pointer',
                       },
-                      onClick: () => navigate('/'),
                       children: 'Live Rating',
                     },),
                   },),
