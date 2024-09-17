@@ -18,7 +18,6 @@ docker run --name postgres-rating -e POSTGRES_PASSWORD=123 -p 5050:5432 -d postg
 
 psql -h localhost -p 5050 -U postgres -W
 
-
 #amplify
 
 amplify init
@@ -38,6 +37,26 @@ docker-compose up --build
 
 #node
 
-nvm install 16.13.0
+nvm -v
 
-nvm use 16.13.0
+>  v18.20.4
+
+#unframer
+https://github.com/remorses/unframer
+
+npx unframer
+
+> import { useNavigate } from'react-router-dom';
+>
+>   constnavigate = useNavigate();
+>
+>   constonClickFutureGames = () => {
+>
+>     navigate('/');
+>
+>   };
+>
+>
+> onClick: () =>navigate('/user'),
+>
+> children:props.userName||'User',

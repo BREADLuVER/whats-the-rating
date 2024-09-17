@@ -12,7 +12,11 @@ Amplify.configure(config);
 // Import the Framer Navigation component
 import Navigation from './framer/navigation';
 import Hero from './framer/hero';
+import UserSurvey from './framer/userSurvey';
+
+//Import pages
 import UserPage from './pages/UserPage';
+import UserForm from './pages/UserForm';
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -60,6 +64,7 @@ function App({ signOut, user }) {
         />
         
         <Routes>
+          {/* Main page route */}
           <Route 
             path="/" 
             element={
@@ -69,11 +74,17 @@ function App({ signOut, user }) {
                   style={{ width: '100%' }}
                   variant={variant}
                 />
+                {/* Add UserSurvey under the Hero */}
+                <UserSurvey 
+                  className='!w-full'
+                  style={{ width: '100%' }}
+                  variant={variant}
+                />
               </>
             } 
           />
-          
           <Route path="/user" element={<UserPage />} />
+          <Route path="/userForm" element={<UserForm />} />
         </Routes>
       </div>
     </Router>
