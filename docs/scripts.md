@@ -39,7 +39,7 @@ docker-compose up --build
 
 nvm -v
 
->  v18.20.4
+> v18.20.4
 
 #unframer
 https://github.com/remorses/unframer
@@ -48,15 +48,24 @@ npx unframer
 
 > import { useNavigate } from'react-router-dom';
 >
->   constnavigate = useNavigate();
+> constnavigate = useNavigate();
 >
->   constonClickFutureGames = () => {
+> constonClickFutureGames = () => {
 >
->     navigate('/');
+> navigate('/');
 >
->   };
->
+> };
 >
 > onClick: () =>navigate('/user'),
 >
 > children:props.userName||'User',
+
+
+
+#Scraper django
+python manage.py makemigrations
+python manage.py migrate
+python manage.py scrape_games
+python manage.py createsuperuser
+python manage.py runserver
+http://127.0.0.1:8000/admin/
