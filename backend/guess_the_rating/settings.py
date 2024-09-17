@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',    # Social login support
     'allauth.socialaccount.providers.google',  # Google login
     'corsheaders',              # Handle CORS for frontend
+    'game_prediction',
 ]
 
 # Site ID (required by Allauth)

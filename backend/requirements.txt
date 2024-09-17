@@ -15,3 +15,4 @@ google-auth
 dj-rest-auth
 requests
 jwt
+beautifulsoup4
