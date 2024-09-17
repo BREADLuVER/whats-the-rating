@@ -3,7 +3,8 @@
     "outDir": "./framer",
     "components": {
       "navigation": "https://framer.com/m/Navigation-FJsM.js",
-      "hero": "https://framer.com/m/hero-DlCg.js" 
+      "hero": "https://framer.com/m/hero-DlCg.js",
+      "userSurvey": "https://framer.com/m/userSurvey-Lbww.js" 
     }
   }
   
