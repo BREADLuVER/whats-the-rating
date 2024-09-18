@@ -15,9 +15,36 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
+EXCLUDED_TITLES = [
+    "Meta Quest release calendar",
+    "Nintendo Switch release calendar",
+    "PC release calendar",
+    "Xbox One release calendar",
+    "Xbox Series X/S release calendar",
+    "PS4 release calendar",
+    "PS5 release calendar",
+    "[REDACTED]",
+    "read early hands-on impressions",
+    "Mobile",
+    "Switch",
+    "PC",
+    "Xbox One",
+    "Xbox Series X/S",
+    "PS4",
+    "PS5",
+    "See All",
+    "New Switch Games",
+    "New PC Games",
+    "New Xbox Series X/S Games",
+    "New PS5 Games",
+    "Upcoming Releases",
+    "Best Games of All Time",
+    "Best Games This Year",
+    "Games"
+]
+
 URL = "https://www.metacritic.com/news/major-new-and-upcoming-video-games-ps5-xbox-switch-pc/"
 
-# Setup Selenium with Chrome in headless mode
 def setup_driver():
     chrome_options = Options()
     chrome_options.add_argument("--headless")  # Run in headless mode for performance
@@ -25,10 +52,15 @@ def setup_driver():
     chrome_options.add_argument("--disable-dev-shm-usage")
 
     # Specify the path to the ChromeDriver
-    service = Service("C:\\Users\\bread\\.wdm\\drivers\\chromedriver\\win64\\128.0.6613.137\\chromedriver-win32\\chromedriver.exe")  # Update this path to your chromedriver
+    service = Service("C:\\Users\\bread\\.wdm\\drivers\\chromedriver\\win64\\128.0.6613.137\\chromedriver-win32\\chromedriver.exe")
 
     driver = webdriver.Chrome(service=service, options=chrome_options)
     return driver
+
+# Setup Selenium with Chrome in headless mode
+def is_valid_title(title):
+    """Check if the title is a valid game title."""
+    return title not in EXCLUDED_TITLES
 
 def fetch_game_data():
     try:
@@ -53,7 +85,12 @@ def fetch_game_data():
             game_link = row.find('a', href=True, rel="follow")  # The title link has the rel="follow" attribute
             if game_link:
                 game_name = game_link.text.strip()
-                
+
+                # Validate the game title
+                if not is_valid_title(game_name):
+                    logging.info(f"Excluded non-game title: {game_name}")
+                    continue  # Skip adding invalid titles
+
                 # Find the score associated with the game
                 score_tag = row.find('a', class_='c-shortcodeTvObject')  # The score link has the 'c-shortcodeTvObject' class
                 if score_tag:
@@ -71,7 +108,6 @@ def fetch_game_data():
     except Exception as e:
         logging.error(f"Error fetching game data: {e}")
         return []
-
 
 def save_games_to_db():
     game_data = fetch_game_data()
