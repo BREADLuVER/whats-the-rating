@@ -1,7 +1,7 @@
 # backend/game_prediction/views.py
 
 from rest_framework import generics
-from .models import Game, Prediction, Comment
+from .models import Game, Prediction, Comment, ScrapedGame
 from .serializers import GameSerializer, PredictionSerializer, CommentSerializer
 from rest_framework.permissions import IsAuthenticated
 from google.oauth2 import id_token
@@ -9,7 +9,8 @@ from google.auth.transport import requests
 from django.http import JsonResponse
 from django.contrib.auth.models import User
 from rest_framework.decorators import api_view
-
+from django.db.models import Q
+from .models import ScrapedGame
 
 @api_view(['POST'])
 def google_login(request):
@@ -43,7 +44,26 @@ def google_login(request):
     except ValueError:
         # Invalid token
         return JsonResponse({'error': 'Invalid token'}, status=400)
+
+
+def search_games(request):
+    query = request.GET.get('query', '')  # Get the 'query' parameter from the request
+    if query:
+        # Perform a case-insensitive search in the ScrapedGame model
+        games = ScrapedGame.objects.filter(Q(title__icontains=query))[:5]  # Limit results for performance
+        
+        # Prepare the data to be sent as a response
+        game_list = [
+            {
+                'title': game.title,
+                'score': game.score,
+            }
+            for game in games
+        ]
+        return JsonResponse(game_list, safe=False)
     
+    return JsonResponse({"error": "No query provided."}, status=400)
+
 
 # List all games
 class GameListView(generics.ListAPIView):

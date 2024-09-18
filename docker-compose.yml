@@ -31,9 +31,16 @@ services:
     volumes:
       - ./frontend:/app
       - /app/node_modules
+      - /app/src/framer
     environment:
       - NODE_ENV=development
       - WATCHPACK_POLLING=true
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 1G
     networks:
       - guess-the-rating-network
     ports:
