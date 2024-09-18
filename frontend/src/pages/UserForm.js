@@ -53,15 +53,18 @@ const UserForm = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Game Title:</label>
-          <input
-            type="text"
-            value={title}
-            onChange={handleTitleChange}
-            required
-          />
+          <div className="input-with-button">
+            <input
+              type="text"
+              value={title}
+              onChange={handleTitleChange}
+              required
+            />
+            <button type="submit">Search</button>
+          </div>
           {/* Suggestions dropdown */}
           {suggestions.length > 0 && (
-            <ul className="suggestions">
+            <ul className="suggestions-dropdown">
               {suggestions.map((suggestion, index) => (
                 <li key={index} onClick={() => setTitle(suggestion.title)}>
                   {suggestion.title} ({suggestion.score})
@@ -70,7 +73,6 @@ const UserForm = () => {
             </ul>
           )}
         </div>
-        <button type="submit">Submit</button>
       </form>
     </div>
   );

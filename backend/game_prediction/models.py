@@ -38,8 +38,6 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
-from django.db import models
-
 class ScrapedGame(models.Model):
     title = models.CharField(max_length=255, unique=True, db_index=True)
     score = models.CharField(max_length=10, default='tbd')  # Store the score as a string, either number or 'tbd'

@@ -1,3 +1,4 @@
+/* Keep the existing CSS */
 body, html {
     margin: 0;
     padding: 0;
@@ -27,21 +28,27 @@ form {
     max-width: 400px;
     display: flex;
     flex-direction: column;
+    position: relative; /* Keep for positioning dropdown */
 }
 
 .form-group {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     margin-bottom: 20px;
+    position: relative; /* Keep for positioning dropdown */
 }
 
 label {
     color: white;
     font-size: 1rem;
-    flex: 1;
-    margin-right: 20px;
+    margin-bottom: 5px;
     text-align: left;
+}
+
+/* Flexbox container for input and button */
+.input-with-button {
+    display: flex;
+    align-items: center; /* Vertically center the input and button */
 }
 
 input {
@@ -49,8 +56,8 @@ input {
     background-color: #1A1A1A;
     border: 1px solid white;
     color: white;
-    flex: 2;
     width: 100%;
+    box-sizing: border-box; /* Ensure padding does not affect input width */
 }
 
 input::placeholder {
@@ -63,9 +70,10 @@ button {
     color: #0A0A0A;
     border: none;
     cursor: pointer;
-    text-align: center;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    margin-left: 10px; /* Add some space between the input and button */
+    white-space: nowrap; /* Prevent button from shrinking */
 }
 
 button:hover {
@@ -77,20 +85,27 @@ button:focus, input:focus {
     border-color: #888;
 }
 
-.suggestions {
+/* Suggestions dropdown */
+.suggestions-dropdown {
     list-style: none;
     margin: 0;
     padding: 0;
     border: 1px solid #ccc;
     max-height: 150px;
     overflow-y: auto;
-  }
-  
-  .suggestions li {
+    background-color: rgb(22, 22, 22);
+    width: 100%; /* Match the width of the input field */
+    position: absolute; /* Position it right below the input field */
+    top: calc(100% + 5px); /* Position it right below the input field */
+    z-index: 1000; /* Ensure it appears above other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for aesthetics */
+}
+
+.suggestions-dropdown li {
     padding: 8px;
     cursor: pointer;
-  }
-  
-  .suggestions li:hover {
-    background-color: #f0f0f0;
-  }
+}
+
+.suggestions-dropdown li:hover {
+    background-color: #161515;
+}
