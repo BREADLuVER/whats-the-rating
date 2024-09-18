@@ -16,3 +16,5 @@ dj-rest-auth
 requests
 jwt
 beautifulsoup4
+selenium 
+webdriver-manager
