@@ -6,7 +6,7 @@ from .models import Game, Prediction, Comment
 class GameSerializer(serializers.ModelSerializer):
     class Meta:
         model = Game
-        fields = ['id', 'title', 'release_date', 'journalist_rating', 'description']
+        fields = ['id', 'title']
 
 class PredictionSerializer(serializers.ModelSerializer):
     class Meta:

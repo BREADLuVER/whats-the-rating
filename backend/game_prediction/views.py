@@ -65,6 +65,14 @@ def search_games(request):
     return JsonResponse({"error": "No query provided."}, status=400)
 
 
+@api_view(['POST'])
+def add_game(request):
+    serializer = GameSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return JsonResponse({'status': 'Game added successfully!'})
+    return JsonResponse(serializer.errors, status=400)
+
 # List all games
 class GameListView(generics.ListAPIView):
     queryset = Game.objects.all()

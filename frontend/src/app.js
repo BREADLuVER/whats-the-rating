@@ -1,5 +1,3 @@
-// src/app.js
-
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Amplify } from 'aws-amplify';
@@ -17,6 +15,7 @@ import UserSurvey from './framer/userSurvey';
 //Import pages
 import UserPage from './pages/UserPage';
 import UserForm from './pages/UserForm';
+import axios from 'axios';  // Import axios to handle the API call
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -52,6 +51,25 @@ function App({ signOut, user }) {
     variant = 'Desktop'; // Desktop variant
   }
 
+  // State to hold the list of games
+  const [games, setGames] = useState([]);
+
+  // Fetch games from the backend when the component is mounted
+  const fetchGames = async () => {
+    try {
+      const response = await axios.get('/api/games/');
+      setGames(response.data);  // Store the fetched games in state
+    } catch (error) {
+      console.error('Error fetching games:', error);
+    }
+  };
+
+  // Fetch games on component mount
+  useEffect(() => {
+    fetchGames();
+  }, []);
+
+
   return (
     <Router>
       <div className="nav-container">
@@ -74,12 +92,23 @@ function App({ signOut, user }) {
                   style={{ width: '100%' }}
                   variant={variant}
                 />
-                {/* Add UserSurvey under the Hero */}
                 <UserSurvey 
                   className='!w-full'
                   style={{ width: '100%' }}
                   variant={variant}
                 />
+                
+                {/* Add a section to display games */}
+                <div className="game-matrix">
+                  <h2>Anticipated Future Games</h2>
+                  <div className="game-grid">
+                    {games.map((game) => (
+                      <>
+                        <div className="grid-item">{game.title}</div>
+                      </>
+                    ))}
+                  </div>
+                </div>
               </>
             } 
           />
@@ -92,4 +121,3 @@ function App({ signOut, user }) {
 }
 
 export default withAuthenticator(App);
-

@@ -18,10 +18,11 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from game_prediction.views import google_login, search_games
+from game_prediction.views import google_login, add_game
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('game_prediction.urls')),
     path('api/auth/google/', google_login, name='google-login'),
+    path('api/add-game/', add_game, name='add-game'),
 ]

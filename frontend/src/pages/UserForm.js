@@ -1,3 +1,5 @@
+//guess-the-rating\frontend\src\pages\UserForm.js
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -6,8 +8,6 @@ import './UserForm.css';
 const UserForm = () => {
   const [title, setTitle] = useState('');
   const [suggestions, setSuggestions] = useState([]);
-  const [releaseDate, setReleaseDate] = useState('');
-  const [developer, setDeveloper] = useState('');
   const navigate = useNavigate();
 
   // Function to fetch game suggestions from the backend
@@ -35,16 +35,26 @@ const UserForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    console.log({
-      gameTitle: title,
-      expectedReleaseDate: releaseDate,
-      gameDeveloper: developer,
-    });
-    
-    navigate('/');
+  
+    // Object to be sent to the backend
+    const newGame = {
+      title: title
+    };
+  
+    try {
+      // Send the new game data to the backend
+      await axios.post('/api/add-game/', newGame);
+  
+      // Optionally, clear the form fields after successful submission
+      setTitle('');
+  
+      // Redirect or notify the user of successful submission
+      navigate('/');
+    } catch (error) {
+      console.error('Error adding the game:', error);
+    }
   };
 
   return (
@@ -60,7 +70,7 @@ const UserForm = () => {
               onChange={handleTitleChange}
               required
             />
-            <button type="submit">Search</button>
+            <button type="submit">Submit</button>
           </div>
           {/* Suggestions dropdown */}
           {suggestions.length > 0 && (
