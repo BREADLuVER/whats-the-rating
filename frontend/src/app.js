@@ -69,6 +69,20 @@ function App({ signOut, user }) {
     fetchGames();
   }, []);
 
+  const [searchQuery, setSearchQuery] = useState(''); // Search query state
+  const [filteredGames, setFilteredGames] = useState(games); // Filtered game list
+
+  // Function to handle the search input change
+  const handleSearchChange = (e) => {
+    const query = e.target.value.toLowerCase();
+    setSearchQuery(query);
+
+    // Filter the game list based on the search query
+    const filtered = games.filter((game) =>
+      game.title.toLowerCase().includes(query)
+    );
+    setFilteredGames(filtered);
+  };
 
   return (
     <Router>
@@ -101,6 +115,15 @@ function App({ signOut, user }) {
                 {/* Add a section to display games */}
                 <div className="game-list">
                   <h2>Anticipated Future Games</h2>
+                  {/* Search Bar */}
+                  <div className="search-bar">
+                    <input
+                      type="text"
+                      placeholder="Search for a game..."
+                      value={searchQuery}
+                      onChange={handleSearchChange}
+                    />
+                  </div>
                   <ul>
                     {games.map((game) => (
                       <li key={game.id}>
