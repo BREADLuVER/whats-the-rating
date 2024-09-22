@@ -76,48 +76,49 @@ function App({ signOut, user }) {
         {/* Responsive Navigation Component */}
         <Navigation
           userName={user.username || 'User'}
-          className='!w-full'
+          className="!w-full"
           style={{ width: '100%' }}
           variant={variant}
         />
-        
+  
         <Routes>
           {/* Main page route */}
-          <Route 
-            path="/" 
+          <Route
+            path="/"
             element={
               <>
                 <Hero
-                  className='!w-full'
+                  className="!w-full"
                   style={{ width: '100%' }}
                   variant={variant}
                 />
-                <UserSurvey 
-                  className='!w-full'
+                <UserSurvey
+                  className="!w-full"
                   style={{ width: '100%' }}
                   variant={variant}
                 />
-                
+  
                 {/* Add a section to display games */}
-                <div className="game-matrix">
+                <div className="game-list">
                   <h2>Anticipated Future Games</h2>
-                  <div className="game-grid">
+                  <ul>
                     {games.map((game) => (
-                      <>
-                        <div className="grid-item">{game.title}</div>
-                      </>
+                      <li key={game.id}>
+                        <span className="game-title">{game.title}</span>
+                        <span className="game-rating">{game.averageRating}</span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </>
-            } 
+            }
           />
           <Route path="/user" element={<UserPage />} />
           <Route path="/userForm" element={<UserForm />} />
         </Routes>
       </div>
     </Router>
-  );
+  );  
 }
 
 export default withAuthenticator(App);

@@ -43,70 +43,65 @@ html, body {
   background-color: #fff; /* Ensure consistent background color */
 }
 
-.game-matrix {
+.game-list {
   color: white;
+  padding: 0;
   margin: 0 auto;
-  padding: 0px;
+  width: 100%;
+  max-width: 1200px;
   box-sizing: border-box;
-  max-width: 100%; /* Ensure full width on larger screens */
 }
 
-.game-matrix h2 {
+.game-list h2 {
   text-align: center;
-  margin-bottom: 20px;
   font-size: 2.5em;
+  margin-bottom: 30px;
 }
 
-/* Grid layout for desktop and larger devices */
-.game-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Increase the number of columns */
-  grid-gap: 15px; /* Add space between grid items */
-  background-color: #333;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 1200px; /* Optional: limit width */
-  margin: 0 auto; /* Center grid on the screen */
+.game-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.grid-item {
-  background-color: #222;
-  border: 1px solid #444;
-  padding: 20px;
-  text-align: center; /* Center text horizontally */
+.game-list li {
   display: flex;
-  justify-content: center; /* Center text horizontally */
-  align-items: center; /* Center text vertically */
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #000000;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.3s ease;
+}
+
+.game-list li:hover {
+  background-color: #444; /* Subtle hover effect */
+}
+
+.game-title {
   font-size: 1.2em;
+  font-weight: bold;
 }
 
-.grid-item:hover {
-  background-color: #444; /* Hover effect */
+.game-rating {
+  font-size: 1.2em;
+  color: #ffcc00; /* Golden color for ratings */
 }
 
-/* Responsive layout for phone */
 @media (max-width: 600px) {
-  .game-grid {
-    grid-template-columns: 1fr; /* 1-column layout for phone */
-    padding-left: 10px;
-    padding-right: 10px;
+  .game-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game-title,
+  .game-rating {
+    font-size: 1.1em;
+    margin: 5px 0;
   }
 }
 
-/* Layout for tablet */
 @media (min-width: 601px) and (max-width: 1024px) {
-  .game-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2-column layout for tablet */
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-/* Layout for desktop */
-@media (min-width: 1025px) {
-  .game-grid {
-    grid-template-columns: repeat(4, 1fr); /* 4-column layout for larger screens */
-    padding-left: 50px;
-    padding-right: 50px;
+  .game-list li {
+    padding: 15px 50px; /* Add more padding for tablets */
   }
 }
