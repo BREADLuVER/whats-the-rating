@@ -16,6 +16,7 @@ html, body {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  background-color: #000000;
 }
 
 /* Ensure no margin between navigation and hero */
@@ -45,7 +46,7 @@ html, body {
 .game-matrix {
   color: white;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0px;
   box-sizing: border-box;
   max-width: 100%; /* Ensure full width on larger screens */
 }
@@ -77,6 +78,10 @@ html, body {
   justify-content: center; /* Center text horizontally */
   align-items: center; /* Center text vertically */
   font-size: 1.2em;
+}
+
+.grid-item:hover {
+  background-color: #444; /* Hover effect */
 }
 
 /* Responsive layout for phone */

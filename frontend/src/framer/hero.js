@@ -2,7 +2,7 @@
 /* eslint-disable */
 'use client';
 
-// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/rQ1y4spxr8fO54cxmcB8/V5lESJQt3.js
+// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/qD3oRdDAL5geCTjNFS26/V5lESJQt3.js
 import { jsx as _jsx3, jsxs as _jsxs, } from 'react/jsx-runtime';
 import {
   addFonts,
@@ -680,11 +680,11 @@ function getMinHeight(style,) {
   if (hasAutoHeight) return 200;
 }
 
-// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/rQ1y4spxr8fO54cxmcB8/V5lESJQt3.js
+// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/qD3oRdDAL5geCTjNFS26/V5lESJQt3.js
 var EmbedFonts = getFonts(Embed,);
 var TimeDateFonts = getFonts(Time,);
 var cycleOrder = ['YFmbfKAkc', 'Ca3pCwa1m', 'FPp4EquH4',];
-var serializationHash = 'framer-pZepV';
+var serializationHash = 'framer-y2el9';
 var variantClassNames = { Ca3pCwa1m: 'framer-v-muo7b', FPp4EquH4: 'framer-v-1n0dnja', YFmbfKAkc: 'framer-v-9afcqs', };
 function addPropertyOverrides(overrides, ...variants) {
   const nextOverrides = {};
@@ -870,6 +870,35 @@ var Component = /* @__PURE__ */ React3.forwardRef(function (props, ref,) {
                           '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
                           '--framer-font-size': '13px',
                           '--framer-font-weight': '500',
+                          '--framer-letter-spacing': '0px',
+                          '--framer-line-height': '1.5em',
+                          '--framer-text-alignment': 'center',
+                          '--framer-text-color': 'var(--extracted-1of0zx5, rgb(136, 136, 136))',
+                        },
+                        children: [
+                          /* @__PURE__ */ _jsx3(motion.span, {
+                            style: { '--framer-font-size': '16px', },
+                            children: 'Be two steps ahead \u2014 predict the ratings game journalists will give to upcoming titles. ',
+                          },),
+                          /* @__PURE__ */ _jsx3(motion.span, {
+                            style: { '--framer-font-size': '16px', },
+                            children: /* @__PURE__ */ _jsx3(motion.br, {},),
+                          },),
+                          /* @__PURE__ */ _jsx3(motion.span, {
+                            style: { '--framer-font-size': '16px', },
+                            children: 'Currently only providing data from IGN and PCgamer',
+                          },),
+                        ],
+                      },),
+                    },),
+                  },
+                  FPp4EquH4: {
+                    children: /* @__PURE__ */ _jsx3(React3.Fragment, {
+                      children: /* @__PURE__ */ _jsxs(motion.h2, {
+                        style: {
+                          '--font-selector': 'R0Y7SW50ZXItNTAw',
+                          '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
+                          '--framer-font-weight': '500',
                           '--framer-letter-spacing': '-0.5px',
                           '--framer-line-height': '1.5em',
                           '--framer-text-alignment': 'center',
@@ -896,21 +925,21 @@ var Component = /* @__PURE__ */ React3.forwardRef(function (props, ref,) {
 },);
 var css = [
   '@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }',
-  '.framer-pZepV.framer-1i9vt0l, .framer-pZepV .framer-1i9vt0l { display: block; }',
-  '.framer-pZepV.framer-9afcqs { align-content: center; align-items: center; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 9px; height: 600px; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 1200px; }',
-  '.framer-pZepV .framer-pbn8s2-container { bottom: -80px; flex: none; left: 0px; position: absolute; right: -1px; top: 0px; z-index: 0; }',
-  '.framer-pZepV .framer-l01x53-container { flex: none; height: auto; left: 32px; position: absolute; top: 34px; width: auto; z-index: 1; }',
-  '.framer-pZepV .framer-eyx347 { flex: none; height: auto; max-width: 100%; position: relative; white-space: pre-wrap; width: auto; word-break: break-word; word-wrap: break-word; }',
-  '.framer-pZepV .framer-b5rsry { flex: none; height: auto; max-width: 100%; overflow: visible; position: relative; white-space: pre-wrap; width: 390px; word-break: break-word; word-wrap: break-word; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-pZepV.framer-9afcqs { gap: 0px; } .framer-pZepV.framer-9afcqs > * { margin: 0px; margin-bottom: calc(9px / 2); margin-top: calc(9px / 2); } .framer-pZepV.framer-9afcqs > :first-child { margin-top: 0px; } .framer-pZepV.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
-  '.framer-pZepV.framer-v-muo7b.framer-9afcqs { gap: 14px; width: 390px; }',
-  '.framer-pZepV.framer-v-muo7b .framer-l01x53-container { left: unset; right: 9px; top: 30px; }',
-  '.framer-pZepV.framer-v-muo7b .framer-b5rsry { width: 262px; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-pZepV.framer-v-muo7b.framer-9afcqs { gap: 0px; } .framer-pZepV.framer-v-muo7b.framer-9afcqs > * { margin: 0px; margin-bottom: calc(14px / 2); margin-top: calc(14px / 2); } .framer-pZepV.framer-v-muo7b.framer-9afcqs > :first-child { margin-top: 0px; } .framer-pZepV.framer-v-muo7b.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
-  '.framer-pZepV.framer-v-1n0dnja.framer-9afcqs { gap: 7px; width: 810px; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-pZepV.framer-v-1n0dnja.framer-9afcqs { gap: 0px; } .framer-pZepV.framer-v-1n0dnja.framer-9afcqs > * { margin: 0px; margin-bottom: calc(7px / 2); margin-top: calc(7px / 2); } .framer-pZepV.framer-v-1n0dnja.framer-9afcqs > :first-child { margin-top: 0px; } .framer-pZepV.framer-v-1n0dnja.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
+  '.framer-y2el9.framer-1i9vt0l, .framer-y2el9 .framer-1i9vt0l { display: block; }',
+  '.framer-y2el9.framer-9afcqs { align-content: center; align-items: center; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 9px; height: 600px; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 1200px; }',
+  '.framer-y2el9 .framer-pbn8s2-container { bottom: -80px; flex: none; left: 0px; position: absolute; right: -1px; top: 0px; z-index: 0; }',
+  '.framer-y2el9 .framer-l01x53-container { flex: none; height: auto; left: 32px; position: absolute; top: 34px; width: auto; z-index: 1; }',
+  '.framer-y2el9 .framer-eyx347 { flex: none; height: auto; max-width: 100%; position: relative; white-space: pre-wrap; width: auto; word-break: break-word; word-wrap: break-word; }',
+  '.framer-y2el9 .framer-b5rsry { flex: none; height: auto; max-width: 100%; overflow: visible; position: relative; white-space: pre-wrap; width: 390px; word-break: break-word; word-wrap: break-word; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-y2el9.framer-9afcqs { gap: 0px; } .framer-y2el9.framer-9afcqs > * { margin: 0px; margin-bottom: calc(9px / 2); margin-top: calc(9px / 2); } .framer-y2el9.framer-9afcqs > :first-child { margin-top: 0px; } .framer-y2el9.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
+  '.framer-y2el9.framer-v-muo7b.framer-9afcqs { gap: 14px; width: 390px; }',
+  '.framer-y2el9.framer-v-muo7b .framer-l01x53-container { left: unset; right: 9px; top: 30px; }',
+  '.framer-y2el9.framer-v-muo7b .framer-b5rsry { width: 262px; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-y2el9.framer-v-muo7b.framer-9afcqs { gap: 0px; } .framer-y2el9.framer-v-muo7b.framer-9afcqs > * { margin: 0px; margin-bottom: calc(14px / 2); margin-top: calc(14px / 2); } .framer-y2el9.framer-v-muo7b.framer-9afcqs > :first-child { margin-top: 0px; } .framer-y2el9.framer-v-muo7b.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
+  '.framer-y2el9.framer-v-1n0dnja.framer-9afcqs { gap: 7px; width: 810px; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-y2el9.framer-v-1n0dnja.framer-9afcqs { gap: 0px; } .framer-y2el9.framer-v-1n0dnja.framer-9afcqs > * { margin: 0px; margin-bottom: calc(7px / 2); margin-top: calc(7px / 2); } .framer-y2el9.framer-v-1n0dnja.framer-9afcqs > :first-child { margin-top: 0px; } .framer-y2el9.framer-v-1n0dnja.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
 ];
-var FramerV5lESJQt3 = withCSS(Component, css, 'framer-pZepV',);
+var FramerV5lESJQt3 = withCSS(Component, css, 'framer-y2el9',);
 var stdin_default = FramerV5lESJQt3;
 FramerV5lESJQt3.displayName = 'hero';
 FramerV5lESJQt3.defaultProps = { height: 600, width: 1200, };

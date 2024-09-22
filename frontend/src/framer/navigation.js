@@ -2,7 +2,7 @@
 /* eslint-disable */
 'use client';
 
-// https :https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/ZSCia5SlclJ3ZPLT2vA4/j6oGRcNtb.js
+// https :https://framerusercontent.com/modules/Ujm2cDZJrG6BGf3gPyaf/kQTKGuZNxFGyskIfimM6/j6oGRcNtb.js
 import { jsx as _jsx, jsxs as _jsxs, } from 'react/jsx-runtime';
 import {
   addFonts,
@@ -19,9 +19,8 @@ import {
 } from 'unframer';
 import { LayoutGroup, motion, MotionConfigContext, } from 'unframer';
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom';
 var cycleOrder = ['dNSFe_iUx', 'OlRDtOhw4', 'QdnqlRfg6',];
-var serializationHash = 'framer-xuY01';
+var serializationHash = 'framer-Mc7ZP';
 var variantClassNames = { dNSFe_iUx: 'framer-v-1y5t2b2', OlRDtOhw4: 'framer-v-ljpkez', QdnqlRfg6: 'framer-v-1fm9697', };
 function addPropertyOverrides(overrides, ...variants) {
   const nextOverrides = {};
@@ -87,10 +86,6 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
   const defaultLayoutId = React.useId();
   const sharedStyleClassNames = [];
   const componentViewport = useComponentViewport();
-  const navigate = useNavigate();
-  const onClickFutureGames = () => {
-    navigate('/');
-  };
   return /* @__PURE__ */ _jsx(LayoutGroup, {
     id: layoutId !== null && layoutId !== void 0 ? layoutId : defaultLayoutId,
     children: /* @__PURE__ */ _jsx(Variants, {
@@ -128,7 +123,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
               ),
               children: [
                 /* @__PURE__ */ _jsx(SVG, {
-                  background: { alt: '', positionX: 'center', positionY: 'center', },
+                  background: { alt: '', fit: 'fill', },
                   className: 'framer-6zwpvp',
                   'data-framer-name': 'Logo',
                   description: 'An SVG icon of the Framer Logo.',
@@ -143,16 +138,8 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                   withExternalLayout: true,
                   ...addPropertyOverrides(
                     {
-                      OlRDtOhw4: {
-                        svg:
-                          '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37 31"><g><defs><pattern id="idss10744037584_1g-fillImage" width="100%" height="100%" patternContentUnits="objectBoundingBox"><image width="1" height="1" href="https://framerusercontent.com/images/hpEiNiXZw2BBNLWn9qtJfO690Mc.jpg" preserveAspectRatio="none" transform="translate(0, 0) scale(1, 1)"></image></pattern></defs><path d="M 6 0 L 37 0 L 37 31 L 6 31 Z" fill="url(#idss10744037584_1g-fillImage)"></path></g><path d="" fill="rgba(0,170,255,0.5)" stroke="#0AF"></path><g><defs><pattern id="idss10744037584_3g-fillImage" width="100%" height="100%" patternContentUnits="objectBoundingBox"><image width="1" height="1" href="https://framerusercontent.com/images/hpEiNiXZw2BBNLWn9qtJfO690Mc.jpg" preserveAspectRatio="none" transform="translate(0, 0) scale(1, 1)"></image></pattern></defs><path d="M 6 0 L 37 0 L 37 31 L 6 31 Z" fill="url(#idss10744037584_3g-fillImage)"></path></g></svg>',
-                        svgContentId: 10744037584,
-                      },
-                      QdnqlRfg6: {
-                        svg:
-                          '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37 31"><path d="" fill="rgba(0,170,255,0.5)" stroke="#0AF"></path><g><defs><pattern id="idss10158270715_2g-fillImage" width="100%" height="100%" patternContentUnits="objectBoundingBox"><image width="1" height="1" href="https://framerusercontent.com/images/hpEiNiXZw2BBNLWn9qtJfO690Mc.jpg" preserveAspectRatio="none" transform="translate(0, 0) scale(1, 1)"></image></pattern></defs><path d="M 6 0 L 37 0 L 37 31 L 6 31 Z" fill="url(#idss10158270715_2g-fillImage)"></path></g><g><defs><pattern id="idss10158270715_3g-fillImage" width="100%" height="100%" patternContentUnits="objectBoundingBox"><image width="1" height="1" href="https://framerusercontent.com/images/hpEiNiXZw2BBNLWn9qtJfO690Mc.jpg" preserveAspectRatio="none" transform="translate(0, 0) scale(1, 1)"></image></pattern></defs><path d="M 6 0 L 37 0 L 37 31 L 6 31 Z" fill="url(#idss10158270715_3g-fillImage)"></path></g></svg>',
-                        svgContentId: 10158270715,
-                      },
+                      OlRDtOhw4: { background: { alt: '', positionX: 'center', positionY: 'center', }, },
+                      QdnqlRfg6: { background: { alt: '', positionX: 'center', positionY: 'center', }, },
                     },
                     baseVariant,
                     gestureVariant,
@@ -198,7 +185,6 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                 },),
               ],
             },),
-            
             /* @__PURE__ */ _jsxs(motion.div, {
               className: 'framer-17s6yys',
               'data-framer-name': 'Links',
@@ -220,9 +206,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                         '--framer-line-height': '2em',
                         '--framer-text-alignment': 'center',
                         '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                        cursor: 'pointer',
                       },
-                      onClick: () => navigate('/'),
                       children: 'Future Games',
                     },),
                   },),
@@ -246,9 +230,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               '--framer-line-height': '1.5em',
                               '--framer-text-alignment': 'left',
                               '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                              cursor: 'pointer',
                             },
-                            onClick: onClickFutureGames,
                             children: 'Future Games',
                           },),
                         },),
@@ -265,9 +247,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               '--framer-line-height': '1.5em',
                               '--framer-text-alignment': 'left',
                               '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                              cursor: 'pointer',
                             },
-                            onClick: () => navigate('/'),
                             children: 'Future Games',
                           },),
                         },),
@@ -291,7 +271,6 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                         '--framer-line-height': '2em',
                         '--framer-text-alignment': 'center',
                         '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                        cursor: 'pointer',
                       },
                       children: 'Live Rating',
                     },),
@@ -317,7 +296,6 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               '--framer-line-height': '1.5em',
                               '--framer-text-alignment': 'left',
                               '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                              cursor: 'pointer',
                             },
                             children: 'Live Rating',
                           },),
@@ -334,7 +312,6 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               '--framer-line-height': '1.5em',
                               '--framer-text-alignment': 'left',
                               '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                              cursor: 'pointer',
                             },
                             children: 'Live Rating',
                           },),
@@ -359,7 +336,6 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                         '--framer-line-height': '2em',
                         '--framer-text-alignment': 'center',
                         '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                        cursor: 'pointer',
                       },
                       children: 'Leaderboard',
                     },),
@@ -384,7 +360,6 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               '--framer-line-height': '1.5em',
                               '--framer-text-alignment': 'left',
                               '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                              cursor: 'pointer',
                             },
                             children: 'Leaderboard',
                           },),
@@ -402,7 +377,6 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               '--framer-line-height': '1.5em',
                               '--framer-text-alignment': 'left',
                               '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                              cursor: 'pointer',
                             },
                             children: 'Leaderboard',
                           },),
@@ -427,10 +401,8 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                         '--framer-line-height': '2em',
                         '--framer-text-alignment': 'center',
                         '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                        cursor: 'pointer',
                       },
-                      onClick: () => navigate('/user'),
-                      children: props.userName || 'User',
+                      children: 'User',
                     },),
                   },),
                   className: 'framer-16s5cwp',
@@ -454,10 +426,8 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               '--framer-line-height': '1.5em',
                               '--framer-text-alignment': 'left',
                               '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                              cursor: 'pointer',
                             },
-                            onClick: () => navigate('/user'),
-                            children: props.userName || 'User',
+                            children: 'User',
                           },),
                         },),
                       },
@@ -472,10 +442,8 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               '--framer-line-height': '1.5em',
                               '--framer-text-alignment': 'left',
                               '--framer-text-color': 'var(--extracted-r6o4lv, rgb(255, 255, 255))',
-                              cursor: 'pointer',
                             },
-                            onClick: () => navigate('/user'),
-                            children: props.userName || 'User',
+                            children: 'User',
                           },),
                         },),
                         fonts: ['GF;Inter Tight-600',],
@@ -502,29 +470,29 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
 },);
 var css = [
   '@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }',
-  '.framer-xuY01.framer-1x3y98b, .framer-xuY01 .framer-1x3y98b { display: block; }',
-  '.framer-xuY01.framer-1y5t2b2 { align-content: center; align-items: center; display: flex; flex-direction: row; flex-wrap: nowrap; gap: 20px; height: 64px; justify-content: flex-start; overflow: hidden; padding: 0px; position: relative; width: 1200px; }',
-  '.framer-xuY01 .framer-sowwyr { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: visible; padding: 10px 0px 10px 10px; position: relative; width: min-content; }',
-  '.framer-xuY01 .framer-6zwpvp { flex: none; height: 31px; position: relative; width: 37px; }',
-  '.framer-xuY01 .framer-1bmr3ij { flex: none; height: 40px; overflow: hidden; position: relative; width: 40px; }',
-  '.framer-xuY01 .framer-1rwtbw4 { flex: none; height: 2px; left: calc(50.00000000000002% - 20px / 2); overflow: hidden; position: absolute; top: calc(62.50000000000002% - 2px / 2); width: 20px; will-change: var(--framer-will-change-override, transform); }',
-  '.framer-xuY01 .framer-vxenmo { flex: none; height: 2px; left: calc(50.00000000000002% - 20px / 2); overflow: hidden; position: absolute; top: calc(37.50000000000002% - 2px / 2); width: 20px; will-change: var(--framer-will-change-override, transform); }',
-  '.framer-xuY01 .framer-17s6yys { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 20px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: min-content; }',
-  '.framer-xuY01 .framer-u8r087, .framer-xuY01 .framer-6wgfva, .framer-xuY01 .framer-y5dgm2, .framer-xuY01 .framer-16s5cwp { -webkit-user-select: none; flex: none; height: auto; position: relative; user-select: none; white-space: pre; width: auto; }',
-  '.framer-xuY01 .framer-10hctwx { bottom: 0px; flex: none; height: 1px; left: 0px; overflow: visible; position: absolute; right: 0px; z-index: 1; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-xuY01.framer-1y5t2b2, .framer-xuY01 .framer-sowwyr, .framer-xuY01 .framer-17s6yys { gap: 0px; } .framer-xuY01.framer-1y5t2b2 > *, .framer-xuY01 .framer-17s6yys > * { margin: 0px; margin-left: calc(20px / 2); margin-right: calc(20px / 2); } .framer-xuY01.framer-1y5t2b2 > :first-child, .framer-xuY01 .framer-sowwyr > :first-child, .framer-xuY01 .framer-17s6yys > :first-child { margin-left: 0px; } .framer-xuY01.framer-1y5t2b2 > :last-child, .framer-xuY01 .framer-sowwyr > :last-child, .framer-xuY01 .framer-17s6yys > :last-child { margin-right: 0px; } .framer-xuY01 .framer-sowwyr > * { margin: 0px; margin-left: calc(0px / 2); margin-right: calc(0px / 2); } }',
-  '.framer-xuY01.framer-v-ljpkez.framer-1y5t2b2 { flex-direction: column; gap: 0px; width: 390px; }',
-  '.framer-xuY01.framer-v-ljpkez .framer-sowwyr, .framer-xuY01.framer-v-1fm9697 .framer-sowwyr { cursor: pointer; gap: unset; justify-content: space-between; padding: 10px; width: 100%; }',
-  '.framer-xuY01.framer-v-ljpkez .framer-1bmr3ij { height: 44px; width: 42px; }',
-  '.framer-xuY01.framer-v-ljpkez .framer-17s6yys { align-content: flex-start; align-items: flex-start; flex-direction: column; gap: 0px; padding: 20px 20px 120px 20px; width: 100%; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-xuY01.framer-v-ljpkez.framer-1y5t2b2, .framer-xuY01.framer-v-ljpkez .framer-sowwyr, .framer-xuY01.framer-v-ljpkez .framer-17s6yys { gap: 0px; } .framer-xuY01.framer-v-ljpkez.framer-1y5t2b2 > *, .framer-xuY01.framer-v-ljpkez .framer-17s6yys > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-xuY01.framer-v-ljpkez.framer-1y5t2b2 > :first-child, .framer-xuY01.framer-v-ljpkez .framer-17s6yys > :first-child { margin-top: 0px; } .framer-xuY01.framer-v-ljpkez.framer-1y5t2b2 > :last-child, .framer-xuY01.framer-v-ljpkez .framer-17s6yys > :last-child { margin-bottom: 0px; } .framer-xuY01.framer-v-ljpkez .framer-sowwyr > *, .framer-xuY01.framer-v-ljpkez .framer-sowwyr > :first-child, .framer-xuY01.framer-v-ljpkez .framer-sowwyr > :last-child { margin: 0px; } }',
-  '.framer-xuY01.framer-v-1fm9697.framer-1y5t2b2 { flex-direction: column; gap: 0px; height: min-content; max-height: calc(var(--framer-viewport-height, 100vh) * 1); overflow: auto; overscroll-behavior: contain; width: 390px; }',
-  '.framer-xuY01.framer-v-1fm9697 .framer-1bmr3ij { height: 44px; width: 44px; }',
-  '.framer-xuY01.framer-v-1fm9697 .framer-1rwtbw4, .framer-xuY01.framer-v-1fm9697 .framer-vxenmo { top: calc(50.00000000000002% - 2px / 2); }',
-  '.framer-xuY01.framer-v-1fm9697 .framer-17s6yys { align-content: flex-start; align-items: flex-start; flex-direction: column; gap: 0px; padding: 20px; width: 100%; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-xuY01.framer-v-1fm9697.framer-1y5t2b2, .framer-xuY01.framer-v-1fm9697 .framer-sowwyr, .framer-xuY01.framer-v-1fm9697 .framer-17s6yys { gap: 0px; } .framer-xuY01.framer-v-1fm9697.framer-1y5t2b2 > *, .framer-xuY01.framer-v-1fm9697 .framer-17s6yys > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-xuY01.framer-v-1fm9697.framer-1y5t2b2 > :first-child, .framer-xuY01.framer-v-1fm9697 .framer-17s6yys > :first-child { margin-top: 0px; } .framer-xuY01.framer-v-1fm9697.framer-1y5t2b2 > :last-child, .framer-xuY01.framer-v-1fm9697 .framer-17s6yys > :last-child { margin-bottom: 0px; } .framer-xuY01.framer-v-1fm9697 .framer-sowwyr > *, .framer-xuY01.framer-v-1fm9697 .framer-sowwyr > :first-child, .framer-xuY01.framer-v-1fm9697 .framer-sowwyr > :last-child { margin: 0px; } }',
+  '.framer-Mc7ZP.framer-1x3y98b, .framer-Mc7ZP .framer-1x3y98b { display: block; }',
+  '.framer-Mc7ZP.framer-1y5t2b2 { align-content: center; align-items: center; display: flex; flex-direction: row; flex-wrap: nowrap; gap: 20px; height: 64px; justify-content: flex-start; overflow: hidden; padding: 0px; position: relative; width: 1200px; }',
+  '.framer-Mc7ZP .framer-sowwyr { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: visible; padding: 10px 0px 10px 10px; position: relative; width: min-content; }',
+  '.framer-Mc7ZP .framer-6zwpvp { flex: none; height: 31px; position: relative; width: 37px; }',
+  '.framer-Mc7ZP .framer-1bmr3ij { flex: none; height: 40px; overflow: hidden; position: relative; width: 40px; }',
+  '.framer-Mc7ZP .framer-1rwtbw4 { flex: none; height: 2px; left: calc(50.00000000000002% - 20px / 2); overflow: hidden; position: absolute; top: calc(62.50000000000002% - 2px / 2); width: 20px; will-change: var(--framer-will-change-override, transform); }',
+  '.framer-Mc7ZP .framer-vxenmo { flex: none; height: 2px; left: calc(50.00000000000002% - 20px / 2); overflow: hidden; position: absolute; top: calc(37.50000000000002% - 2px / 2); width: 20px; will-change: var(--framer-will-change-override, transform); }',
+  '.framer-Mc7ZP .framer-17s6yys { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 20px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: min-content; }',
+  '.framer-Mc7ZP .framer-u8r087, .framer-Mc7ZP .framer-6wgfva, .framer-Mc7ZP .framer-y5dgm2, .framer-Mc7ZP .framer-16s5cwp { -webkit-user-select: none; flex: none; height: auto; position: relative; user-select: none; white-space: pre; width: auto; }',
+  '.framer-Mc7ZP .framer-10hctwx { bottom: 0px; flex: none; height: 1px; left: 0px; overflow: visible; position: absolute; right: 0px; z-index: 1; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-Mc7ZP.framer-1y5t2b2, .framer-Mc7ZP .framer-sowwyr, .framer-Mc7ZP .framer-17s6yys { gap: 0px; } .framer-Mc7ZP.framer-1y5t2b2 > *, .framer-Mc7ZP .framer-17s6yys > * { margin: 0px; margin-left: calc(20px / 2); margin-right: calc(20px / 2); } .framer-Mc7ZP.framer-1y5t2b2 > :first-child, .framer-Mc7ZP .framer-sowwyr > :first-child, .framer-Mc7ZP .framer-17s6yys > :first-child { margin-left: 0px; } .framer-Mc7ZP.framer-1y5t2b2 > :last-child, .framer-Mc7ZP .framer-sowwyr > :last-child, .framer-Mc7ZP .framer-17s6yys > :last-child { margin-right: 0px; } .framer-Mc7ZP .framer-sowwyr > * { margin: 0px; margin-left: calc(0px / 2); margin-right: calc(0px / 2); } }',
+  '.framer-Mc7ZP.framer-v-ljpkez.framer-1y5t2b2 { flex-direction: column; gap: 0px; width: 390px; }',
+  '.framer-Mc7ZP.framer-v-ljpkez .framer-sowwyr, .framer-Mc7ZP.framer-v-1fm9697 .framer-sowwyr { cursor: pointer; gap: unset; justify-content: space-between; padding: 10px; width: 100%; }',
+  '.framer-Mc7ZP.framer-v-ljpkez .framer-1bmr3ij { height: 44px; width: 42px; }',
+  '.framer-Mc7ZP.framer-v-ljpkez .framer-17s6yys { align-content: flex-start; align-items: flex-start; flex-direction: column; gap: 0px; padding: 20px 20px 120px 20px; width: 100%; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-Mc7ZP.framer-v-ljpkez.framer-1y5t2b2, .framer-Mc7ZP.framer-v-ljpkez .framer-sowwyr, .framer-Mc7ZP.framer-v-ljpkez .framer-17s6yys { gap: 0px; } .framer-Mc7ZP.framer-v-ljpkez.framer-1y5t2b2 > *, .framer-Mc7ZP.framer-v-ljpkez .framer-17s6yys > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-Mc7ZP.framer-v-ljpkez.framer-1y5t2b2 > :first-child, .framer-Mc7ZP.framer-v-ljpkez .framer-17s6yys > :first-child { margin-top: 0px; } .framer-Mc7ZP.framer-v-ljpkez.framer-1y5t2b2 > :last-child, .framer-Mc7ZP.framer-v-ljpkez .framer-17s6yys > :last-child { margin-bottom: 0px; } .framer-Mc7ZP.framer-v-ljpkez .framer-sowwyr > *, .framer-Mc7ZP.framer-v-ljpkez .framer-sowwyr > :first-child, .framer-Mc7ZP.framer-v-ljpkez .framer-sowwyr > :last-child { margin: 0px; } }',
+  '.framer-Mc7ZP.framer-v-1fm9697.framer-1y5t2b2 { flex-direction: column; gap: 0px; height: min-content; max-height: calc(var(--framer-viewport-height, 100vh) * 1); overflow: auto; overscroll-behavior: contain; width: 390px; }',
+  '.framer-Mc7ZP.framer-v-1fm9697 .framer-1bmr3ij { height: 44px; width: 44px; }',
+  '.framer-Mc7ZP.framer-v-1fm9697 .framer-1rwtbw4, .framer-Mc7ZP.framer-v-1fm9697 .framer-vxenmo { top: calc(50.00000000000002% - 2px / 2); }',
+  '.framer-Mc7ZP.framer-v-1fm9697 .framer-17s6yys { align-content: flex-start; align-items: flex-start; flex-direction: column; gap: 0px; padding: 20px; width: 100%; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-Mc7ZP.framer-v-1fm9697.framer-1y5t2b2, .framer-Mc7ZP.framer-v-1fm9697 .framer-sowwyr, .framer-Mc7ZP.framer-v-1fm9697 .framer-17s6yys { gap: 0px; } .framer-Mc7ZP.framer-v-1fm9697.framer-1y5t2b2 > *, .framer-Mc7ZP.framer-v-1fm9697 .framer-17s6yys > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-Mc7ZP.framer-v-1fm9697.framer-1y5t2b2 > :first-child, .framer-Mc7ZP.framer-v-1fm9697 .framer-17s6yys > :first-child { margin-top: 0px; } .framer-Mc7ZP.framer-v-1fm9697.framer-1y5t2b2 > :last-child, .framer-Mc7ZP.framer-v-1fm9697 .framer-17s6yys > :last-child { margin-bottom: 0px; } .framer-Mc7ZP.framer-v-1fm9697 .framer-sowwyr > *, .framer-Mc7ZP.framer-v-1fm9697 .framer-sowwyr > :first-child, .framer-Mc7ZP.framer-v-1fm9697 .framer-sowwyr > :last-child { margin: 0px; } }',
 ];
-var Framerj6oGRcNtb = withCSS(Component, css, 'framer-xuY01',);
+var Framerj6oGRcNtb = withCSS(Component, css, 'framer-Mc7ZP',);
 var stdin_default = Framerj6oGRcNtb;
 Framerj6oGRcNtb.displayName = 'Navigation';
 Framerj6oGRcNtb.defaultProps = { height: 64, width: 1200, };
@@ -604,5 +572,4 @@ stdin_default.Responsive = (props,) => {
   return /* @__PURE__ */ jsx(WithFramerBreakpoints, { Component: stdin_default, ...props, },);
 };
 var navigation_default = stdin_default;
-
 export { navigation_default as default, };
