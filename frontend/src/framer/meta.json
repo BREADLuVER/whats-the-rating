@@ -862,8 +862,8 @@
       ],
       "format": "esm"
     },
-    "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/ImezAo9NUF2yFg9W8fJA/XiKKufNe7.js": {
-      "bytes": 13478,
+    "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/sSZJYP1fO4ThYxqdNAFo/XiKKufNe7.js": {
+      "bytes": 13707,
       "imports": [
         {
           "path": "react/jsx-runtime",
@@ -907,9 +907,9 @@
       "bytes": 536,
       "imports": [
         {
-          "path": "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/ImezAo9NUF2yFg9W8fJA/XiKKufNe7.js",
+          "path": "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/sSZJYP1fO4ThYxqdNAFo/XiKKufNe7.js",
           "kind": "import-statement",
-          "original": "https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/ImezAo9NUF2yFg9W8fJA/XiKKufNe7.js"
+          "original": "https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/sSZJYP1fO4ThYxqdNAFo/XiKKufNe7.js"
         },
         {
           "path": "unframer",
@@ -1246,14 +1246,14 @@
       ],
       "entryPoint": "virtual:userSurvey",
       "inputs": {
-        "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/ImezAo9NUF2yFg9W8fJA/XiKKufNe7.js": {
-          "bytesInOutput": 12712
+        "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/sSZJYP1fO4ThYxqdNAFo/XiKKufNe7.js": {
+          "bytesInOutput": 12937
         },
         "virtual:userSurvey": {
           "bytesInOutput": 267
         }
       },
-      "bytes": 13164
+      "bytes": 13389
     }
   }
 }

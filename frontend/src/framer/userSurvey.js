@@ -2,7 +2,7 @@
 /* eslint-disable */
 'use client';
 
-// https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/ImezAo9NUF2yFg9W8fJA/XiKKufNe7.js
+// https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/sSZJYP1fO4ThYxqdNAFo/XiKKufNe7.js
 import { jsx as _jsx, jsxs as _jsxs, } from 'react/jsx-runtime';
 import {
   addFonts,
@@ -17,8 +17,9 @@ import {
 } from 'unframer';
 import { LayoutGroup, motion, MotionConfigContext, } from 'unframer';
 import * as React from 'react';
+import { useNavigate } from'react-router-dom';
 var cycleOrder = ['E_hf9L2LL', 'wCzCfTl94', 'lV0cKwHkW',];
-var serializationHash = 'framer-Jjna4';
+var serializationHash = 'framer-czR0b';
 var variantClassNames = { E_hf9L2LL: 'framer-v-xc23t', lV0cKwHkW: 'framer-v-1xivxd7', wCzCfTl94: 'framer-v-1w0nrx8', };
 function addPropertyOverrides(overrides, ...variants) {
   const nextOverrides = {};
@@ -28,6 +29,8 @@ function addPropertyOverrides(overrides, ...variants) {
   return nextOverrides;
 }
 var transition1 = { bounce: 0.2, delay: 0, duration: 0.4, type: 'spring', };
+var transition2 = { bounce: 0.25, delay: 0, duration: 0.45, type: 'spring', };
+var animation = { opacity: 1, rotate: 0, rotateX: 0, rotateY: 0, scale: 1.1, skewX: 0, skewY: 0, transition: transition2, };
 var Transition = ({ value, children, },) => {
   const config = React.useContext(MotionConfigContext,);
   const transition = value !== null && value !== void 0 ? value : config.transition;
@@ -73,6 +76,10 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
   const defaultLayoutId = React.useId();
   const sharedStyleClassNames = [];
   const componentViewport = useComponentViewport();
+  const navigate = useNavigate();
+  const onClickFutureGames = () => {
+    navigate('/');
+  };
   return /* @__PURE__ */ _jsx(LayoutGroup, {
     id: layoutId !== null && layoutId !== void 0 ? layoutId : defaultLayoutId,
     children: /* @__PURE__ */ _jsx(Variants, {
@@ -216,6 +223,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                 boxShadow:
                   '0px 0.7065919983928324px 0.7065919983928324px -0.625px rgba(0, 0, 0, 0.14764), 0px 1.8065619053231785px 1.8065619053231785px -1.25px rgba(0, 0, 0, 0.14398), 0px 3.6217592146567767px 3.6217592146567767px -1.875px rgba(0, 0, 0, 0.13793), 0px 6.8655999097303715px 6.8655999097303715px -2.5px rgba(0, 0, 0, 0.12711), 0px 13.646761411524492px 13.646761411524492px -3.125px rgba(0, 0, 0, 0.10451), 0px 30px 30px -3.75px rgba(0, 0, 0, 0.05)',
               },
+              whileHover: animation,
               children: /* @__PURE__ */ _jsx(RichText, {
                 __fromCanvasComponent: true,
                 children: /* @__PURE__ */ _jsx(React.Fragment, {
@@ -228,6 +236,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                       '--framer-text-alignment': 'center',
                       '--framer-text-color': 'var(--extracted-r6o4lv, rgb(199, 197, 197))',
                     },
+                    onClick: () => navigate('/userForm'),
                     children: 'Click Here',
                   },),
                 },),
@@ -253,18 +262,18 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
 },);
 var css = [
   '@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }',
-  '.framer-Jjna4.framer-1bzucgt, .framer-Jjna4 .framer-1bzucgt { display: block; }',
-  '.framer-Jjna4.framer-xc23t { align-content: center; align-items: center; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 10px; height: 185px; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 1200px; }',
-  '.framer-Jjna4 .framer-1x9iwtz { flex: none; height: 73px; position: relative; white-space: pre-wrap; width: 405px; word-break: break-word; word-wrap: break-word; }',
-  '.framer-Jjna4 .framer-pm3zeo { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: 36px; justify-content: center; overflow: visible; padding: 15px 23px 15px 23px; position: relative; width: min-content; }',
-  '.framer-Jjna4 .framer-1ef4p9i { flex: none; height: auto; position: relative; white-space: pre; width: auto; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-Jjna4.framer-xc23t, .framer-Jjna4 .framer-pm3zeo { gap: 0px; } .framer-Jjna4.framer-xc23t > * { margin: 0px; margin-bottom: calc(10px / 2); margin-top: calc(10px / 2); } .framer-Jjna4.framer-xc23t > :first-child { margin-top: 0px; } .framer-Jjna4.framer-xc23t > :last-child { margin-bottom: 0px; } .framer-Jjna4 .framer-pm3zeo > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } .framer-Jjna4 .framer-pm3zeo > :first-child { margin-left: 0px; } .framer-Jjna4 .framer-pm3zeo > :last-child { margin-right: 0px; } }',
-  '.framer-Jjna4.framer-v-1w0nrx8.framer-xc23t { width: 390px; }',
-  '.framer-Jjna4.framer-v-1w0nrx8 .framer-1x9iwtz { width: 330px; }',
-  '.framer-Jjna4.framer-v-1xivxd7.framer-xc23t { width: 810px; }',
-  '.framer-Jjna4[data-border="true"]::after, .framer-Jjna4 [data-border="true"]::after { content: ""; border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0); border-color: var(--border-color, none); border-style: var(--border-style, none); width: 100%; height: 100%; position: absolute; box-sizing: border-box; left: 0; top: 0; border-radius: inherit; pointer-events: none; }',
+  '.framer-czR0b.framer-1bzucgt, .framer-czR0b .framer-1bzucgt { display: block; }',
+  '.framer-czR0b.framer-xc23t { align-content: center; align-items: center; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 10px; height: 185px; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 1200px; }',
+  '.framer-czR0b .framer-1x9iwtz { flex: none; height: 73px; position: relative; white-space: pre-wrap; width: 405px; word-break: break-word; word-wrap: break-word; }',
+  '.framer-czR0b .framer-pm3zeo { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: 36px; justify-content: center; overflow: visible; padding: 15px 23px 15px 23px; position: relative; width: min-content; }',
+  '.framer-czR0b .framer-1ef4p9i { flex: none; height: auto; position: relative; white-space: pre; width: auto; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-czR0b.framer-xc23t, .framer-czR0b .framer-pm3zeo { gap: 0px; } .framer-czR0b.framer-xc23t > * { margin: 0px; margin-bottom: calc(10px / 2); margin-top: calc(10px / 2); } .framer-czR0b.framer-xc23t > :first-child { margin-top: 0px; } .framer-czR0b.framer-xc23t > :last-child { margin-bottom: 0px; } .framer-czR0b .framer-pm3zeo > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } .framer-czR0b .framer-pm3zeo > :first-child { margin-left: 0px; } .framer-czR0b .framer-pm3zeo > :last-child { margin-right: 0px; } }',
+  '.framer-czR0b.framer-v-1w0nrx8.framer-xc23t { width: 390px; }',
+  '.framer-czR0b.framer-v-1w0nrx8 .framer-1x9iwtz { width: 330px; }',
+  '.framer-czR0b.framer-v-1xivxd7.framer-xc23t { width: 810px; }',
+  '.framer-czR0b[data-border="true"]::after, .framer-czR0b [data-border="true"]::after { content: ""; border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0); border-color: var(--border-color, none); border-style: var(--border-style, none); width: 100%; height: 100%; position: absolute; box-sizing: border-box; left: 0; top: 0; border-radius: inherit; pointer-events: none; }',
 ];
-var FramerXiKKufNe7 = withCSS(Component, css, 'framer-Jjna4',);
+var FramerXiKKufNe7 = withCSS(Component, css, 'framer-czR0b',);
 var stdin_default = FramerXiKKufNe7;
 FramerXiKKufNe7.displayName = 'userSurvey';
 FramerXiKKufNe7.defaultProps = { height: 185, width: 1200, };
