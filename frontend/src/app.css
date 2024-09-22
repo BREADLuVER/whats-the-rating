@@ -112,6 +112,20 @@ html, body {
   border-color: #555;
 }
 
+.clear-search {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.clear-search:hover {
+  background-color: #ff6666;
+}
+
 @media (max-width: 600px) {
   .game-list li {
     flex-direction: column;

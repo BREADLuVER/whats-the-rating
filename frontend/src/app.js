@@ -84,6 +84,12 @@ function App({ signOut, user }) {
     setFilteredGames(filtered);
   };
 
+  // Function to clear the search input
+  const clearSearch = () => {
+    setSearchQuery('');
+    setFilteredGames(games); // Reset the filtered list to all games
+  };
+
   return (
     <Router>
       <div className="nav-container">
@@ -123,15 +129,24 @@ function App({ signOut, user }) {
                       value={searchQuery}
                       onChange={handleSearchChange}
                     />
+                    <button className="clear-search" onClick={clearSearch}>
+                      Clear Search
+                    </button>
                   </div>
-                  <ul>
-                    {filteredGames.map((game) => (
-                      <li key={game.id}>
-                        <span className="game-title">{game.title}</span>
-                        <span className="game-rating">{game.averageRating}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  
+                  {/* Conditionally render the game list or no games found message */}
+                  {filteredGames.length > 0 ? (
+                    <ul>
+                      {filteredGames.map((game) => (
+                        <li key={game.id}>
+                          <span className="game-title">{game.title}</span>
+                          <span className="game-rating">{game.averageRating}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    searchQuery && <p style={{ fontSize: '1.2em' }}>No games found</p>
+                  )}
                 </div>
               </>
             }
@@ -141,7 +156,7 @@ function App({ signOut, user }) {
         </Routes>
       </div>
     </Router>
-  );  
+  );
 }
 
 export default withAuthenticator(App);
