@@ -12,7 +12,7 @@ import Navigation from './framer/navigation';
 import Hero from './framer/hero';
 import UserSurvey from './framer/userSurvey';
 
-//Import pages
+// Import pages
 import UserPage from './pages/UserPage';
 import UserForm from './pages/UserForm';
 import axios from 'axios';  // Import axios to handle the API call
@@ -53,12 +53,15 @@ function App({ signOut, user }) {
 
   // State to hold the list of games
   const [games, setGames] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(''); // Search query state
+  const [filteredGames, setFilteredGames] = useState([]); // Filtered game list
 
   // Fetch games from the backend when the component is mounted
   const fetchGames = async () => {
     try {
       const response = await axios.get('/api/games/');
       setGames(response.data);  // Store the fetched games in state
+      setFilteredGames(response.data); // Set the filteredGames initially to all games
     } catch (error) {
       console.error('Error fetching games:', error);
     }
@@ -68,9 +71,6 @@ function App({ signOut, user }) {
   useEffect(() => {
     fetchGames();
   }, []);
-
-  const [searchQuery, setSearchQuery] = useState(''); // Search query state
-  const [filteredGames, setFilteredGames] = useState(games); // Filtered game list
 
   // Function to handle the search input change
   const handleSearchChange = (e) => {
@@ -125,7 +125,7 @@ function App({ signOut, user }) {
                     />
                   </div>
                   <ul>
-                    {games.map((game) => (
+                    {filteredGames.map((game) => (
                       <li key={game.id}>
                         <span className="game-title">{game.title}</span>
                         <span className="game-rating">{game.averageRating}</span>
