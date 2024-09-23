@@ -38,6 +38,9 @@ var Transition = ({ value, children, },) => {
   return /* @__PURE__ */ _jsx(MotionConfigContext.Provider, { value: contextValue, children, },);
 };
 var Variants = motion(React.Fragment,);
+var transition1 = { bounce: 0.2, delay: 0, duration: 0.4, type: 'spring', };
+var transition2 = { bounce: 0.25, delay: 0, duration: 0.45, type: 'spring', };
+var animation = { opacity: 1, rotate: 0, rotateX: 0, rotateY: 0, scale: 1.1, skewX: 0, skewY: 0, transition: transition2, };
 var humanReadableVariantMap = { 'Phone Open': 'QdnqlRfg6', Desktop: 'dNSFe_iUx', Phone: 'OlRDtOhw4', };
 var getProps = ({ height, id, width, ...props },) => {
   var _humanReadableVariantMap_props_variant, _ref;
@@ -224,6 +227,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                       },
                       onClick: () => navigate('/'),
                       children: 'Future Games',
+                      whileHover: animation,
                     },),
                   },),
                   className: 'framer-u8r087',
@@ -250,6 +254,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                             },
                             onClick: onClickFutureGames,
                             children: 'Future Games',
+                            whileHover: animation,
                           },),
                         },),
                         fonts: ['GF;Inter Tight-600',],
@@ -269,6 +274,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                             },
                             onClick: () => navigate('/'),
                             children: 'Future Games',
+                            whileHover: animation,
                           },),
                         },),
                         fonts: ['GF;Inter Tight-600',],
@@ -294,6 +300,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                         cursor: 'pointer',
                       },
                       children: 'Live Rating',
+                      whileHover: animation,
                     },),
                   },),
                   className: 'framer-6wgfva',
@@ -320,6 +327,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               cursor: 'pointer',
                             },
                             children: 'Live Rating',
+                            whileHover: animation,
                           },),
                         },),
                       },
@@ -337,6 +345,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               cursor: 'pointer',
                             },
                             children: 'Live Rating',
+                            whileHover: animation,
                           },),
                         },),
                         fonts: ['GF;Inter Tight-600',],
@@ -362,6 +371,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                         cursor: 'pointer',
                       },
                       children: 'Leaderboard',
+                      whileHover: animation,
                     },),
                   },),
                   className: 'framer-y5dgm2',
@@ -387,6 +397,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               cursor: 'pointer',
                             },
                             children: 'Leaderboard',
+                            whileHover: animation,
                           },),
                         },),
                         fonts: ['GF;Inter Tight-600',],
@@ -405,6 +416,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                               cursor: 'pointer',
                             },
                             children: 'Leaderboard',
+                            whileHover: animation,
                           },),
                         },),
                         fonts: ['GF;Inter Tight-600',],
@@ -431,6 +443,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                       },
                       onClick: () => navigate('/user'),
                       children: props.userName || 'User',
+                      whileHover: animation,
                     },),
                   },),
                   className: 'framer-16s5cwp',
@@ -458,6 +471,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                             },
                             onClick: () => navigate('/user'),
                             children: props.userName || 'User',
+                            whileHover: animation,
                           },),
                         },),
                       },
@@ -476,6 +490,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                             },
                             onClick: () => navigate('/user'),
                             children: props.userName || 'User',
+                            whileHover: animation,
                           },),
                         },),
                         fonts: ['GF;Inter Tight-600',],
