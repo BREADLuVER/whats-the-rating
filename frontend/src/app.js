@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Amplify } from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
+import axios from 'axios';
 import '@aws-amplify/ui-react/styles.css';
 import config from './amplifyconfiguration.json';
 import './app.css';
@@ -15,7 +16,7 @@ import UserSurvey from './framer/userSurvey';
 // Import pages
 import UserPage from './pages/UserPage';
 import UserForm from './pages/UserForm';
-import axios from 'axios';  // Import axios to handle the API call
+import ChooseJournalist from './pages/ChooseJournalist';
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -42,7 +43,6 @@ function App({ signOut, user }) {
   const size = useWindowSize();
   let variant;
 
-  // Adjust the variant based on the screen width
   if (size.width < 600) {
     variant = 'Phone'; // Mobile variant
   } else if (size.width < 1024) {
@@ -53,10 +53,9 @@ function App({ signOut, user }) {
 
   // State to hold the list of games
   const [games, setGames] = useState([]);
-  const [searchQuery, setSearchQuery] = useState(''); // Search query state
-  const [filteredGames, setFilteredGames] = useState([]); // Filtered game list
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredGames, setFilteredGames] = useState([]);
 
-  // Fetch games from the backend when the component is mounted
   const fetchGames = async () => {
     try {
       const response = await axios.get('/api/games/');
@@ -87,7 +86,7 @@ function App({ signOut, user }) {
   // Function to clear the search input
   const clearSearch = () => {
     setSearchQuery('');
-    setFilteredGames(games); // Reset the filtered list to all games
+    setFilteredGames(games);
   };
 
   return (
@@ -138,10 +137,12 @@ function App({ signOut, user }) {
                   {filteredGames.length > 0 ? (
                     <ul>
                       {filteredGames.map((game) => (
-                        <li key={game.id}>
-                          <span className="game-title">{game.title}</span>
-                          <span className="game-rating">{game.averageRating}</span>
-                        </li>
+                        <Link to={`/rate/${encodeURIComponent(game.title)}`} key={game.id} className="game-list">
+                          <li>
+                            <span className="game-title">{game.title}</span>
+                            <span className="game-rating">{game.averageRating}</span>
+                          </li>
+                        </Link>
                       ))}
                     </ul>
                   ) : (
@@ -151,6 +152,7 @@ function App({ signOut, user }) {
               </>
             }
           />
+          <Route path="/rate/:gameTitle" element={<ChooseJournalist />} />
           <Route path="/user" element={<UserPage />} />
           <Route path="/userForm" element={<UserForm />} />
         </Routes>

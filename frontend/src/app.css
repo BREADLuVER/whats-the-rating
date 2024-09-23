@@ -80,11 +80,13 @@ html, body {
 .game-title {
   font-size: 1.2em;
   font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
 
 .game-rating {
   font-size: 1.2em;
-  color: #ffcc00; /* Golden color for ratings */
+  color: #ffcc00;
 }
 
 .search-bar {
@@ -141,6 +143,6 @@ html, body {
 
 @media (min-width: 601px) and (max-width: 1024px) {
   .game-list li {
-    padding: 15px 50px; /* Add more padding for tablets */
+    padding: 15px 50px;
   }
 }

@@ -1,0 +1,61 @@
+.choose-journalist-container {
+    text-align: center;
+    padding: 20px;
+    color: white;
+  }
+  
+  .choose-journalist-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+  
+  .journalist-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+  }
+  
+  .journalist-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+  }
+  
+  .journalist-logo {
+    width: 100%;
+    height: auto;
+    max-width: 150px; /* Set a maximum width */
+    object-fit: contain;
+  }
+  
+  /* Button styling */
+  .journalist-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .journalist-button:hover {
+    background-color: #666;
+  }
+  
+  @media (max-width: 600px) {
+    .choose-journalist-container h1 {
+      font-size: 1.8em;
+    }
+  
+    .journalist-options {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
