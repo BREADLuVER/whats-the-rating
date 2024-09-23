@@ -10,7 +10,8 @@
     text-align: center;
     padding: 20px;
     color: white;
-    vertical-align: middle
+    vertical-align: middle;
+    margin-bottom: 40px;
   }
   
   .choose-journalist-container h1 {
