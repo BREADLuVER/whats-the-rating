@@ -9,18 +9,20 @@ const ChooseJournalist = () => {
   const { gameTitle } = useParams(); // Extract game title from URL
 
   return (
-    <div className="choose-journalist-container">
-      <h1>How Would ___ Rate {decodeURIComponent(gameTitle)}</h1>
+    <div className="page-container"> {/* Add a wrapper to the entire page */}
+      <div className="choose-journalist-container">
+        <h1>How Would ___ Rate {decodeURIComponent(gameTitle)}</h1>
 
-      <div className="journalist-options">
-        <div className="journalist-option">
-          <img src={IGNIcon} alt="IGN" className="journalist-logo" />
-          <button className="journalist-button">IGN</button>
-        </div>
+        <div className="journalist-options">
+          <div className="journalist-option">
+            <img src={IGNIcon} alt="IGN" className="journalist-logo" />
+            <button className="journalist-button">IGN</button>
+          </div>
 
-        <div className="journalist-option">
-          <img src={gameRantIcon} alt="GameRant" className="journalist-logo" />
-          <button className="journalist-button">GameRant</button>
+          <div className="journalist-option">
+            <img src={gameRantIcon} alt="GameRant" className="journalist-logo" />
+            <button className="journalist-button">GameRant</button>
+          </div>
         </div>
       </div>
     </div>
