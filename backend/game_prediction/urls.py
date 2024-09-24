@@ -8,7 +8,7 @@ urlpatterns = [
     path('games/<int:pk>/', GameDetailView.as_view(), name='game-detail'),
     path('games/<int:game_id>/comments/', CommentListView.as_view(), name='comment-list'),
     path('games/<int:game_id>/comments/new/', CreateCommentView.as_view(), name='comment-create'),
-    path('predictions/', CreatePredictionView.as_view(), name='create-prediction'),
     path('search-games/', search_games, name='search-games'),
     path('api/add-game/', add_game, name='add-game'),
+    path('predictions/', CreatePredictionView.as_view(), name='create-prediction'),
 ]

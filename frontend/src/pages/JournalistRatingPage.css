@@ -1,0 +1,36 @@
+.rating-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    color: white;
+    text-align: center;
+  }
+  
+  .rating-page-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+  
+  .rating-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .rating-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .rating-button:hover {
+    background-color: #666;
+  }
+  

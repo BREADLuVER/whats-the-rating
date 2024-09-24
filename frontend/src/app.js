@@ -17,6 +17,7 @@ import UserSurvey from './framer/userSurvey';
 import UserPage from './pages/UserPage';
 import UserForm from './pages/UserForm';
 import ChooseJournalist from './pages/ChooseJournalist';
+import JournalistRatingPage from './pages/JournalistRatingPage';
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -155,6 +156,7 @@ function App({ signOut, user }) {
           <Route path="/rate/:gameTitle" element={<ChooseJournalist />} />
           <Route path="/user" element={<UserPage />} />
           <Route path="/userForm" element={<UserForm />} />
+          <Route path="/rate/:journalist/:gameTitle" element={<JournalistRatingPage />} />
         </Routes>
       </div>
     </Router>
