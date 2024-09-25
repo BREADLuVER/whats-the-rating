@@ -25,4 +25,5 @@ urlpatterns = [
     path('api/', include('game_prediction.urls')),
     path('api/auth/google/', google_login, name='google-login'),
     path('api/add-game/', add_game, name='add-game'),
+    path('predictions/', CreatePredictionView.as_view(), name='create-prediction'),
 ]

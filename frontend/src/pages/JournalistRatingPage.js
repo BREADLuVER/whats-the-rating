@@ -1,46 +1,97 @@
 // guess-the-rating/frontend/src/pages/JournalistRatingPage.js
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './JournalistRatingPage.css';
+import { fetchAuthSession, getCurrentUser } from 'aws-amplify/auth';
 import axios from 'axios';
 
 const JournalistRatingPage = () => {
+  const [user, setUser] = useState(null);
   const { journalist, gameTitle } = useParams(); // Extract journalist and game title from URL
   const [selectedRating, setSelectedRating] = useState(null); // Store the selected rating
 
   // Handle rating click and submission
   const handleRatingClick = (rating) => {
+    console.log(`Rating clicked: ${rating}`);
     setSelectedRating(rating);
     submitRating(rating); // Submit the rating when selected
   };
 
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const { username } = await getCurrentUser();  // Fetch the current user's username
+        setUser(username);  // Store the username in state
+      } catch (error) {
+        console.error('Error fetching user session:', error);
+      }
+    };
+
+    fetchUser();  // Fetch user when component mounts
+  }, []);
+
   // Submit rating to the backend
   const submitRating = async (rating) => {
+    const csrfToken = getCSRFToken();
+    console.log("Submitting rating:", rating);
+    
+    // Log the axios config object
+    const axiosConfig = {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrfToken,
+      },
+      withCredentials: true,
+    };
+  
+    const postData = {
+      user: user,
+      game: gameTitle,  // Use game ID instead of title if required
+      journalist: journalist,
+      predicted_rating: rating,
+    };
+  
+    console.log("Post data:", postData);
+    console.log("Axios config:", axiosConfig);
     try {
+      console.log("Preparing to send POST request");
       const response = await axios.post(
-        'http://localhost:8000/api/predictions/', // Correct API endpoint with /api/ prefix
+        'http://127.0.0.1:8000/api/predictions/',  // Full URL for Django API
         {
-          game: decodeURIComponent(gameTitle),
+          user: user,
+          game: gameTitle,  // Use game ID instead of title if required
+          journalist: journalist,
           predicted_rating: rating,
         },
         {
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem('token')}`,
+            'X-CSRFToken': csrfToken,  // Send CSRF token if using session-based auth
           },
+          withCredentials: true,  // Include session cookie
         }
       );
-  
+      
       if (response.status === 201) {
-        console.log('Rating submitted successfully!');
+        alert('Rating submitted successfully!');
       } else {
-        console.error('Error submitting rating');
+        alert('Failed to submit rating.');
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error submitting rating:', error);
+      console.log('Request headers:', error.config.headers); 
     }
+  };  
+
+  // Helper function to get CSRF token from cookies
+  const getCSRFToken = () => {
+    const cookieValue = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('csrftoken='))
+      ?.split('=')[1];
+    return cookieValue;
   };
-  
 
   return (
     <div className="rating-page-container">

@@ -57,17 +57,16 @@ INSTALLED_APPS = [
 # Site ID (required by Allauth)
 SITE_ID = 1
 
-# CORS configuration for cross-origin requests
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',  # React frontend URL
-]
-
 # Rest Framework configuration
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',  # enables simple command line authentication
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    )
 }
 
 # Allauth and REST auth settings
@@ -96,7 +95,30 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS configuration for cross-origin requests
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',  # React frontend URL
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+# You can allow additional HTTP headers if needed
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'x-csrftoken',
+    'authorization',
+    'accept',
+    'origin',
+]
+
+# Optionally specify allowed methods
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'DELETE',
+    'OPTIONS',
+]
 
 ROOT_URLCONF = 'guess_the_rating.urls'
 

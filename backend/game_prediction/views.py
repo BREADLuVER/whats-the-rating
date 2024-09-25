@@ -10,7 +10,7 @@ from django.http import JsonResponse
 from django.contrib.auth.models import User
 from rest_framework.decorators import api_view
 from django.db.models import Q
-from .models import ScrapedGame
+from rest_framework.exceptions import ValidationError
 
 @api_view(['POST'])
 def google_login(request):
@@ -89,7 +89,15 @@ class CreatePredictionView(generics.CreateAPIView):
     permission_classes = [IsAuthenticated]
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+        game_title = self.request.data.get('game', '')
+        user = self.request.data.get('user', '')
+
+        # Log received data for debugging
+        print(f"Storing prediction with game: {game_title}, user: {user}")
+
+        # Save the prediction with the given username and game title
+        serializer.save(user=user, game=game_title)
+
 
 # View comments for a specific game
 class CommentListView(generics.ListAPIView):

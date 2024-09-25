@@ -8,10 +8,17 @@ class GameSerializer(serializers.ModelSerializer):
         model = Game
         fields = ['id', 'title']
 
+
 class PredictionSerializer(serializers.ModelSerializer):
+    user = serializers.CharField()  # Accept username
+    game = serializers.CharField(required=False)  # Make game optional
+    journalist = serializers.CharField(required=False)  # Make journalist optional
+    predicted_rating = serializers.IntegerField(required=False)  # Make rating optional
+
     class Meta:
         model = Prediction
-        fields = ['id', 'user', 'game', 'predicted_rating', 'submitted_at']
+        fields = ['id', 'user', 'game', 'journalist', 'predicted_rating', 'submitted_at']
+
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:

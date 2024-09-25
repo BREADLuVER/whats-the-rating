@@ -10,13 +10,15 @@ class Game(models.Model):
         return self.title
 
 class Prediction(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    game = models.ForeignKey(Game, on_delete=models.CASCADE)
-    predicted_rating = models.FloatField()
+    user = models.CharField(max_length=150)  # Username as a string
+    game = models.CharField(max_length=200, null=True, blank=True)  # Game can be null/blank
+    journalist = models.CharField(max_length=200, null=True, blank=True)  # Journalist can be null/blank
+    predicted_rating = models.IntegerField(null=True, blank=True)  # Rating can be null/blank
     submitted_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.user.username}'s prediction for {self.game.title}"
+        return f"{self.user} predicts that {self.journalist} will give {self.game} a {self.predicted_rating}"
+
 
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
