@@ -10,10 +10,10 @@ class GameSerializer(serializers.ModelSerializer):
 
 
 class PredictionSerializer(serializers.ModelSerializer):
-    user = serializers.CharField()  # Accept username
-    game = serializers.CharField(required=False)  # Make game optional
-    journalist = serializers.CharField(required=False)  # Make journalist optional
-    predicted_rating = serializers.IntegerField(required=False)  # Make rating optional
+    user = serializers.CharField()
+    game = serializers.CharField(required=False)
+    journalist = serializers.CharField(required=False)
+    predicted_rating = serializers.IntegerField(required=False)
 
     class Meta:
         model = Prediction

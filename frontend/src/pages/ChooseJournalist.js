@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom'; // Add useNavigate
 import './ChooseJournalist.css';
 import gameRantIcon from '../images/GameRant_icon.png';
-import IGNIcon from '../images/IGN_icon.jpg';
+import IGNIcon from '../images/IGN_icon.png';
 
 const ChooseJournalist = () => {
   const { gameTitle } = useParams(); // Extract game title from URL

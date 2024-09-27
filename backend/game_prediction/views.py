@@ -91,12 +91,19 @@ class CreatePredictionView(generics.CreateAPIView):
     def perform_create(self, serializer):
         game_title = self.request.data.get('game', '')
         user = self.request.data.get('user', '')
+        journalist = self.request.data.get('journalist', '')
 
-        # Log received data for debugging
-        print(f"Storing prediction with game: {game_title}, user: {user}")
+        # Check if a prediction already exists for the user, game, and journalist
+        existing_prediction = Prediction.objects.filter(user=user, game=game_title, journalist=journalist).first()
 
-        # Save the prediction with the given username and game title
-        serializer.save(user=user, game=game_title)
+        if existing_prediction:
+            # Update the existing prediction
+            existing_prediction.predicted_rating = self.request.data.get('predicted_rating')
+            existing_prediction.save()
+            return existing_prediction
+        else:
+            # Create a new prediction
+            return serializer.save(user=user, game=game_title, journalist=journalist)
 
 
 # View comments for a specific game
