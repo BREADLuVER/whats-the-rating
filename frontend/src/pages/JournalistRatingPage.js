@@ -1,5 +1,4 @@
-// guess-the-rating/frontend/src/pages/JournalistRatingPage.js
-
+// src/components/JournalistRatingPage.js
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './JournalistRatingPage.css';
@@ -8,87 +7,64 @@ import axios from 'axios';
 
 const JournalistRatingPage = () => {
   const [user, setUser] = useState(null);
-  const { journalist, gameTitle } = useParams(); // Extract journalist and game title from URL
-  const [selectedRating, setSelectedRating] = useState(null); // Store the selected rating
-
-  // Handle rating click and submission
-  const handleRatingClick = (rating) => {
-    console.log(`Rating clicked: ${rating}`);
-    setSelectedRating(rating);
-    submitRating(rating); // Submit the rating when selected
-  };
+  const { journalist, gameTitle } = useParams();
+  const [selectedRating, setSelectedRating] = useState(null);
+  const [message, setMessage] = useState(''); // Message to display after rating submission
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const { username } = await getCurrentUser();  // Fetch the current user's username
-        setUser(username);  // Store the username in state
+        const { username } = await getCurrentUser();
+        setUser(username);
       } catch (error) {
         console.error('Error fetching user session:', error);
       }
     };
 
-    fetchUser();  // Fetch user when component mounts
+    fetchUser();
   }, []);
 
-  // Submit rating to the backend
   const submitRating = async (rating) => {
     const csrfToken = getCSRFToken();
-    console.log("Submitting rating:", rating);
-    
-    // Log the axios config object
-    const axiosConfig = {
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRFToken': csrfToken,
-      },
-      withCredentials: true,
-    };
-  
-    const postData = {
-      user: user,
-      game: gameTitle,  // Use game ID instead of title if required
-      journalist: journalist,
-      predicted_rating: rating,
-    };
-  
-    console.log("Post data:", postData);
-    console.log("Axios config:", axiosConfig);
     try {
-      console.log("Preparing to send POST request");
       const response = await axios.post(
-        'http://127.0.0.1:8000/api/predictions/',  // Full URL for Django API
+        'http://127.0.0.1:8000/api/predictions/',
         {
-          user: user,
-          game: gameTitle,  // Use game ID instead of title if required
-          journalist: journalist,
+          user,
+          game: gameTitle,
+          journalist,
           predicted_rating: rating,
         },
         {
           headers: {
             'Content-Type': 'application/json',
-            'X-CSRFToken': csrfToken,  // Send CSRF token if using session-based auth
+            'X-CSRFToken': csrfToken,
           },
-          withCredentials: true,  // Include session cookie
+          withCredentials: true,
         }
       );
-      
+
       if (response.status === 201) {
-        alert('Rating submitted successfully!');
+        setMessage(`Rating of ${rating} submitted successfully!`);
       } else {
-        alert('Failed to submit rating.');
+        setMessage('Failed to submit rating.');
       }
     } catch (error) {
       console.error('Error submitting rating:', error);
-      console.log('Request headers:', error.config.headers); 
+      setMessage('An error occurred while submitting your rating.');
     }
-  };  
+  };
 
-  // Helper function to get CSRF token from cookies
+  const handleRatingChange = (e) => {
+    const rating = parseInt(e.target.value, 10);
+    setSelectedRating(rating);
+    submitRating(rating);
+  };
+
   const getCSRFToken = () => {
     const cookieValue = document.cookie
       .split('; ')
-      .find(row => row.startsWith('csrftoken='))
+      .find((row) => row.startsWith('csrftoken='))
       ?.split('=')[1];
     return cookieValue;
   };
@@ -98,19 +74,25 @@ const JournalistRatingPage = () => {
       <div className="rating-content">
         <h1>{journalist}'s Rating for {decodeURIComponent(gameTitle)}</h1>
 
-        <div className="rating-options">
-          {[...Array(10).keys()].map((_, index) => (
-            <button
-              key={index + 1}
-              className={`rating-button ${selectedRating === index + 1 ? 'selected' : ''}`}
-              onClick={() => handleRatingClick(index + 1)}
-            >
-              {index + 1}
-            </button>
-          ))}
+        <div className="rating-select-container">
+          <select
+            className="rating-dropdown"
+            value={selectedRating || ''}
+            onChange={handleRatingChange}
+          >
+            <option value="" disabled>
+              Select a rating
+            </option>
+            {[...Array(10).keys()].map((index) => (
+              <option key={index + 1} value={index + 1}>
+                {index + 1}
+              </option>
+            ))}
+          </select>
         </div>
 
         {selectedRating && <p>You selected a rating of {selectedRating}.</p>}
+        {message && <p className="rating-message">{message}</p>}
       </div>
     </div>
   );

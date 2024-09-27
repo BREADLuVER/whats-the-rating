@@ -1,36 +1,69 @@
+/* src/components/JournalistRatingPage.css */
+
 .rating-page-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #000;
-    color: white;
-    text-align: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.rating-content {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.rating-page-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.rating-select-container {
+  margin: 20px 0;
+}
+
+.rating-dropdown {
+  width: 50%;
+  padding: 8px;
+  font-size: 1em;/
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.rating-dropdown:hover {
+  background-color: #444;
+}
+
+.rating-dropdown:focus {
+  box-shadow: 0 0 5px #fff;
+}
+
+.rating-message {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #00ff00;
+}
+
+@media (max-width: 768px) {
   .rating-page-container h1 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+    font-size: 2em;
   }
-  
-  .rating-options {
-    display: flex;
-    gap: 10px;
+
+  .rating-dropdown {
+    width: 70%;
+    font-size: 0.9em;
+    padding: 6px;
   }
-  
-  .rating-button {
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    font-size: 1.5em;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .rating-button:hover {
-    background-color: #666;
-  }
-  
+}
