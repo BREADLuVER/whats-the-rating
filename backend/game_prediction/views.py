@@ -1,6 +1,7 @@
 # backend/game_prediction/views.py
 
 from rest_framework import generics
+from rest_framework.views import APIView
 from .models import Game, Prediction, Comment, ScrapedGame
 from .serializers import GameSerializer, PredictionSerializer, CommentSerializer
 from rest_framework.permissions import IsAuthenticated
@@ -9,31 +10,28 @@ from google.auth.transport import requests
 from django.http import JsonResponse
 from django.contrib.auth.models import User
 from rest_framework.decorators import api_view
-from django.db.models import Q
+from django.db.models import Q, Count
 from rest_framework.exceptions import ValidationError
+from rest_framework.response import Response
 
 @api_view(['POST'])
 def google_login(request):
     token = request.data.get('id_token')
 
     try:
-        # Specify the CLIENT_ID of the app that accesses the backend
         idinfo = id_token.verify_oauth2_token(token, requests.Request(), "YOUR_GOOGLE_CLIENT_ID")
 
-        # ID token is valid, get the user’s Google Account info
         google_user_id = idinfo['sub']
         email = idinfo.get('email')
         first_name = idinfo.get('given_name')
         last_name = idinfo.get('family_name')
 
-        # If the user doesn't exist, create a new one
         user, created = User.objects.get_or_create(username=google_user_id, defaults={
             'first_name': first_name,
             'last_name': last_name,
             'email': email
         })
 
-        # You can implement token-based auth here if necessary (e.g., using JWT)
 
         return JsonResponse({
             'message': 'User logged in successfully',
@@ -42,17 +40,14 @@ def google_login(request):
         })
 
     except ValueError:
-        # Invalid token
         return JsonResponse({'error': 'Invalid token'}, status=400)
 
 
 def search_games(request):
-    query = request.GET.get('query', '')  # Get the 'query' parameter from the request
+    query = request.GET.get('query', '')
     if query:
-        # Perform a case-insensitive search in the ScrapedGame model
-        games = ScrapedGame.objects.filter(Q(title__icontains=query))[:5]  # Limit results for performance
-        
-        # Prepare the data to be sent as a response
+        games = ScrapedGame.objects.filter(Q(title__icontains=query))[:5]
+
         game_list = [
             {
                 'title': game.title,
@@ -73,15 +68,18 @@ def add_game(request):
         return JsonResponse({'status': 'Game added successfully!'})
     return JsonResponse(serializer.errors, status=400)
 
+
 # List all games
 class GameListView(generics.ListAPIView):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
 
+
 # Get details for a specific game
 class GameDetailView(generics.RetrieveAPIView):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
+
 
 # Allow users to submit their prediction
 class CreatePredictionView(generics.CreateAPIView):
@@ -93,17 +91,27 @@ class CreatePredictionView(generics.CreateAPIView):
         user = self.request.data.get('user', '')
         journalist = self.request.data.get('journalist', '')
 
-        # Check if a prediction already exists for the user, game, and journalist
         existing_prediction = Prediction.objects.filter(user=user, game=game_title, journalist=journalist).first()
 
         if existing_prediction:
-            # Update the existing prediction
             existing_prediction.predicted_rating = self.request.data.get('predicted_rating')
             existing_prediction.save()
             return existing_prediction
         else:
             # Create a new prediction
             return serializer.save(user=user, game=game_title, journalist=journalist)
+
+
+# Fetch all predictions for the given game and journalist
+class AnalystPredictionsView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, game_title, journalist_name):
+        predictions = Prediction.objects.filter(game=game_title, journalist=journalist_name)
+
+        ratings_count = predictions.values('predicted_rating').annotate(count=Count('predicted_rating'))
+
+        return Response(ratings_count)
 
 
 # View comments for a specific game
