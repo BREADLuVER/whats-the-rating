@@ -103,6 +103,8 @@ class CreatePredictionView(generics.CreateAPIView):
 
 
 # Fetch all predictions for the given game and journalist
+#from django.views.decorators.csrf import csrf_exempt
+# @csrf_exempt
 class AnalystPredictionsView(APIView):
     permission_classes = [IsAuthenticated]
 

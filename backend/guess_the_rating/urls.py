@@ -18,7 +18,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from game_prediction.views import google_login, add_game, CreatePredictionView
+from game_prediction.views import google_login, add_game, CreatePredictionView, AnalystPredictionsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +26,5 @@ urlpatterns = [
     path('api/auth/google/', google_login, name='google-login'),
     path('api/add-game/', add_game, name='add-game'),
     path('predictions/', CreatePredictionView.as_view(), name='create-prediction'),
+    path('api/predictions/<str:game_title>/<str:journalist_name>/', AnalystPredictionsView.as_view(), name='game-journalist-predictions'),
 ]
