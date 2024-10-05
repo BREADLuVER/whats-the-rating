@@ -19,6 +19,7 @@ import UserForm from './pages/UserForm';
 import ChooseJournalist from './pages/ChooseJournalist';
 import ChooseJournalist2 from './pages/ChooseJournalist2';
 import JournalistRatingPage from './pages/JournalistRatingPage';
+import ComingSoon from './pages/ComingSoon';
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -160,6 +161,7 @@ function App({ signOut, user }) {
           />
           <Route path="/chooseJournalist2/:gameTitle" element={<ChooseJournalist2 />} />
           <Route path="/chooseJournalist/:gameTitle" element={<ChooseJournalist />} />
+          <Route path="/comingSoon" element={<ComingSoon />} />
           <Route path="/user" element={<UserPage />} />
           <Route path="/userForm" element={<UserForm />} />
           <Route path="/rate/:journalist/:gameTitle" element={<JournalistRatingPage />} />
