@@ -13,6 +13,8 @@ from rest_framework.decorators import api_view
 from django.db.models import Q, Count
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
+from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 
 @api_view(['POST'])
 def google_login(request):
@@ -69,6 +71,12 @@ def add_game(request):
     return JsonResponse(serializer.errors, status=400)
 
 
+# Sort games by click_count in descending order
+def game_list(request):
+    games = Game.objects.all().order_by('-click_count')
+    return render(request, 'game_list.html', {'games': games})
+
+
 # List all games
 class GameListView(generics.ListAPIView):
     queryset = Game.objects.all()
@@ -115,6 +123,17 @@ class AnalystPredictionsView(APIView):
 
         return Response(ratings_count)
 
+
+@csrf_exempt
+def increment_click(request, game_id):
+    try:
+        game = Game.objects.get(id=game_id)
+        game.click_count += 1
+        game.save()
+        return JsonResponse({"status": "success", "click_count": game.click_count})
+    except Game.DoesNotExist:
+        return JsonResponse({"status": "error", "message": "Game not found"}, status=404)
+    
 
 # View comments for a specific game
 class CommentListView(generics.ListAPIView):

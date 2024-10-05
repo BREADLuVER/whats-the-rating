@@ -59,11 +59,13 @@ function App({ signOut, user }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredGames, setFilteredGames] = useState([]);
 
+  // Fetch games from the backend and sort by popularity
   const fetchGames = async () => {
     try {
       const response = await axios.get('/api/games/');
-      setGames(response.data);  // Store the fetched games in state
-      setFilteredGames(response.data); // Set the filteredGames initially to all games
+      const sortedGames = response.data.sort((a, b) => b.clickCount - a.clickCount);  // Sort by clickCount
+      setGames(sortedGames);  // Store the sorted games in state
+      setFilteredGames(sortedGames); // Set the filteredGames initially to sorted games
     } catch (error) {
       console.error('Error fetching games:', error);
     }
@@ -89,6 +91,18 @@ function App({ signOut, user }) {
   const clearSearch = () => {
     setSearchQuery('');
     setFilteredGames(games);
+  };
+
+  // Function to handle game clicks and increment the click count
+  const handleGameClick = (gameId) => {
+    axios.post(`/increment-click/${gameId}/`)
+      .then(response => {
+        console.log("Click recorded successfully", response.data);
+        fetchGames();  // Re-fetch the games to update the click count and re-sort the list
+      })
+      .catch(error => {
+        console.error("Error recording click:", error);
+      });
   };
 
   return (
@@ -140,7 +154,11 @@ function App({ signOut, user }) {
                     <ul>
                       {filteredGames.map((game) => (
                         <li key={game.id} className="game-item">
-                          <Link to={`/chooseJournalist2/${encodeURIComponent(game.title)}`} className="game-list">
+                          <Link
+                            to={`/chooseJournalist2/${encodeURIComponent(game.title)}`}
+                            className="game-list"
+                            onClick={() => handleGameClick(game.id)}
+                          >
                             <span className="game-title">{game.title}</span>
                             <span className="game-rating">{game.averageRating}</span>
                           </Link>

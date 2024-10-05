@@ -5,6 +5,7 @@ from django.db import models
 
 class Game(models.Model):
     title = models.CharField(max_length=200)
+    click_count = models.IntegerField(default=0)
 
     def __str__(self):
         return self.title
@@ -42,3 +43,4 @@ class ScrapedGame(models.Model):
 
     def __str__(self):
         return f"{self.title} ({self.score})"
+    
