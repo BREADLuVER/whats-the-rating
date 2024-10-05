@@ -775,8 +775,8 @@
       ],
       "format": "esm"
     },
-    "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/qD3oRdDAL5geCTjNFS26/V5lESJQt3.js": {
-      "bytes": 12678,
+    "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/xRnjRSDZqtOEbHmMJOdx/V5lESJQt3.js": {
+      "bytes": 13813,
       "imports": [
         {
           "path": "react/jsx-runtime",
@@ -830,9 +830,9 @@
       "bytes": 536,
       "imports": [
         {
-          "path": "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/qD3oRdDAL5geCTjNFS26/V5lESJQt3.js",
+          "path": "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/xRnjRSDZqtOEbHmMJOdx/V5lESJQt3.js",
           "kind": "import-statement",
-          "original": "https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/qD3oRdDAL5geCTjNFS26/V5lESJQt3.js"
+          "original": "https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/xRnjRSDZqtOEbHmMJOdx/V5lESJQt3.js"
         },
         {
           "path": "unframer",
@@ -1151,8 +1151,8 @@
       ],
       "entryPoint": "virtual:hero",
       "inputs": {
-        "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/qD3oRdDAL5geCTjNFS26/V5lESJQt3.js": {
-          "bytesInOutput": 11743
+        "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/xRnjRSDZqtOEbHmMJOdx/V5lESJQt3.js": {
+          "bytesInOutput": 12855
         },
         "https :https://framerusercontent.com/modules/HYcHVPAbe8jLEeU7c4mp/TcQV6SEsl3y6G9Op8tp0/Time.js": {
           "bytesInOutput": 4902
@@ -1206,7 +1206,7 @@
           "bytesInOutput": 261
         }
       },
-      "bytes": 31239
+      "bytes": 32351
     },
     "userSurvey.js": {
       "imports": [

@@ -756,9 +756,9 @@ NavigationContainer
 
 @font-face {
     font-family: 'Inter'; 
-    src: url(https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZ1rib2Bg-4.woff2);
-    font-style: normal;
-    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/inter/v18/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcWdxhiJ-Ek-7MeA.woff2);
+    font-style: italic;
+    font-weight: 800;
 }
 
 @font-face {

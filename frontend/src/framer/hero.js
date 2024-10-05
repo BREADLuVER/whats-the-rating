@@ -2,7 +2,7 @@
 /* eslint-disable */
 'use client';
 
-// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/qD3oRdDAL5geCTjNFS26/V5lESJQt3.js
+// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/xRnjRSDZqtOEbHmMJOdx/V5lESJQt3.js
 import { jsx as _jsx3, jsxs as _jsxs, } from 'react/jsx-runtime';
 import {
   addFonts,
@@ -16,6 +16,8 @@ import {
   useLocaleInfo,
   useVariantState,
   withCSS,
+  withFX,
+  withOptimizedAppearEffect,
 } from 'unframer';
 import { LayoutGroup, motion, MotionConfigContext, } from 'unframer';
 import * as React3 from 'react';
@@ -680,11 +682,13 @@ function getMinHeight(style,) {
   if (hasAutoHeight) return 200;
 }
 
-// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/qD3oRdDAL5geCTjNFS26/V5lESJQt3.js
+// https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/xRnjRSDZqtOEbHmMJOdx/V5lESJQt3.js
 var EmbedFonts = getFonts(Embed,);
 var TimeDateFonts = getFonts(Time,);
+var RichTextWithFX = withFX(RichText,);
+var RichTextWithFXWithOptimizedAppearEffect = withOptimizedAppearEffect(withFX(RichText,),);
 var cycleOrder = ['YFmbfKAkc', 'Ca3pCwa1m', 'FPp4EquH4',];
-var serializationHash = 'framer-y2el9';
+var serializationHash = 'framer-yJDYI';
 var variantClassNames = { Ca3pCwa1m: 'framer-v-muo7b', FPp4EquH4: 'framer-v-1n0dnja', YFmbfKAkc: 'framer-v-9afcqs', };
 function addPropertyOverrides(overrides, ...variants) {
   const nextOverrides = {};
@@ -694,6 +698,21 @@ function addPropertyOverrides(overrides, ...variants) {
   return nextOverrides;
 }
 var transition1 = { bounce: 0.2, delay: 0, duration: 0.4, type: 'spring', };
+var transition2 = { delay: 0, duration: 1.6, ease: [0.44, 0, 0.56, 1,], type: 'tween', };
+var animation = { opacity: 1, rotate: 0, rotateX: 0, rotateY: 0, scale: 1, skewX: 0, skewY: 0, x: 0, y: 10, };
+var animation1 = { filter: 'blur(5px)', opacity: 1e-3, rotate: 0, scale: 1, skewX: 0, skewY: 0, x: 0, y: 10, };
+var transition3 = { bounce: 0, delay: 0, duration: 0.8, type: 'spring', };
+var textEffect = {
+  effect: animation1,
+  startDelay: 0.1,
+  tokenization: 'character',
+  transition: transition3,
+  trigger: 'onMount',
+  type: 'appear',
+};
+var transition4 = { bounce: 0.2, delay: 0.6, duration: 0.7, type: 'spring', };
+var animation2 = { opacity: 1, rotate: 0, rotateX: 0, rotateY: 0, scale: 1, skewX: 0, skewY: 0, transition: transition4, x: 0, y: 0, };
+var animation3 = { opacity: 1e-3, rotate: 0, rotateX: 0, rotateY: 0, scale: 1, skewX: 0, skewY: 0, x: 0, y: 150, };
 var Transition = ({ value, children, },) => {
   const config = React3.useContext(MotionConfigContext,);
   const transition = value !== null && value !== void 0 ? value : config.transition;
@@ -803,24 +822,34 @@ var Component = /* @__PURE__ */ React3.forwardRef(function (props, ref,) {
                 },),
               },),
             },),
-            /* @__PURE__ */ _jsx3(RichText, {
+            /* @__PURE__ */ _jsx3(RichTextWithFX, {
+              __framer__loop: animation,
+              __framer__loopEffectEnabled: true,
+              __framer__loopRepeatDelay: 0,
+              __framer__loopRepeatType: 'mirror',
+              __framer__loopTransition: transition2,
               __fromCanvasComponent: true,
+              __perspectiveFX: false,
+              __smartComponentFX: true,
+              __targetOpacity: 1,
               children: /* @__PURE__ */ _jsx3(React3.Fragment, {
                 children: /* @__PURE__ */ _jsx3(motion.h1, {
                   style: {
-                    '--font-selector': 'R0Y7SW50ZXItNzAw',
+                    '--font-selector': 'R0Y7SW50ZXItODAwaXRhbGlj',
                     '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
-                    '--framer-font-size': '50px',
-                    '--framer-font-weight': '700',
+                    '--framer-font-size': '60px',
+                    '--framer-font-style': 'italic',
+                    '--framer-font-weight': '800',
                     '--framer-letter-spacing': '-2.6px',
                     '--framer-text-alignment': 'center',
                     '--framer-text-color': 'var(--extracted-gdpscs, rgb(227, 225, 225))',
                   },
-                  children: 'Know Your Critics',
+                  children: 'Guess the Ratings',
                 },),
               },),
               className: 'framer-eyx347',
-              fonts: ['GF;Inter-700',],
+              effect: textEffect,
+              fonts: ['GF;Inter-800italic',],
               layoutDependency,
               layoutId: 'SAtgw0Oqk',
               style: {
@@ -832,10 +861,19 @@ var Component = /* @__PURE__ */ React3.forwardRef(function (props, ref,) {
               verticalAlignment: 'top',
               withExternalLayout: true,
             },),
-            /* @__PURE__ */ _jsx3(RichText, {
+            /* @__PURE__ */ _jsx3(RichTextWithFXWithOptimizedAppearEffect, {
+              __framer__loop: animation,
+              __framer__loopEffectEnabled: true,
+              __framer__loopRepeatDelay: 0,
+              __framer__loopRepeatType: 'mirror',
+              __framer__loopTransition: transition2,
               __fromCanvasComponent: true,
+              __perspectiveFX: false,
+              __smartComponentFX: true,
+              __targetOpacity: 1,
+              animate: animation2,
               children: /* @__PURE__ */ _jsx3(React3.Fragment, {
-                children: /* @__PURE__ */ _jsxs(motion.h2, {
+                children: /* @__PURE__ */ _jsx3(motion.h2, {
                   style: {
                     '--font-selector': 'R0Y7SW50ZXItNTAw',
                     '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
@@ -846,17 +884,16 @@ var Component = /* @__PURE__ */ React3.forwardRef(function (props, ref,) {
                     '--framer-text-alignment': 'center',
                     '--framer-text-color': 'var(--extracted-1of0zx5, rgb(136, 136, 136))',
                   },
-                  children: [
-                    'Be two steps ahead \u2014 predict the ratings game journalists will give to upcoming titles. ',
-                    /* @__PURE__ */ _jsx3(motion.br, {},),
-                    'Currently only providing data from IGN and PCgamer',
-                  ],
+                  children: 'Be two steps ahead \u2014 predict the ratings game journalists will give to upcoming titles. ',
                 },),
               },),
               className: 'framer-b5rsry',
+              'data-framer-appear-id': 'b5rsry',
               fonts: ['GF;Inter-500',],
+              initial: animation3,
               layoutDependency,
               layoutId: 'UAZWF53F_',
+              optimized: true,
               style: { '--extracted-1of0zx5': 'rgb(136, 136, 136)', '--framer-paragraph-spacing': '0px', },
               verticalAlignment: 'top',
               withExternalLayout: true,
@@ -864,37 +901,23 @@ var Component = /* @__PURE__ */ React3.forwardRef(function (props, ref,) {
                 {
                   Ca3pCwa1m: {
                     children: /* @__PURE__ */ _jsx3(React3.Fragment, {
-                      children: /* @__PURE__ */ _jsxs(motion.h2, {
+                      children: /* @__PURE__ */ _jsx3(motion.h2, {
                         style: {
                           '--font-selector': 'R0Y7SW50ZXItNTAw',
                           '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
-                          '--framer-font-size': '13px',
                           '--framer-font-weight': '500',
                           '--framer-letter-spacing': '0px',
                           '--framer-line-height': '1.5em',
                           '--framer-text-alignment': 'center',
                           '--framer-text-color': 'var(--extracted-1of0zx5, rgb(136, 136, 136))',
                         },
-                        children: [
-                          /* @__PURE__ */ _jsx3(motion.span, {
-                            style: { '--framer-font-size': '16px', },
-                            children: 'Be two steps ahead \u2014 predict the ratings game journalists will give to upcoming titles. ',
-                          },),
-                          /* @__PURE__ */ _jsx3(motion.span, {
-                            style: { '--framer-font-size': '16px', },
-                            children: /* @__PURE__ */ _jsx3(motion.br, {},),
-                          },),
-                          /* @__PURE__ */ _jsx3(motion.span, {
-                            style: { '--framer-font-size': '16px', },
-                            children: 'Currently only providing data from IGN and PCgamer',
-                          },),
-                        ],
+                        children: 'Be two steps ahead \u2014 predict the ratings game journalists will give to upcoming titles. ',
                       },),
                     },),
                   },
                   FPp4EquH4: {
                     children: /* @__PURE__ */ _jsx3(React3.Fragment, {
-                      children: /* @__PURE__ */ _jsxs(motion.h2, {
+                      children: /* @__PURE__ */ _jsx3(motion.h2, {
                         style: {
                           '--font-selector': 'R0Y7SW50ZXItNTAw',
                           '--framer-font-family': '"Inter", "Inter Placeholder", sans-serif',
@@ -904,11 +927,7 @@ var Component = /* @__PURE__ */ React3.forwardRef(function (props, ref,) {
                           '--framer-text-alignment': 'center',
                           '--framer-text-color': 'var(--extracted-1of0zx5, rgb(136, 136, 136))',
                         },
-                        children: [
-                          'Be two steps ahead \u2014 predict the ratings game journalists will give to upcoming titles. ',
-                          /* @__PURE__ */ _jsx3(motion.br, {},),
-                          'Currently only providing data from IGN and PCgamer',
-                        ],
+                        children: 'Be two steps ahead \u2014 predict the ratings game journalists will give to upcoming titles. ',
                       },),
                     },),
                   },
@@ -925,21 +944,21 @@ var Component = /* @__PURE__ */ React3.forwardRef(function (props, ref,) {
 },);
 var css = [
   '@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }',
-  '.framer-y2el9.framer-1i9vt0l, .framer-y2el9 .framer-1i9vt0l { display: block; }',
-  '.framer-y2el9.framer-9afcqs { align-content: center; align-items: center; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 9px; height: 600px; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 1200px; }',
-  '.framer-y2el9 .framer-pbn8s2-container { bottom: -80px; flex: none; left: 0px; position: absolute; right: -1px; top: 0px; z-index: 0; }',
-  '.framer-y2el9 .framer-l01x53-container { flex: none; height: auto; left: 32px; position: absolute; top: 34px; width: auto; z-index: 1; }',
-  '.framer-y2el9 .framer-eyx347 { flex: none; height: auto; max-width: 100%; position: relative; white-space: pre-wrap; width: auto; word-break: break-word; word-wrap: break-word; }',
-  '.framer-y2el9 .framer-b5rsry { flex: none; height: auto; max-width: 100%; overflow: visible; position: relative; white-space: pre-wrap; width: 390px; word-break: break-word; word-wrap: break-word; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-y2el9.framer-9afcqs { gap: 0px; } .framer-y2el9.framer-9afcqs > * { margin: 0px; margin-bottom: calc(9px / 2); margin-top: calc(9px / 2); } .framer-y2el9.framer-9afcqs > :first-child { margin-top: 0px; } .framer-y2el9.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
-  '.framer-y2el9.framer-v-muo7b.framer-9afcqs { gap: 14px; width: 390px; }',
-  '.framer-y2el9.framer-v-muo7b .framer-l01x53-container { left: unset; right: 9px; top: 30px; }',
-  '.framer-y2el9.framer-v-muo7b .framer-b5rsry { width: 262px; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-y2el9.framer-v-muo7b.framer-9afcqs { gap: 0px; } .framer-y2el9.framer-v-muo7b.framer-9afcqs > * { margin: 0px; margin-bottom: calc(14px / 2); margin-top: calc(14px / 2); } .framer-y2el9.framer-v-muo7b.framer-9afcqs > :first-child { margin-top: 0px; } .framer-y2el9.framer-v-muo7b.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
-  '.framer-y2el9.framer-v-1n0dnja.framer-9afcqs { gap: 7px; width: 810px; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-y2el9.framer-v-1n0dnja.framer-9afcqs { gap: 0px; } .framer-y2el9.framer-v-1n0dnja.framer-9afcqs > * { margin: 0px; margin-bottom: calc(7px / 2); margin-top: calc(7px / 2); } .framer-y2el9.framer-v-1n0dnja.framer-9afcqs > :first-child { margin-top: 0px; } .framer-y2el9.framer-v-1n0dnja.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
+  '.framer-yJDYI.framer-1i9vt0l, .framer-yJDYI .framer-1i9vt0l { display: block; }',
+  '.framer-yJDYI.framer-9afcqs { align-content: center; align-items: center; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 9px; height: 600px; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 1200px; }',
+  '.framer-yJDYI .framer-pbn8s2-container { bottom: -80px; flex: none; left: 0px; position: absolute; right: -1px; top: 0px; z-index: 0; }',
+  '.framer-yJDYI .framer-l01x53-container { flex: none; height: auto; left: 32px; position: absolute; top: 34px; width: auto; z-index: 1; }',
+  '.framer-yJDYI .framer-eyx347 { flex: none; height: auto; max-width: 100%; position: relative; white-space: pre-wrap; width: auto; word-break: break-word; word-wrap: break-word; }',
+  '.framer-yJDYI .framer-b5rsry { flex: none; height: auto; max-width: 100%; overflow: visible; position: relative; white-space: pre-wrap; width: 390px; word-break: break-word; word-wrap: break-word; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-yJDYI.framer-9afcqs { gap: 0px; } .framer-yJDYI.framer-9afcqs > * { margin: 0px; margin-bottom: calc(9px / 2); margin-top: calc(9px / 2); } .framer-yJDYI.framer-9afcqs > :first-child { margin-top: 0px; } .framer-yJDYI.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
+  '.framer-yJDYI.framer-v-muo7b.framer-9afcqs { gap: 14px; width: 390px; }',
+  '.framer-yJDYI.framer-v-muo7b .framer-l01x53-container { left: unset; right: 9px; top: 30px; }',
+  '.framer-yJDYI.framer-v-muo7b .framer-b5rsry { width: 262px; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-yJDYI.framer-v-muo7b.framer-9afcqs { gap: 0px; } .framer-yJDYI.framer-v-muo7b.framer-9afcqs > * { margin: 0px; margin-bottom: calc(14px / 2); margin-top: calc(14px / 2); } .framer-yJDYI.framer-v-muo7b.framer-9afcqs > :first-child { margin-top: 0px; } .framer-yJDYI.framer-v-muo7b.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
+  '.framer-yJDYI.framer-v-1n0dnja.framer-9afcqs { gap: 7px; width: 810px; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-yJDYI.framer-v-1n0dnja.framer-9afcqs { gap: 0px; } .framer-yJDYI.framer-v-1n0dnja.framer-9afcqs > * { margin: 0px; margin-bottom: calc(7px / 2); margin-top: calc(7px / 2); } .framer-yJDYI.framer-v-1n0dnja.framer-9afcqs > :first-child { margin-top: 0px; } .framer-yJDYI.framer-v-1n0dnja.framer-9afcqs > :last-child { margin-bottom: 0px; } }',
 ];
-var FramerV5lESJQt3 = withCSS(Component, css, 'framer-y2el9',);
+var FramerV5lESJQt3 = withCSS(Component, css, 'framer-yJDYI',);
 var stdin_default = FramerV5lESJQt3;
 FramerV5lESJQt3.displayName = 'hero';
 FramerV5lESJQt3.defaultProps = { height: 600, width: 1200, };
@@ -957,9 +976,9 @@ addFonts(FramerV5lESJQt3, [
     fonts: [{
       family: 'Inter',
       source: 'google',
-      style: 'normal',
-      url: 'https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZ1rib2Bg-4.woff2',
-      weight: '700',
+      style: 'italic',
+      url: 'https://fonts.gstatic.com/s/inter/v18/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcWdxhiJ-Ek-7MeA.woff2',
+      weight: '800',
     }, {
       family: 'Inter',
       source: 'google',

@@ -44,6 +44,8 @@ nvm -v
 #unframer
 https://github.com/remorses/unframer
 
+cd src 
+
 npx unframer
 
 > import { useNavigate } from'react-router-dom';
@@ -56,13 +58,11 @@ npx unframer
 >
 > };
 >
->
 > vartransition1 = { bounce:0.2, delay:0, duration:0.4, type:'spring', };
 >
 > vartransition2 = { bounce:0.25, delay:0, duration:0.45, type:'spring', };
 >
 > varanimation = { opacity:1, rotate:0, rotateX:0, rotateY:0, scale:1.1, skewX:0, skewY:0, transition:transition2, };
->
 >
 > onClick: () =>navigate('/user'),
 >
