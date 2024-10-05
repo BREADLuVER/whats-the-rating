@@ -4,18 +4,18 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f7f7f7;
+    background-color: #0d0d0d;
     text-align: center;
   }
   
   .coming-soon-container h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #333;
+    color: #d2d1d1;
   }
   
   .coming-soon-container p {
     font-size: 1.5em;
-    color: #555;
+    color: #d1d0d0;
   }
   
