@@ -2,7 +2,7 @@
 /* eslint-disable */
 'use client';
 
-// https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/sSZJYP1fO4ThYxqdNAFo/XiKKufNe7.js
+// https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/Cjav34nfNklxcEB0UCrc/XiKKufNe7.js
 import { jsx as _jsx, jsxs as _jsxs, } from 'react/jsx-runtime';
 import {
   addFonts,
@@ -17,9 +17,8 @@ import {
 } from 'unframer';
 import { LayoutGroup, motion, MotionConfigContext, } from 'unframer';
 import * as React from 'react';
-import { useNavigate } from'react-router-dom';
 var cycleOrder = ['E_hf9L2LL', 'wCzCfTl94', 'lV0cKwHkW',];
-var serializationHash = 'framer-czR0b';
+var serializationHash = 'framer-9KsDl';
 var variantClassNames = { E_hf9L2LL: 'framer-v-xc23t', lV0cKwHkW: 'framer-v-1xivxd7', wCzCfTl94: 'framer-v-1w0nrx8', };
 function addPropertyOverrides(overrides, ...variants) {
   const nextOverrides = {};
@@ -76,10 +75,6 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
   const defaultLayoutId = React.useId();
   const sharedStyleClassNames = [];
   const componentViewport = useComponentViewport();
-  const navigate = useNavigate();
-  const onClickFutureGames = () => {
-    navigate('/');
-  };
   return /* @__PURE__ */ _jsx(LayoutGroup, {
     id: layoutId !== null && layoutId !== void 0 ? layoutId : defaultLayoutId,
     children: /* @__PURE__ */ _jsx(Variants, {
@@ -236,7 +231,6 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                       '--framer-text-alignment': 'center',
                       '--framer-text-color': 'var(--extracted-r6o4lv, rgb(199, 197, 197))',
                     },
-                    onClick: () => navigate('/userForm'),
                     children: 'Click Here',
                   },),
                 },),
@@ -262,21 +256,21 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
 },);
 var css = [
   '@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }',
-  '.framer-czR0b.framer-1bzucgt, .framer-czR0b .framer-1bzucgt { display: block; }',
-  '.framer-czR0b.framer-xc23t { align-content: center; align-items: center; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 10px; height: 185px; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 1200px; }',
-  '.framer-czR0b .framer-1x9iwtz { flex: none; height: 73px; position: relative; white-space: pre-wrap; width: 405px; word-break: break-word; word-wrap: break-word; }',
-  '.framer-czR0b .framer-pm3zeo { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: 36px; justify-content: center; overflow: visible; padding: 15px 23px 15px 23px; position: relative; width: min-content; }',
-  '.framer-czR0b .framer-1ef4p9i { flex: none; height: auto; position: relative; white-space: pre; width: auto; }',
-  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-czR0b.framer-xc23t, .framer-czR0b .framer-pm3zeo { gap: 0px; } .framer-czR0b.framer-xc23t > * { margin: 0px; margin-bottom: calc(10px / 2); margin-top: calc(10px / 2); } .framer-czR0b.framer-xc23t > :first-child { margin-top: 0px; } .framer-czR0b.framer-xc23t > :last-child { margin-bottom: 0px; } .framer-czR0b .framer-pm3zeo > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } .framer-czR0b .framer-pm3zeo > :first-child { margin-left: 0px; } .framer-czR0b .framer-pm3zeo > :last-child { margin-right: 0px; } }',
-  '.framer-czR0b.framer-v-1w0nrx8.framer-xc23t { width: 390px; }',
-  '.framer-czR0b.framer-v-1w0nrx8 .framer-1x9iwtz { width: 330px; }',
-  '.framer-czR0b.framer-v-1xivxd7.framer-xc23t { width: 810px; }',
-  '.framer-czR0b[data-border="true"]::after, .framer-czR0b [data-border="true"]::after { content: ""; border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0); border-color: var(--border-color, none); border-style: var(--border-style, none); width: 100%; height: 100%; position: absolute; box-sizing: border-box; left: 0; top: 0; border-radius: inherit; pointer-events: none; }',
+  '.framer-9KsDl.framer-1bzucgt, .framer-9KsDl .framer-1bzucgt { display: block; }',
+  '.framer-9KsDl.framer-xc23t { align-content: center; align-items: center; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 10px; height: 400px; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 1200px; }',
+  '.framer-9KsDl .framer-1x9iwtz { flex: none; height: 73px; position: relative; white-space: pre-wrap; width: 405px; word-break: break-word; word-wrap: break-word; }',
+  '.framer-9KsDl .framer-pm3zeo { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: 36px; justify-content: center; overflow: visible; padding: 15px 23px 15px 23px; position: relative; width: min-content; }',
+  '.framer-9KsDl .framer-1ef4p9i { flex: none; height: auto; position: relative; white-space: pre; width: auto; }',
+  '@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-9KsDl.framer-xc23t, .framer-9KsDl .framer-pm3zeo { gap: 0px; } .framer-9KsDl.framer-xc23t > * { margin: 0px; margin-bottom: calc(10px / 2); margin-top: calc(10px / 2); } .framer-9KsDl.framer-xc23t > :first-child { margin-top: 0px; } .framer-9KsDl.framer-xc23t > :last-child { margin-bottom: 0px; } .framer-9KsDl .framer-pm3zeo > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } .framer-9KsDl .framer-pm3zeo > :first-child { margin-left: 0px; } .framer-9KsDl .framer-pm3zeo > :last-child { margin-right: 0px; } }',
+  '.framer-9KsDl.framer-v-1w0nrx8.framer-xc23t { width: 390px; }',
+  '.framer-9KsDl.framer-v-1w0nrx8 .framer-1x9iwtz { width: 330px; }',
+  '.framer-9KsDl.framer-v-1xivxd7.framer-xc23t { width: 810px; }',
+  '.framer-9KsDl[data-border="true"]::after, .framer-9KsDl [data-border="true"]::after { content: ""; border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0); border-color: var(--border-color, none); border-style: var(--border-style, none); width: 100%; height: 100%; position: absolute; box-sizing: border-box; left: 0; top: 0; border-radius: inherit; pointer-events: none; }',
 ];
-var FramerXiKKufNe7 = withCSS(Component, css, 'framer-czR0b',);
+var FramerXiKKufNe7 = withCSS(Component, css, 'framer-9KsDl',);
 var stdin_default = FramerXiKKufNe7;
 FramerXiKKufNe7.displayName = 'userSurvey';
-FramerXiKKufNe7.defaultProps = { height: 185, width: 1200, };
+FramerXiKKufNe7.defaultProps = { height: 400, width: 1200, };
 addPropertyControls(FramerXiKKufNe7, {
   variant: {
     options: ['E_hf9L2LL', 'wCzCfTl94', 'lV0cKwHkW',],

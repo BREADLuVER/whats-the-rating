@@ -775,7 +775,7 @@
       ],
       "format": "esm"
     },
-    "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/xRnjRSDZqtOEbHmMJOdx/V5lESJQt3.js": {
+    "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/Cj1K1K4zpzUTHlXSXhMB/V5lESJQt3.js": {
       "bytes": 13813,
       "imports": [
         {
@@ -830,9 +830,9 @@
       "bytes": 536,
       "imports": [
         {
-          "path": "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/xRnjRSDZqtOEbHmMJOdx/V5lESJQt3.js",
+          "path": "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/Cj1K1K4zpzUTHlXSXhMB/V5lESJQt3.js",
           "kind": "import-statement",
-          "original": "https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/xRnjRSDZqtOEbHmMJOdx/V5lESJQt3.js"
+          "original": "https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/Cj1K1K4zpzUTHlXSXhMB/V5lESJQt3.js"
         },
         {
           "path": "unframer",
@@ -862,7 +862,7 @@
       ],
       "format": "esm"
     },
-    "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/sSZJYP1fO4ThYxqdNAFo/XiKKufNe7.js": {
+    "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/Cjav34nfNklxcEB0UCrc/XiKKufNe7.js": {
       "bytes": 13707,
       "imports": [
         {
@@ -907,9 +907,9 @@
       "bytes": 536,
       "imports": [
         {
-          "path": "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/sSZJYP1fO4ThYxqdNAFo/XiKKufNe7.js",
+          "path": "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/Cjav34nfNklxcEB0UCrc/XiKKufNe7.js",
           "kind": "import-statement",
-          "original": "https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/sSZJYP1fO4ThYxqdNAFo/XiKKufNe7.js"
+          "original": "https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/Cjav34nfNklxcEB0UCrc/XiKKufNe7.js"
         },
         {
           "path": "unframer",
@@ -1151,7 +1151,7 @@
       ],
       "entryPoint": "virtual:hero",
       "inputs": {
-        "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/xRnjRSDZqtOEbHmMJOdx/V5lESJQt3.js": {
+        "https :https://framerusercontent.com/modules/dVfRKhGw53oyBBTWdfYW/Cj1K1K4zpzUTHlXSXhMB/V5lESJQt3.js": {
           "bytesInOutput": 12855
         },
         "https :https://framerusercontent.com/modules/HYcHVPAbe8jLEeU7c4mp/TcQV6SEsl3y6G9Op8tp0/Time.js": {
@@ -1246,7 +1246,7 @@
       ],
       "entryPoint": "virtual:userSurvey",
       "inputs": {
-        "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/sSZJYP1fO4ThYxqdNAFo/XiKKufNe7.js": {
+        "https :https://framerusercontent.com/modules/Wp3udDFej29GQDPImCOx/Cjav34nfNklxcEB0UCrc/XiKKufNe7.js": {
           "bytesInOutput": 12937
         },
         "virtual:userSurvey": {
