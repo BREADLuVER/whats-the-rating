@@ -46,11 +46,11 @@ function App({ signOut, user }) {
   let variant;
 
   if (size.width < 600) {
-    variant = 'Phone'; // Mobile variant
+    variant = 'Phone';
   } else if (size.width < 1024) {
-    variant = 'Phone'; // Tablet variant
+    variant = 'Phone';
   } else {
-    variant = 'Desktop'; // Desktop variant
+    variant = 'Desktop';
   }
 
   // State to hold the list of games
@@ -78,7 +78,6 @@ function App({ signOut, user }) {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
 
-    // Filter the game list based on the search query
     const filtered = games.filter((game) =>
       game.title.toLowerCase().includes(query)
     );

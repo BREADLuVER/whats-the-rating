@@ -10,30 +10,36 @@ const UserForm = () => {
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
-  // Function to fetch game suggestions from the backend
-  const fetchSuggestions = async (query) => {
-    try {
-      const response = await axios.get('/api/search-games/', {
-        params: { query },
-      });
-      setSuggestions(response.data);  // Set suggestions based on response
-    } catch (error) {
-      console.error('Error fetching game suggestions:', error);
-    }
-  };
+// Function to fetch game suggestions from the backend
+const fetchSuggestions = async (query) => {
+  try {
+    const response = await axios.get('/api/search-games/', {
+      params: { query },
+    });
+    const fetchedSuggestions = response.data;
 
-  // Handle the title input change
-  const handleTitleChange = (e) => {
-    const query = e.target.value;
-    setTitle(query);
+    // Filter only games with 'tbd' score
+    const filteredSuggestions = fetchedSuggestions.filter(game => game.score.toLowerCase() === 'tbd');
+    
+    setSuggestions(filteredSuggestions);
+  } catch (error) {
+    console.error('Error fetching game suggestions:', error);
+  }
+};
 
-    // Fetch suggestions if the query has 2 or more characters
-    if (query.length >= 2) {
-      fetchSuggestions(query);
-    } else {
-      setSuggestions([]);  // Clear suggestions if query is too short
-    }
-  };
+// Handle the title input change
+const handleTitleChange = (e) => {
+  const query = e.target.value;
+  setTitle(query);
+
+  // Fetch suggestions if the query has 2 or more characters
+  if (query.length >= 2) {
+    fetchSuggestions(query);
+  } else {
+    setSuggestions([]);
+  }
+};
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
