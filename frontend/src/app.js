@@ -17,6 +17,7 @@ import UserSurvey from './framer/userSurvey';
 import UserPage from './pages/UserPage';
 import UserForm from './pages/UserForm';
 import ChooseJournalist from './pages/ChooseJournalist';
+import ChooseJournalist2 from './pages/ChooseJournalist2';
 import JournalistRatingPage from './pages/JournalistRatingPage';
 
 function useWindowSize() {
@@ -138,12 +139,17 @@ function App({ signOut, user }) {
                   {filteredGames.length > 0 ? (
                     <ul>
                       {filteredGames.map((game) => (
-                        <Link to={`/rate/${encodeURIComponent(game.title)}`} key={game.id} className="game-list">
-                          <li>
+                        <li key={game.id} className="game-item">
+                          <Link to={`/chooseJournalist2/${encodeURIComponent(game.title)}`} className="game-list">
                             <span className="game-title">{game.title}</span>
                             <span className="game-rating">{game.averageRating}</span>
-                          </li>
-                        </Link>
+                          </Link>
+
+                          {/* Combined Journalist Button to the right */}
+                          <div className="journalist-buttons">
+                            <ChooseJournalist gameTitle={game.title} />
+                          </div>
+                        </li>
                       ))}
                     </ul>
                   ) : (
@@ -153,7 +159,8 @@ function App({ signOut, user }) {
               </>
             }
           />
-          <Route path="/rate/:gameTitle" element={<ChooseJournalist />} />
+          <Route path="/chooseJournalist2/:gameTitle" element={<ChooseJournalist2 />} />
+          <Route path="/chooseJournalist/:gameTitle" element={<ChooseJournalist />} />
           <Route path="/user" element={<UserPage />} />
           <Route path="/userForm" element={<UserForm />} />
           <Route path="/rate/:journalist/:gameTitle" element={<JournalistRatingPage />} />
