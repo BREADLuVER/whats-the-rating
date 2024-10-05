@@ -237,7 +237,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                       '--framer-text-color': 'var(--extracted-r6o4lv, rgb(199, 197, 197))',
                     },
                     onClick: () => navigate('/userForm'),
-                    children: 'Click Here',
+                    children: 'Add Game',
                   },),
                 },),
                 className: 'framer-1ef4p9i',
