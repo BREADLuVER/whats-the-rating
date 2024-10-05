@@ -17,6 +17,7 @@ import {
 } from 'unframer';
 import { LayoutGroup, motion, MotionConfigContext, } from 'unframer';
 import * as React from 'react';
+import { useNavigate } from'react-router-dom';
 var cycleOrder = ['E_hf9L2LL', 'wCzCfTl94', 'lV0cKwHkW',];
 var serializationHash = 'framer-9KsDl';
 var variantClassNames = { E_hf9L2LL: 'framer-v-xc23t', lV0cKwHkW: 'framer-v-1xivxd7', wCzCfTl94: 'framer-v-1w0nrx8', };
@@ -75,6 +76,10 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
   const defaultLayoutId = React.useId();
   const sharedStyleClassNames = [];
   const componentViewport = useComponentViewport();
+  const navigate = useNavigate();
+  const onClickFutureGames = () => {
+    navigate('/');
+  };
   return /* @__PURE__ */ _jsx(LayoutGroup, {
     id: layoutId !== null && layoutId !== void 0 ? layoutId : defaultLayoutId,
     children: /* @__PURE__ */ _jsx(Variants, {
@@ -231,6 +236,7 @@ var Component = /* @__PURE__ */ React.forwardRef(function (props, ref,) {
                       '--framer-text-alignment': 'center',
                       '--framer-text-color': 'var(--extracted-r6o4lv, rgb(199, 197, 197))',
                     },
+                    onClick: () => navigate('/userForm'),
                     children: 'Click Here',
                   },),
                 },),
