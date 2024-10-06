@@ -2,7 +2,7 @@
 
 from rest_framework import generics
 from rest_framework.views import APIView
-from .models import Game, Prediction, Comment, ScrapedGame
+from .models import Game, Prediction, Comment, ScrapedGame, GameClick
 from .serializers import GameSerializer, PredictionSerializer, CommentSerializer
 from rest_framework.permissions import IsAuthenticated
 from google.oauth2 import id_token
@@ -15,6 +15,8 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 
 @api_view(['POST'])
 def google_login(request):
@@ -111,8 +113,6 @@ class CreatePredictionView(generics.CreateAPIView):
 
 
 # Fetch all predictions for the given game and journalist
-#from django.views.decorators.csrf import csrf_exempt
-# @csrf_exempt
 class AnalystPredictionsView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -128,9 +128,26 @@ class AnalystPredictionsView(APIView):
 def increment_click(request, game_id):
     try:
         game = Game.objects.get(id=game_id)
+
+        # Check if the user is authenticated
+        if request.user.is_authenticated:
+            game_click, created = GameClick.objects.get_or_create(user=request.user, game=game)
+            if not created:
+                return JsonResponse({"status": "error", "message": "User has already clicked on this game"}, status=400)
+        else:
+            clicked_games = request.session.get('clicked_games', [])
+
+            if str(game.id) in clicked_games:
+                return JsonResponse({"status": "error", "message": "Anonymous user has already clicked on this game"}, status=400)
+
+            clicked_games.append(str(game.id))
+            request.session['clicked_games'] = clicked_games
+
         game.click_count += 1
         game.save()
+
         return JsonResponse({"status": "success", "click_count": game.click_count})
+
     except Game.DoesNotExist:
         return JsonResponse({"status": "error", "message": "Game not found"}, status=404)
     

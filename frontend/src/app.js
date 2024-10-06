@@ -149,10 +149,12 @@ function App({ signOut, user }) {
                     </button>
                   </div>
                   
-                  {/* Conditionally render the game list or no games found message */}
-                  {filteredGames.length > 0 ? (
-                    <ul>
-                      {filteredGames.map((game) => (
+                {/* Conditionally render the game list or no games found message */}
+                {filteredGames.length > 0 ? (
+                  <ul>
+                    {filteredGames
+                      .sort((a, b) => b.click_count - a.click_count) // Sort by click_count in descending order
+                      .map((game) => (
                         <li key={game.id} className="game-item">
                           <Link
                             to={`/chooseJournalist2/${encodeURIComponent(game.title)}`}
@@ -169,10 +171,10 @@ function App({ signOut, user }) {
                           </div>
                         </li>
                       ))}
-                    </ul>
-                  ) : (
-                    searchQuery && <p style={{ fontSize: '1.2em' }}>No games found</p>
-                  )}
+                  </ul>
+                ) : (
+                  searchQuery && <p style={{ fontSize: '1.2em' }}>No games found</p>
+                )}
                 </div>
               </>
             }

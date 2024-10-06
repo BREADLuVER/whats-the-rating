@@ -10,6 +10,17 @@ class Game(models.Model):
     def __str__(self):
         return self.title
 
+class GameClick(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)  # Track which user clicked
+    game = models.ForeignKey(Game, on_delete=models.CASCADE)  # Track which game was clicked
+    clicked_at = models.DateTimeField(auto_now_add=True)  # Store the time of the click
+
+    class Meta:
+        unique_together = ('user', 'game')
+
+    def __str__(self):
+        return f"{self.user.username} clicked on {self.game.title}"
+
 class Prediction(models.Model):
     user = models.CharField(max_length=150)
     game = models.CharField(max_length=200, null=True, blank=True)

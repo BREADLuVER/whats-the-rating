@@ -43,21 +43,20 @@ const handleTitleChange = (e) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    // Object to be sent to the backend
+
     const newGame = {
       title: title
     };
-  
+
     try {
       // Send the new game data to the backend
       await axios.post('/api/add-game/', newGame);
-  
-      // Optionally, clear the form fields after successful submission
+
       setTitle('');
-  
-      // Redirect or notify the user of successful submission
+
       navigate('/');
+
+      window.location.reload();
     } catch (error) {
       console.error('Error adding the game:', error);
     }
