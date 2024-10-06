@@ -79,6 +79,22 @@ def game_list(request):
     return render(request, 'game_list.html', {'games': games})
 
 
+def get_user_ratings(request, game_title, journalist):
+    user = request.user
+    predictions = Prediction.objects.filter(game__title=game_title, journalist=journalist)
+    user_prediction = predictions.filter(user=user).first()
+
+    ratings_data = predictions.values('predicted_rating').annotate(count=models.Count('predicted_rating'))
+
+    response_data = {
+        'ratings': list(ratings_data),
+        'user_submitted': user_prediction is not None,
+        'user_rating': user_prediction.predicted_rating if user_prediction else None
+    }
+
+    return JsonResponse(response_data)
+
+
 # List all games
 class GameListView(generics.ListAPIView):
     queryset = Game.objects.all()
