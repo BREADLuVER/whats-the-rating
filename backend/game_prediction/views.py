@@ -133,11 +133,16 @@ class AnalystPredictionsView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, game_title, journalist_name):
+        user = request.user
         predictions = Prediction.objects.filter(game=game_title, journalist=journalist_name)
-
         ratings_count = predictions.values('predicted_rating').annotate(count=Count('predicted_rating'))
+        user_prediction = predictions.filter(user=user).first()
 
-        return Response(ratings_count)
+        response_data = {
+            "ratings": list(ratings_count),
+            "userRating": user_prediction.predicted_rating if user_prediction else None
+        }
+        return Response(response_data)
 
 
 @csrf_exempt

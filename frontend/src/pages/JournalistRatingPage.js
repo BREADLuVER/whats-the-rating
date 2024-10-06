@@ -71,40 +71,37 @@ const JournalistRatingPage = () => {
     submitRating(rating);
   };
 
-  const fetchRatingData = async (username) => {
+  const fetchRatingData = async () => {
     try {
-      // Fetch rating data for all users
+      // Fetch rating data for all users and the current user's rating
       const response = await axios.get(
         `http://127.0.0.1:8000/api/predictions/${gameTitle}/${journalist}/`,
         { withCredentials: true }
       );
       
       const fetchedData = response.data;
-      
-      // Log the fetchedData for reference
-      console.log('Fetched data:', fetchedData);
+    
+      // console.log('Fetched data:', fetchedData);
+
+      const ratingsArray = fetchedData.ratings || [];
+      const mappedData = mapDataToGraph(ratingsArray);
+      setRatingData(mappedData);
+      const userRatingFromResponse = fetchedData.userRating;
+      // console.log('User Rating:', userRatingFromResponse);
   
-      // No need to check for ratings field, since the array is returned directly
-      if (Array.isArray(fetchedData)) {
-        const mappedData = mapDataToGraph(fetchedData); // Pass the array directly
-        setRatingData(mappedData);
-      } else {
-        console.error('Fetched data is not an array.');
-        setRatingData(Array(10).fill(0)); // Set default empty ratings array to avoid crash
-      }
-  
-      // Check if user has already submitted a rating (assuming this field is still present)
-      if (fetchedData.user_submitted) {
+      if (userRatingFromResponse !== null) {
         setUserSubmittedRating(true);
-        setUserRating(fetchedData.user_rating); // Set the user's submitted rating
+        setUserRating(userRatingFromResponse);
       } else {
         setUserSubmittedRating(false);
+        setUserRating(null);
       }
     } catch (error) {
       console.error('Error fetching ratings data:', error.response || error);
     }
   };
-  
+
+
   // Helper function to map the data to the correct format for the bar graph
   const mapDataToGraph = (data) => {
     if (!Array.isArray(data)) {
@@ -159,7 +156,7 @@ const JournalistRatingPage = () => {
             />
           </div>
         )}
-        {userSubmittedRating ? (
+        {userSubmittedRating? (
           <div className="resubmit-section">
             <h2>You have already submitted a rating of {userRating}/10. Would you like to update your rating?</h2>
             <select

@@ -13,25 +13,32 @@
   box-sizing: border-box;
 }
 
+/* This will make the entire content area take 90% of the viewport width */
 .rating-content {
-  max-width: 600px;
+  max-width: 60vw; /* Updated to take up 90% of the viewport width */
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.rating-page-container h1 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
+/* Style for the bar chart */
+.bar-chart {
+  width: 100%; /* Ensure the chart also takes 90% of the viewport width */
+  margin-bottom: 40px;
 }
 
+/* Style for the form area (rating select section) */
 .rating-select-container {
   margin: 20px 0;
+  width: 70%; /* Ensure the rating dropdown form takes 90% of the viewport width */
 }
 
 .rating-dropdown {
-  width: 50%;
-  padding: 8px;
-  font-size: 1em;
+  width: 50%; /* Take full width inside the form container */
+  padding: 12px;
+  font-size: 1.2em;
   background-color: #222;
   color: white;
   border: none;
@@ -41,7 +48,6 @@
   transition: background-color 0.3s ease;
 }
 
-
 .rating-dropdown:hover {
   background-color: #444;
 }
@@ -50,10 +56,9 @@
   box-shadow: 0 0 5px #fff;
 }
 
-.rating-message {
-  margin-top: 20px;
-  font-size: 1.2em;
-  color: #00ff00;
+.rating-page-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
@@ -62,8 +67,11 @@
   }
 
   .rating-dropdown {
-    width: 70%;
-    font-size: 0.9em;
-    padding: 6px;
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .bar-chart, .rating-select-container {
+    width: 100%; /* On smaller screens, allow the components to take the full width */
   }
 }
